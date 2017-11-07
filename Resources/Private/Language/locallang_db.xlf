@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-11T11:52:11Z" product-name="fp_fractionslider">
+		<header/>
+		<body>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1">
+				<source>Professional Slider-Plugin</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1.description">
+				<source>Can be used with the "jQuery-FractionSlider", the "Professional jQuery Content Slider Plugin - Slider Pro" or the "Slider revolution".</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_slide.title">
+				<source>Title of the slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_slide.subtitle">
+				<source>Optional subtitle of the slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_slide.background">
+				<source>Fixed background image</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_slide.color">
+				<source>Or fixed background color</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_slide.datain">
+				<source>data-in (Fractionslider) / data-transition (Slider Revolution) attribute: animation</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_slide.elements">
+				<source>Elements for this slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect">
+				<source>Fractionslider Effect</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.dataposition">
+				<source>data-position attribute. Format: “top,left” in pixels. E.g. 100,500. [px,px]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.datain">
+				<source>data-in attribute</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.dataout">
+				<source>data-out attribute</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.dataeasein">
+				<source>data-ease-in attribute. E.g. linear, swing or easeInBack.</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.dataeaseout">
+				<source>data-ease-out attribute. E.g. linear, swing or easeOutBack.</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.datadelay">
+				<source>data-delay attribute: time before the in transition starts (in the current step). [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.datatime">
+				<source>data-time attribute: time after which the elements animation is complete. [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.datastep">
+				<source>data-step attribute: you can group your elements in different steps.</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_fraceffect.dataspecial">
+				<source>data-special attribute: cycle will trigger the out transition for the previous element in the current step.</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_cssclass">
+				<source>CSS class</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_cssclass.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_cssclass.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect">
+				<source>Slider Pro Effect</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datawidth">
+				<source>Sets the width of the layer. Can be set to a fixed or percentage value (px or %).</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.dataheight">
+				<source>Sets the height of the layer. Can be set to a fixed or percentage value (px or %).</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datadepth">
+				<source>Sets the depth (z-index, in CSS terms) of the layer</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.dataposition">
+				<source>Sets the position of the layer</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datahorizontal">
+				<source>Sets the horizontal position of the layer, using the value specified for data-position as a reference point (px or %)</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datavertical">
+				<source>Sets the vertical position of the layer, using the value specified for data-position as a reference point (px or %)</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datashowtransition">
+				<source>Sets the transition of the layer when it appears in the slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datashowoffset">
+				<source>Sets an offset for the position of the layer from which the layer will be animated towards the final position when it appears in the slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datashowduration">
+				<source>Sets the duration of the show transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datashowdelay">
+				<source>Sets a delay for the show transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datahidetransition">
+				<source>Sets the transition of the layer when it disappears from the slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datahideoffset">
+				<source>Sets an offset for the position of the layer towards which the layer will be animated from the original position when it disappears from the slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datahideduration">
+				<source>Sets the duration of the hide transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datahidedelay">
+				<source>Sets a delay for the hide transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_proeffect.datastayduration">
+				<source>Sets how much time a layer will stay visible before being hidden automatically [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect">
+				<source>Slider Revolution Effect</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.datax">
+				<source>data-x value: Horizontal Layer position within the Layer Grid Container [px,"left","center","right"]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.datay">
+				<source>data-y value: Vertical Layer position within the Layer Grid Container [px,"top","center","bottom"]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.datastart">
+				<source>data-start value: start time [ms]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.datawhitespace">
+				<source>data-whitespace value: line break mode</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.datawidth">
+				<source>data-width value: Width of the layer [px, "none", "auto", array]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.dataheight">
+				<source>data-height value: Height of the layer [px, "none", "auto", array]</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.datahoffset">
+				<source>data-hoffset value: Offset horizontally from the Layer position</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.datavoffset">
+				<source>data-voffset value: Offset vertically from the Layer position</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.dataresponsiveoffset">
+				<source>data-responsive_offset: Defines how offset values (hoffset,voffset) should act on responsivity.</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_reveffect.databasealign">
+				<source>data-basealign value: Defines if the Layer should be aligned to the Layer Grid container, or to the Slide.</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part">
+				<source>Part of a slide</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.title">
+				<source>Title of this element</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.subtitle">
+				<source>Optional subtitle of this element</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.linktitle">
+				<source>Optional text for the link (button-text)</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.cettcontent">
+				<source>Or: relation to a tt_content element</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.cssstyles">
+				<source>CSS styles</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.cssclass">
+				<source>CSS class</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.fraction">
+				<source>Fractionslider effects</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.pro">
+				<source>Slider Pro effects</source>
+			</trans-unit>
+			<trans-unit id="tx_fpfractionslider_domain_model_part.revolution">
+				<source>Slider Revolution effects</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

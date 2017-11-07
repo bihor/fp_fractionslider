@@ -1,0 +1,23 @@
+﻿.. |img-3|      image:: ../../Images/backend1.jpg
+.. :align: left
+.. :border: 0
+.. :name: Image 1
+.. :width: 100%
+
+.. |img-4|      image:: ../../Images/backend2.jpg
+.. :align: left
+.. :border: 0
+.. :name: Image 2
+.. :width: 100%
+
+.. |img-5|      image:: ../../Images/frontend1.jpg
+.. :align: left
+.. :border: 0
+.. :name: Image 3
+.. :width: 100%
+
+.. |img-6|      image:: ../../Images/frontend2.jpg
+.. :align: left
+.. :border: 0
+.. :name: Image 4
+.. :width: 100%

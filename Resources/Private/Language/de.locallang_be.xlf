@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-11-10T14:22:23Z" product-name="fp_fractionslider">
+		<header/>
+		<body>
+			<trans-unit id="fpfractionslider-folder" xml:space="preserve">
+				<target>Professioneller Slider</target>
+			</trans-unit>
+			<trans-unit id="title" xml:space="preserve">
+				<target>Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="action" xml:space="preserve">
+				<target>Aktion</target>
+			</trans-unit>
+			<trans-unit id="pagelayoutview">
+				<target>Professioneller Slider; Einstellungen:</target>
+			</trans-unit>
+			<trans-unit id="pagemodule.switchToPage">
+				<target>gehe zur Seite</target>
+			</trans-unit>
+			<trans-unit id="pagemodule.pageNotAvailable">
+				<target>keine Seite verfügbar!</target>
+			</trans-unit>
+			<trans-unit id="template">
+				<target>Slider-Template:</target>
+			</trans-unit>
+			<trans-unit id="template.not_configured">
+				<target>kein Layout-Template ausgewählt!</target>
+			</trans-unit>
+			<trans-unit id="fractionslider" xml:space="preserve">
+				<target>FractionSlider</target>
+			</trans-unit>
+			<trans-unit id="sliderpro" xml:space="preserve">
+				<target>Slider Pro</target>
+			</trans-unit>
+			<trans-unit id="sliderrevolution" xml:space="preserve">
+				<target>Slider Revolution</target>
+			</trans-unit>
+			<trans-unit id="true" xml:space="preserve">
+				<target>true</target>
+			</trans-unit>
+			<trans-unit id="false" xml:space="preserve">
+				<target>false</target>
+			</trans-unit>
+			<trans-unit id="top" xml:space="preserve">
+				<target>oben</target>
+			</trans-unit>
+			<trans-unit id="bottom" xml:space="preserve">
+				<target>unten</target>
+			</trans-unit>
+			<trans-unit id="left" xml:space="preserve">
+				<target>links</target>
+			</trans-unit>
+			<trans-unit id="right" xml:space="preserve">
+				<target>rechts</target>
+			</trans-unit>
+			<trans-unit id="neither" xml:space="preserve">
+				<target>none / nichts davon</target>
+			</trans-unit>
+			<trans-unit id="width" xml:space="preserve">
+				<target>Breite in px, z.B. 1920</target>
+			</trans-unit>
+			<trans-unit id="height" xml:space="preserve">
+				<target>Höhe in px, z.B. 600</target>
+			</trans-unit>
+			<trans-unit id="slideTransition" xml:space="preserve">
+				<target>Slide-Animation, z.B. none</target>
+			</trans-unit>
+			<trans-unit id="slideTransitionSpeed" xml:space="preserve">
+				<target>Slide-Animations-Dauer [ms]</target>
+			</trans-unit>
+			<trans-unit id="slideEndAnimation" xml:space="preserve">
+				<target>Slide-Animations-Ende: wenn true, wird erst zu ende animiert, ehe es weiter geht</target>
+			</trans-unit>
+			<trans-unit id="transitionIn" xml:space="preserve">
+				<target>in - transition, z.B. left</target>
+			</trans-unit>
+			<trans-unit id="transitionOut" xml:space="preserve">
+				<target>out - transition, z.B. top</target>
+			</trans-unit>
+			<trans-unit id="fullWidth" xml:space="preserve">
+				<target>Volle Breite: an/aus</target>
+			</trans-unit>
+			<trans-unit id="delay" xml:space="preserve">
+				<target>Verzögerung für die Elemente [ms]</target>
+			</trans-unit>
+			<trans-unit id="timeout" xml:space="preserve">
+				<target>Anzeige-Dauer eines Slides [ms]</target>
+			</trans-unit>
+			<trans-unit id="speedIn" xml:space="preserve">
+				<target>in - transition Geschwindigkeit [ms]</target>
+			</trans-unit>
+			<trans-unit id="speedOut" xml:space="preserve">
+				<target>out - transition Geschwindigkeit [ms]</target>
+			</trans-unit>
+			<trans-unit id="easeIn" xml:space="preserve">
+				<target>Easing in, z.B. easeOutExpo</target>
+			</trans-unit>
+			<trans-unit id="easeOut" xml:space="preserve">
+				<target>Easing out, z.B. easeOutCubic</target>
+			</trans-unit>
+			<trans-unit id="controls" xml:space="preserve">
+				<target>Pfeile: an/aus</target>
+			</trans-unit>
+			<trans-unit id="pager" xml:space="preserve">
+				<target>Pfeile innerhalb des Slider: an/aus</target>
+			</trans-unit>
+			<trans-unit id="autoChange" xml:space="preserve">
+				<target>Auto-Wechsel der Slides: an/aus</target>
+			</trans-unit>
+			<trans-unit id="pauseOnHover" xml:space="preserve">
+				<target>Slider bei hover pausieren: an/aus</target>
+			</trans-unit>
+			<trans-unit id="backgroundAnimation" xml:space="preserve">
+				<target>Hintergrund-Animation: an/aus</target>
+			</trans-unit>
+			<trans-unit id="backgroundElement" xml:space="preserve">
+				<target>Element zum animieren | default fractionSlider-Element</target>
+			</trans-unit>
+			<trans-unit id="backgroundX" xml:space="preserve">
+				<target>Hintergrund-Animation x-Abstand</target>
+			</trans-unit>
+			<trans-unit id="backgroundY" xml:space="preserve">
+				<target>Hintergrund-Animation y-Abstand</target>
+			</trans-unit>
+			<trans-unit id="backgroundSpeed" xml:space="preserve">
+				<target>Hintergrund-Animations-Geschwindigkeit [ms]</target>
+			</trans-unit>
+			<trans-unit id="backgroundEase" xml:space="preserve">
+				<target>Hintergrund-Animation easing, z.B. easeOutCubic</target>
+			</trans-unit>
+			<trans-unit id="responsive" xml:space="preserve">
+				<target>Responsiver-Slider: an/aus</target>
+			</trans-unit>
+			<trans-unit id="increase" xml:space="preserve">
+				<target>Increase: darf der Slider auch größer werden?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.width" xml:space="preserve">
+				<target>Breite in px oder %, z.B. 1920 oder 100%</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.height" xml:space="preserve">
+				<target>Höhe in px oder %, z.B. 600 oder 50%</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.responsive" xml:space="preserve">
+				<target>Responsiver Slider? 'width' und 'height' gesetzt: Breite und Höhe sind dann Maximalwerte.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.aspectRatio" xml:space="preserve">
+				<target>Aspect ratio der Slides.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.imageScaleMode" xml:space="preserve">
+				<target>Skalierungsmodus für das Hintergrundbild.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.centerImage" xml:space="preserve">
+				<target>Soll das Bild zentriert werden?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.allowScaleUp" xml:space="preserve">
+				<target>Dürfen kleine Bilder vergrößert werden?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoHeight" xml:space="preserve">
+				<target>Gibt an, ob die Höhe des Slider an die Höhe des ausgewählten Slides angepasst werden soll.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoSlideSize" xml:space="preserve">
+				<target>Alle Slides auf gleicher Höhe halten...</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.startSlide" xml:space="preserve">
+				<target>Bei welchem Slide soll gestartet werden?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.shuffle" xml:space="preserve">
+				<target>Gibt an, ob die Slides gemischt werden sollen.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.orientation" xml:space="preserve">
+				<target>Slides horizontal oder vertikal anordnen?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.forceSize" xml:space="preserve">
+				<target>Welche Größe soll der Slider haben?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.loop" xml:space="preserve">
+				<target>Am Ende von vorne beginnen?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.slideDistance" xml:space="preserve">
+				<target>Legt den Abstand zwischen den Slides fest.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.slideAnimationDuration" xml:space="preserve">
+				<target>Legt die Dauer der Slide-Animation fest [ms].</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.heightAnimationDuration" xml:space="preserve">
+				<target>Legt die Dauer der Höhenanimation fest.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.visibleSize" xml:space="preserve">
+				<target>Legt die Größe des sichtbaren Bereichs fest, so dass weitere Slides in der Nähe des ausgewählten Slide sichtbar werden können.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.centerSelectedSlide" xml:space="preserve">
+				<target>Gibt an, ob der ausgewählte Slide zentriert [true] oder links [false] angeordnet werden soll...</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.rightToLeft" xml:space="preserve">
+				<target>Gibt an, ob die Richtung der Slides von rechts nach links, anstelle der Vorgabe von links nach rechts ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fade" xml:space="preserve">
+				<target>Gibt an, ob der Fade-Effekt verwendet werden soll.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeOutPreviousSlide" xml:space="preserve">
+				<target>Soll ein Slide ausgeblendet werden?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeDuration" xml:space="preserve">
+				<target>Legt die Dauer des Fade-Effekts fest. [ms]</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplay" xml:space="preserve">
+				<target>Gibt an, ob Autoplay aktiviert ist oder nicht.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplayDelay" xml:space="preserve">
+				<target>Setzt die Verzögerung / Intervall, bei der das Autoplay läuft. [ms]</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplayDirection" xml:space="preserve">
+				<target>Gibt an, ob das Autoplay zum nächsten Slide oder zum vorherigen Slide navigieren soll.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplayOnHover" xml:space="preserve">
+				<target>Gibt an, ob das Autoplay bei mouseover angehalten oder gestoppt wird.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.arrows" xml:space="preserve">
+				<target>Pfeiltasten anzeigen?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeArrows" xml:space="preserve">
+				<target>Pfeile nur bei hover einblenden?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.buttons" xml:space="preserve">
+				<target>Buttons anzeigen?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.keyboard" xml:space="preserve">
+				<target>Tastatur-Navigation einschalten?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.keyboardOnlyOnFocus" xml:space="preserve">
+				<target>Gibt an, ob der Slider nur dann auf die Tastatureingabe reagiert, wenn der Slider im Fokus ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.touchSwipe" xml:space="preserve">
+				<target>Gibt an, ob der Touch-Swipe für Slides aktiviert ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.touchSwipeThreshold" xml:space="preserve">
+				<target>Legt den Mindestbetrag fest, den Slides sich bewegen sollen.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeCaption" xml:space="preserve">
+				<target>Gibt an, ob die Bildunterschriften eingeblendet werden sollen.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.captionFadeDuration" xml:space="preserve">
+				<target>Legt die Dauer der Fade-Animation fest. [ms]</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fullScreen" xml:space="preserve">
+				<target>Gibt an, ob der Vollbild-Button aktiviert ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeFullScreen" xml:space="preserve">
+				<target>Vollbild-Button nur bei hover einblenden?</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.waitForLayers" xml:space="preserve">
+				<target>Gibt an, ob der Slide darauf wartet, dass die Layer verschwinden, bevor sie zu einem neuen Slide gehen.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoScaleLayers" xml:space="preserve">
+				<target>Gibt an, ob die Layer automatisch skaliert werden sollen.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoScaleReference" xml:space="preserve">
+				<target>Setzt eine Referenzbreite, die mit dem aktuellen Slider verglichen wird...</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.smallSize" xml:space="preserve">
+				<target>Wenn die Slider-Größe unter dieser Größe liegt, wird die kleine Version der Bilder verwendet.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.mediumSize" xml:space="preserve">
+				<target>Wenn die Slider-Größe unter dieser Größe liegt, wird die mittlere Version der Bilder verwendet.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.largeSize" xml:space="preserve">
+				<target>Wenn die Slider-Größe unter dieser Größe liegt, wird die große Version der Bilder verwendet.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.updateHash" xml:space="preserve">
+				<target>Gibt an, ob der Hash aktualisiert wird, wenn ein neuer Slide ausgewählt ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.reachVideoAction" xml:space="preserve">
+				<target>Legt die Aktion fest, die das Video ausführen wird, wenn der Slide-Container ausgewählt ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.leaveVideoAction" xml:space="preserve">
+				<target>Legt die Aktion fest, die das Video ausführen wird, wenn ein anderer Slide ausgewählt ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.playVideoAction" xml:space="preserve">
+				<target>Legt die Aktion fest, die der Slide ausführen wird, wenn das Video abgespielt wird.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.pauseVideoAction" xml:space="preserve">
+				<target>Legt die Aktion fest, die der Slider ausführen wird, wenn das Video angehalten wird.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.endVideoAction" xml:space="preserve">
+				<target>Setzt die Aktion, die der Slider ausführen wird, wenn das Video endet.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailWidth" xml:space="preserve">
+				<target>Legt die Breite der Miniaturansicht fest.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailHeight" xml:space="preserve">
+				<target>Legt die Höhe der Miniaturansicht fest.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailsPosition" xml:space="preserve">
+				<target>Legt die Position der Thumbnails fest.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailPointer" xml:space="preserve">
+				<target>Gibt an, ob ein Zeiger für die ausgewählte Miniaturansicht angezeigt wird.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailArrows" xml:space="preserve">
+				<target>Gibt an, ob die Thumbnail-Pfeile aktiviert sind.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeThumbnailArrows" xml:space="preserve">
+				<target>Gibt an, ob die Thumbnail-Pfeile gefadet werden sollen.</target>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailTouchSwipe" xml:space="preserve">
+				<target>Gibt an, ob der Touch-Swipe für Thumbnails aktiviert ist.</target>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.delay" xml:space="preserve">
+				<target>Anzeigedauer eines Slide [ms]</target>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.gridwidth" xml:space="preserve">
+				<target>Breite des Grid [px]</target>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.gridheight" xml:space="preserve">
+				<target>Höhe des Grid [px]</target>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.disableProgressBar" xml:space="preserve">
+				<target>Fortschrittsbalken ausschalten?</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

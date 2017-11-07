@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-04-18T15:56:35Z" product-name="fp_fractionslider">
+		<header/>
+		<body>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1">
+				<target>Professionelles Slider-Plugin</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1.description">
+				<target>Kann mit dem "jQuery-FractionSlider", dem "Professional jQuery Content Slider Plugin - Slider Pro" oder dem "Slider Revolution" benutzt werden.</target>
+			</trans-unit>
+			<trans-unit id="datax.description">
+				<target>data-x: Horizontale Layer Position [px,"left","center","right"]</target>
+			</trans-unit>
+			<trans-unit id="datay.description">
+				<target>data-y value: Vertikale Layer Position [px,"top","center","bottom"]</target>
+			</trans-unit>
+			<trans-unit id="datastart.description">
+				<target>data-start: Start-Zeit [ms]</target>
+			</trans-unit>
+			<trans-unit id="datawhitespace.description">
+				<target>data-whitespace: Zeilenumbruch-Modus</target>
+			</trans-unit>
+			<trans-unit id="datawidth.description">
+				<target>data-width: Breite des Layer [px, "none", "auto", array]</target>
+			</trans-unit>
+			<trans-unit id="dataheight.description">
+				<target>data-height: Höhe des Layer [px, "none", "auto", array]</target>
+			</trans-unit>
+			<trans-unit id="datahoffset.description">
+				<target>data-hoffset: Offset horizontal von der Layer Position</target>
+			</trans-unit>
+			<trans-unit id="datavoffset.description">
+				<target>data-voffset: Offset vertikal von der Layer Position</target>
+			</trans-unit>
+			<trans-unit id="dataresponsiveoffset.description">
+				<target>data-responsive_offset: Wie sollen die offset-Werte (hoffset,voffset) responsiv gelten?</target>
+			</trans-unit>
+			<trans-unit id="databasealign.description">
+				<target>data-basealign: Ausrichtung des Layer nach...</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

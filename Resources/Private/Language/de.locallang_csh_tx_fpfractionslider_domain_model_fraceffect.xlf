@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-04-18T15:56:35Z" product-name="fp_fractionslider">
+		<header/>
+		<body>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1">
+				<target>Professionelles Slider-plugin</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1.description">
+				<target>Kann mit dem "jQuery-FractionSlider", dem "Professional jQuery Content Slider Plugin - Slider Pro" oder dem "Slider Revolution" benutzt werden.</target>
+			</trans-unit>
+			<trans-unit id="dataposition.description">
+				<target>data-position Attribut. Format: “top,left” in Pixel. Z.B. 100,500. [px,px]</target>
+			</trans-unit>
+			<trans-unit id="datain.description">
+				<target>data-in Attribut: Animation</target>
+			</trans-unit>
+			<trans-unit id="dataout.description">
+				<target>data-out Attribut</target>
+			</trans-unit>
+			<trans-unit id="dataeasein.description">
+				<target>data-ease-in Attribut. Z.B. linear, swing oder easeInBack.</target>
+			</trans-unit>
+			<trans-unit id="dataeaseout.description">
+				<target>data-ease-out Attribut. Z.B. linear, swing oder easeOutBack.</target>
+			</trans-unit>
+			<trans-unit id="datadelay.description">
+				<target>data-delay Attribut: Zeit, bevor die Animation startet (im aktuellen Schritt). [ms]</target>
+			</trans-unit>
+			<trans-unit id="datatime.description">
+				<target>data-time Attribut: Zeit, nachdem die Animation beendet wird. [ms]</target>
+			</trans-unit>
+			<trans-unit id="datastep.description">
+				<target>data-step Attribut: Schritt; zum gruppieren der Animationen.</target>
+			</trans-unit>
+			<trans-unit id="dataspecial.description">
+				<target>data-special Attribut: cycle wird nur bei mehreren Schritten gebraucht.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

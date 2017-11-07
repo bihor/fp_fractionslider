@@ -1,0 +1,66 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for ProEffect</h1>
+
+<f:flashMessages />
+
+<table  class="tx_fpfractionslider" >
+	<tr>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datawidth" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.dataheight" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datadepth" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.dataposition" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datahorizontal" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datavertical" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datashowtransition" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datashowoffset" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datashowduration" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datashowdelay" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datahidetransition" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datahideoffset" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datahideduration" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datahidedelay" /></th>
+		<th><f:translate key="tx_fpfractionslider_domain_model_proeffect.datastayduration" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{proEffects}" as="proEffect">
+		<tr>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datawidth}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.dataheight}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datadepth}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.dataposition}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datahorizontal}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datavertical}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datashowtransition}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datashowoffset}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datashowduration}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datashowdelay}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datahidetransition}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datahideoffset}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datahideduration}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datahidedelay}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{proEffect : proEffect}"> {proEffect.datastayduration}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{proEffect : proEffect}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{proEffect : proEffect}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New ProEffect</f:link.action>
+</f:section>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-11T11:52:11Z" product-name="fp_fractionslider">
+		<header/>
+		<body>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1">
+				<source>Professional Slider-Plugin</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1.description">
+				<source>Can be used with the "jQuery-FractionSlider", the "Professional jQuery Content Slider Plugin - Slider Pro" or the "Slider revolution".</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>Title of this element</source>
+			</trans-unit>
+			<trans-unit id="subtitle.description">
+				<source>Optional subtitle of this element</source>
+			</trans-unit>
+			<trans-unit id="linktitle.description">
+				<source>Optional text for the link (button-text)</source>
+			</trans-unit>
+			<trans-unit id="link.description">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="cettcontent.description">
+				<source>Or: relation to a tt_content element</source>
+			</trans-unit>
+			<trans-unit id="cssstyles.description">
+				<source>CSS styles</source>
+			</trans-unit>
+			<trans-unit id="cssclass.description">
+				<source>CSS class</source>
+			</trans-unit>
+			<trans-unit id="fraction.description">
+				<source>Fractionslider-effect</source>
+			</trans-unit>
+			<trans-unit id="pro.description">
+				<source>Slider Pro effect</source>
+			</trans-unit>
+			<trans-unit id="revolution.description">
+				<source>Slider revolution effect</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

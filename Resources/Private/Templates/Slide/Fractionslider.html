@@ -1,0 +1,148 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace re=Fixpunkt\FpFractionslider\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="main">
+<f:flashMessages />
+
+<pre>
+**Installation guide**
+You need the FractionSlider-Plugin from here for this template:
+http://jacksbox.de/stuff/jquery-fractionslider/
+
+Download it and copy the css/fractionslider.css and jquery.fractionslider.min.js to your fileadmin-folder and
+ load them with the viewhelper re:addPublicResources.
+Copy this file (Resources/Private/Templates/Slide/List.html) to the fileadmin-folder too and
+ mofify the path to the slider-plugin below. Remove this pre-comment.
+After you have modified the path, you can use this template from your fileadmin-folder.
+Change the path to this template via TypoScript-constants. Example:
+ plugin.tx_fpfractionslider_pi1.view {
+  templateRootPath = fileadmin/bsdist/theme/tmpl/fractionslider/Templates/
+  partialRootPath = fileadmin/bsdist/theme/tmpl/fractionslider/Partials/
+  layoutRootPath = fileadmin/bsdist/theme/tmpl/fractionslider/Layouts/
+ }
+Now you can customise this template.
+</pre>
+
+<re:addPublicResources path="fileadmin/bsdist/theme/Contrib/FractionSlider/css/fractionslider.css"></re:addPublicResources>
+<re:addPublicResources path="fileadmin/bsdist/theme/Contrib/FractionSlider/jquery.fractionslider.min.js" compress="FALSE" footer="TRUE"></re:addPublicResources>
+
+<div class="slider-container">
+	<f:for each="{slides}" as="slide" iteration="iteratorS">
+		<div class="slide" {f:if(condition: '{slide.color}', then: 'style="background-color:{slide.color};"')} {f:if(condition: '{slide.datain} > 0', then: 'data-in="{slide.datainValue}"')} >
+			<f:if condition="{slide.background.originalResource.name}">
+				<img data-fixed src="{slide.background.originalResource.originalFile.publicUrl}" alt="{slide.title}" />
+			</f:if>
+			<f:for each="{slide.elements}" as="element" iteration="iteratorE">
+			  <f:if condition="{element.image.originalResource.name}"><f:then>
+				<img src="{element.image.originalResource.originalFile.publicUrl}" alt="{element.title}"
+					class="slide-part-{iteratorE.cycle} {element.cssclass.name}" {f:if(condition: '{element.styles}', then: 'style="{element.styles}"')} <f:for each="{element.fraction}" as="effekt">
+					{f:if(condition: '{effekt.dataspecial}', then: 'data-special="{effekt.dataspecial}"')} {f:if(condition: '{effekt.datastep}', then: 'data-step="{effekt.datastep}"')}
+					{f:if(condition: '{effekt.datadelay}', then: 'data-delay="{effekt.datadelay}"')} {f:if(condition: '{effekt.datatime}', then: 'data-time="{effekt.datatime}"')}
+					{f:if(condition: '{effekt.dataeasein}', then: 'data-ease-in="{effekt.dataeasein}"')} {f:if(condition: '{effekt.dataeaseout}', then: 'data-ease-out="{effekt.dataeaseout}"')}
+					data-position="{f:if(condition: '{effekt.dataposition}', then: '{effekt.dataposition}', else: '100,100')}"
+					data-in="{f:if(condition: '{effekt.datain}', then: '{effekt.datainValue}', else: 'fade')}"
+					data-out="{f:if(condition: '{effekt.dataout}', then: '{effekt.dataoutValue}', else: 'fade')}" </f:for> />
+			  </f:then><f:else>
+				<div class="slide-part-{iteratorE.cycle} {element.cssclass.name}" {f:if(condition: '{element.styles}', then: 'style="{element.styles}"')} <f:for each="{element.fraction}" as="effekt">
+					{f:if(condition: '{effekt.dataspecial}', then: 'data-special="{effekt.dataspecial}"')} {f:if(condition: '{effekt.datastep}', then: 'data-step="{effekt.datastep}"')}
+					{f:if(condition: '{effekt.datadelay}', then: 'data-delay="{effekt.datadelay}"')} {f:if(condition: '{effekt.datatime}', then: 'data-time="{effekt.datatime}"')}
+					{f:if(condition: '{effekt.dataeasein}', then: 'data-ease-in="{effekt.dataeasein}"')} {f:if(condition: '{effekt.dataeaseout}', then: 'data-ease-out="{effekt.dataeaseout}"')}
+					data-position="{f:if(condition: '{effekt.dataposition}', then: '{effekt.dataposition}', else: '100,100')}"
+					data-in="{f:if(condition: '{effekt.datain}', then: '{effekt.datainValue}', else: 'fade')}"
+					data-out="{f:if(condition: '{effekt.dataout}', then: '{effekt.dataoutValue}', else: 'fade')}" </f:for> >
+				<f:if condition="{element.cettcontent}">
+				<f:then>
+					<re:Content uid="{element.cettcontent}" />
+				</f:then>
+				<f:else>
+					<f:if condition="{iteratorE.cycle} == 1">Nr. {iteratorS.cycle}:</f:if>
+					<f:if condition="{element.linktitle}"><f:then>
+						{element.title}
+						<f:if condition="{element.subtitle}"><br><f:format.raw>{element.subtitle}</f:format.raw></f:if>
+						<br><br><f:link.typolink parameter="{element.link}" class="btn btn-default external-link-new-window">{element.linktitle}</f:link.typolink>
+					</f:then><f:else><f:if condition="{element.link}"><f:then>
+						<f:link.typolink parameter="{element.link}">{element.title}</f:link.typolink>
+						<f:if condition="{element.subtitle}"><br><f:format.raw>{element.subtitle}</f:format.raw></f:if>
+					</f:then><f:else>
+						{element.title}
+						<f:if condition="{element.subtitle}"><br><f:format.raw>{element.subtitle}</f:format.raw></f:if>
+					</f:else></f:if></f:else></f:if>
+				</f:else>
+				</f:if>
+				</div>
+			  </f:else></f:if>
+			</f:for>
+		</div>
+	</f:for>
+	<div class="fs_loader"><!-- shows a loading .gif while the slider is getting ready --></div>
+</div>
+
+<script type="text/javascript">
+var fraction_slideTransition = '{settings.fractionslider.slideTransition}';
+var fraction_slideTransitionSpeed = {settings.fractionslider.slideTransitionSpeed};
+var fraction_slideEndAnimation = {settings.fractionslider.slideEndAnimation};
+var fraction_transitionIn = '{settings.fractionslider.transitionIn}';
+var fraction_transitionOut = '{settings.fractionslider.transitionOut}';
+var fraction_fullWidth = {settings.fractionslider.fullWidth};
+var fraction_delay = {settings.fractionslider.delay};
+var fraction_timeout = {settings.fractionslider.timeout};
+var fraction_speedIn = {settings.fractionslider.speedIn};
+var fraction_speedOut =	{settings.fractionslider.speedOut};
+var fraction_easeIn = '{settings.fractionslider.easeIn}';
+var fraction_easeOut = '{settings.fractionslider.easeOut}';
+var fraction_controls = {settings.fractionslider.controls};
+var fraction_pager = {settings.fractionslider.pager};
+var fraction_autoChange = {settings.fractionslider.autoChange};
+var fraction_pauseOnHover = {settings.fractionslider.pauseOnHover};
+var fraction_backgroundAnimation = {settings.fractionslider.backgroundAnimation};
+var fraction_backgroundElement = '{settings.fractionslider.backgroundElement}';
+var fraction_backgroundX = {settings.fractionslider.backgroundX};
+var fraction_backgroundY = {settings.fractionslider.backgroundY};
+var fraction_backgroundSpeed = {settings.fractionslider.backgroundSpeed};
+var fraction_backgroundEase = '{settings.fractionslider.backgroundEase}';
+var fraction_responsive = {settings.fractionslider.responsive};
+var fraction_increase = {settings.fractionslider.increase};
+var fraction_width = {settings.fractionslider.width};
+var fraction_height = {settings.fractionslider.height};
+/*<![CDATA[*/
+jQuery(window).load(function(){
+	$('.slider-container').fractionSlider({
+		'slideTransition' : fraction_slideTransition, // default slide transition
+		'slideTransitionSpeed' : fraction_slideTransitionSpeed, // default slide transition time
+		'slideEndAnimation' : fraction_slideEndAnimation, // if set true, objects will transition out before next slide moves in
+		'transitionIn' : fraction_transitionIn, // default in - transition
+		'transitionOut' : fraction_transitionOut, // default out - transition 
+		'fullWidth': fraction_fullWidth, // transition over the full width of the window
+		'delay' : fraction_delay, // default delay for elements
+		'timeout': fraction_timeout, // default timeout before switching slides
+		'speedIn' : fraction_speedIn, // default in - transition speed
+		'speedOut' : fraction_speedOut, // default out - transition speed
+		'easeIn' : fraction_easeIn, // default easing in
+		'easeOut' : fraction_easeOut, // default easing out
+		'controls': fraction_controls, // controls on/off
+		'pager' : fraction_pager, // pager inside of the slider on/off OR $('someselector') for a pager outside of the slider
+		'autoChange' : fraction_autoChange, // auto change slides
+		'pauseOnHover' : fraction_pauseOnHover, // Pauses slider on hover (current step will still be completed)
+		'backgroundAnimation' : fraction_backgroundAnimation, // background animation
+		'backgroundElement' : fraction_backgroundElement, // element to animate | default fractionSlider element
+		'backgroundX' : fraction_backgroundX, // background animation x distance
+		'backgroundY' : fraction_backgroundY, // background animation y distance
+		'backgroundSpeed' : fraction_backgroundSpeed, // default background animation speed
+		'backgroundEase' : fraction_backgroundEase, // default background animation easing
+		'responsive': fraction_responsive, // responsive slider (see below for some implementation tipps)
+		'increase' : fraction_increase, // if set, slider is allowed to get bigger than basic dimensions
+		'dimensions': fraction_width+','+fraction_height
+	});
+});
+/*]]>*/
+</script>
+</f:section>
+
+
+<f:comment>
+img data-fixed src=
+alternativ:
+f:link.action action="show" arguments="{slide : slide}"> {slide.background.originalResource.name}/f:link.action
+f:image src="{element.image.uid}" class="fraction-img" alt="{element.title}" treatIdAsReference="1"
+</f:comment>
+</html>

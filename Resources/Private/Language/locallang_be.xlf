@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-10T14:22:23Z" product-name="fp_fractionslider">
+		<header/>
+		<body>
+			<trans-unit id="fpfractionslider-folder" xml:space="preserve">
+				<source>Professional slider</source>
+			</trans-unit>
+			<trans-unit id="title" xml:space="preserve">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="action" xml:space="preserve">
+				<source>Action</source>
+			</trans-unit>
+			<trans-unit id="pagelayoutview">
+				<source>Professional slider; settings:</source>
+			</trans-unit>
+			<trans-unit id="pagemodule.switchToPage">
+				<source>switch to page</source>
+			</trans-unit>
+			<trans-unit id="pagemodule.pageNotAvailable">
+				<source>page not available!</source>
+			</trans-unit>
+			<trans-unit id="template">
+				<source>HTML-Template:</source>
+			</trans-unit>
+			<trans-unit id="template.not_configured">
+				<source>no template layout selected!</source>
+			</trans-unit>
+			<trans-unit id="fractionslider" xml:space="preserve">
+				<source>FractionSlider</source>
+			</trans-unit>
+			<trans-unit id="sliderpro" xml:space="preserve">
+				<source>Slider Pro</source>
+			</trans-unit>
+			<trans-unit id="sliderrevolution" xml:space="preserve">
+				<source>Slider Revolution</source>
+			</trans-unit>
+			<trans-unit id="true" xml:space="preserve">
+				<source>true</source>
+			</trans-unit>
+			<trans-unit id="false" xml:space="preserve">
+				<source>false</source>
+			</trans-unit>
+			<trans-unit id="top" xml:space="preserve">
+				<source>top</source>
+			</trans-unit>
+			<trans-unit id="bottom" xml:space="preserve">
+				<source>bottom</source>
+			</trans-unit>
+			<trans-unit id="left" xml:space="preserve">
+				<source>left</source>
+			</trans-unit>
+			<trans-unit id="right" xml:space="preserve">
+				<source>right</source>
+			</trans-unit>
+			<trans-unit id="neither" xml:space="preserve">
+				<source>none / neither</source>
+			</trans-unit>
+			<trans-unit id="width" xml:space="preserve">
+				<source>Width in px, e.g. 1920</source>
+			</trans-unit>
+			<trans-unit id="height" xml:space="preserve">
+				<source>Height in px, e.g. 600</source>
+			</trans-unit>
+			<trans-unit id="slideTransition" xml:space="preserve">
+				<source>Slide transition, e.g. none</source>
+			</trans-unit>
+			<trans-unit id="slideTransitionSpeed" xml:space="preserve">
+				<source>Slide transition time [ms]</source>
+			</trans-unit>
+			<trans-unit id="slideEndAnimation" xml:space="preserve">
+				<source>Slide end animation: if set true, objects will transition out before next slide moves in</source>
+			</trans-unit>
+			<trans-unit id="transitionIn" xml:space="preserve">
+				<source>in - transition, e.g. left</source>
+			</trans-unit>
+			<trans-unit id="transitionOut" xml:space="preserve">
+				<source>out - transition, e.g. top</source>
+			</trans-unit>
+			<trans-unit id="fullWidth" xml:space="preserve">
+				<source>Transition over the full width of the window on/off</source>
+			</trans-unit>
+			<trans-unit id="delay" xml:space="preserve">
+				<source>Delay for elements [ms]</source>
+			</trans-unit>
+			<trans-unit id="timeout" xml:space="preserve">
+				<source>Timeout before switching slides [ms]</source>
+			</trans-unit>
+			<trans-unit id="speedIn" xml:space="preserve">
+				<source>in - transition speed [ms]</source>
+			</trans-unit>
+			<trans-unit id="speedOut" xml:space="preserve">
+				<source>out - transition speed [ms]</source>
+			</trans-unit>
+			<trans-unit id="easeIn" xml:space="preserve">
+				<source>Easing in, e.g. easeOutExpo</source>
+			</trans-unit>
+			<trans-unit id="easeOut" xml:space="preserve">
+				<source>Easing out, e.g. easeOutCubic</source>
+			</trans-unit>
+			<trans-unit id="controls" xml:space="preserve">
+				<source>Controls on/off</source>
+			</trans-unit>
+			<trans-unit id="pager" xml:space="preserve">
+				<source>Pager inside of the slider on/off</source>
+			</trans-unit>
+			<trans-unit id="autoChange" xml:space="preserve">
+				<source>Auto change slides on/off</source>
+			</trans-unit>
+			<trans-unit id="pauseOnHover" xml:space="preserve">
+				<source>Pauses slider on hover (current step will still be completed) on/off</source>
+			</trans-unit>
+			<trans-unit id="backgroundAnimation" xml:space="preserve">
+				<source>Background animation on/off</source>
+			</trans-unit>
+			<trans-unit id="backgroundElement" xml:space="preserve">
+				<source>Element to animate | default fractionSlider element</source>
+			</trans-unit>
+			<trans-unit id="backgroundX" xml:space="preserve">
+				<source>Background animation x distance</source>
+			</trans-unit>
+			<trans-unit id="backgroundY" xml:space="preserve">
+				<source>Background animation y distance</source>
+			</trans-unit>
+			<trans-unit id="backgroundSpeed" xml:space="preserve">
+				<source>Background animation speed [ms]</source>
+			</trans-unit>
+			<trans-unit id="backgroundEase" xml:space="preserve">
+				<source>Background animation easing, e.g. easeOutCubic</source>
+			</trans-unit>
+			<trans-unit id="responsive" xml:space="preserve">
+				<source>Responsive slider on/off</source>
+			</trans-unit>
+			<trans-unit id="increase" xml:space="preserve">
+				<source>Increase: if set, slider is allowed to get bigger than basic dimensions</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.width" xml:space="preserve">
+				<source>Width in px or %, e.g. 1920 or 100%</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.height" xml:space="preserve">
+				<source>Height in px or %, e.g. 600 or 50%</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.responsive" xml:space="preserve">
+				<source>Makes the slider responsive. 'width' and 'height' set: will act as the maximum width and height of the slides.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.aspectRatio" xml:space="preserve">
+				<source>Sets the aspect ratio of the slides.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.imageScaleMode" xml:space="preserve">
+				<source>Sets the scale mode of the main slide images (images added as background).</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.centerImage" xml:space="preserve">
+				<source>Indicates if the image will be centered.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.allowScaleUp" xml:space="preserve">
+				<source>Indicates if the image can be scaled up more than its original size.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoHeight" xml:space="preserve">
+				<source>Indicates if height of the slider will be adjusted to the height of the selected slide.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoSlideSize" xml:space="preserve">
+				<source>Will maintain all the slides at the same height...</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.startSlide" xml:space="preserve">
+				<source>Sets the slide that will be selected when the slider loads.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.shuffle" xml:space="preserve">
+				<source>Indicates if the slides will be shuffled.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.orientation" xml:space="preserve">
+				<source>Indicates whether the slides will be arranged horizontally or vertically.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.forceSize" xml:space="preserve">
+				<source>Indicates if the size of the slider will be forced to full width or full window.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.loop" xml:space="preserve">
+				<source>Indicates if the slider will be loopable (infinite scrolling).</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.slideDistance" xml:space="preserve">
+				<source>Sets the distance between the slides.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.slideAnimationDuration" xml:space="preserve">
+				<source>Sets the duration of the slide animation.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.heightAnimationDuration" xml:space="preserve">
+				<source>Sets the duration of the height animation.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.visibleSize" xml:space="preserve">
+				<source>Sets the size of the visible area, allowing for more slides to become visible near the selected slide.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.centerSelectedSlide" xml:space="preserve">
+				<source>Indicates whether the selected slide will be in the center [true] or the left [false] of the slider...</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.rightToLeft" xml:space="preserve">
+				<source>Indicates if the direction of the slider will be from right to left, instead of the default left to right.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fade" xml:space="preserve">
+				<source>Indicates if fade will be used.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeOutPreviousSlide" xml:space="preserve">
+				<source>Indicates if the previous slide will be faded out (in addition to the next slide being faded in).</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeDuration" xml:space="preserve">
+				<source>Sets the duration of the fade effect. [ms]</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplay" xml:space="preserve">
+				<source>Indicates whether or not autoplay will be enabled.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplayDelay" xml:space="preserve">
+				<source>Sets the delay/interval at which the autoplay will run. [ms]</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplayDirection" xml:space="preserve">
+				<source>Indicates whether autoplay will navigate to the next slide or previous slide.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoplayOnHover" xml:space="preserve">
+				<source>Indicates if the autoplay will be paused or stopped when the slider is hovered.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.arrows" xml:space="preserve">
+				<source>Indicates whether the arrow buttons will be created.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeArrows" xml:space="preserve">
+				<source>Indicates whether the arrows will fade in only on hover.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.buttons" xml:space="preserve">
+				<source>Indicates whether the buttons will be created.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.keyboard" xml:space="preserve">
+				<source>Indicates whether keyboard navigation will be enabled.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.keyboardOnlyOnFocus" xml:space="preserve">
+				<source>Indicates whether the slider will respond to keyboard input only when the slider is in focus.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.touchSwipe" xml:space="preserve">
+				<source>Indicates whether the touch swipe will be enabled for slides.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.touchSwipeThreshold" xml:space="preserve">
+				<source>Sets the minimum amount that the slides should move.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeCaption" xml:space="preserve">
+				<source>Indicates whether or not the captions will be faded.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.captionFadeDuration" xml:space="preserve">
+				<source>Sets the duration of the fade animation. [ms]</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fullScreen" xml:space="preserve">
+				<source>Indicates whether the full-screen button is enabled.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeFullScreen" xml:space="preserve">
+				<source>Indicates whether the button will fade in only on hover.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.waitForLayers" xml:space="preserve">
+				<source>Indicates whether the slider will wait for the layers to disappear before going to a new slide.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoScaleLayers" xml:space="preserve">
+				<source>Indicates whether the layers will be scaled automatically.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.autoScaleReference" xml:space="preserve">
+				<source>Sets a reference width which will be compared to the current slider width...</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.smallSize" xml:space="preserve">
+				<source>If the slider size is below this size, the small version of the images will be used.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.mediumSize" xml:space="preserve">
+				<source>If the slider size is below this size, the medium version of the images will be used.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.largeSize" xml:space="preserve">
+				<source>If the slider size is below this size, the large version of the images will be used.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.updateHash" xml:space="preserve">
+				<source>Indicates whether the hash will be updated when a new slide is selected.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.reachVideoAction" xml:space="preserve">
+				<source>Sets the action that the video will perform when its slide container is selected.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.leaveVideoAction" xml:space="preserve">
+				<source>Sets the action that the video will perform when another slide is selected.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.playVideoAction" xml:space="preserve">
+				<source>Sets the action that the slider will perform when the video starts playing.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.pauseVideoAction" xml:space="preserve">
+				<source>Sets the action that the slider will perform when the video is paused.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.endVideoAction" xml:space="preserve">
+				<source>Sets the action that the slider will perform when the video ends.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailWidth" xml:space="preserve">
+				<source>Sets the width of the thumbnail.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailHeight" xml:space="preserve">
+				<source>Sets the height of the thumbnail.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailsPosition" xml:space="preserve">
+				<source>Sets the position of the thumbnail scroller.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailPointer" xml:space="preserve">
+				<source>Indicates if a pointer will be displayed for the selected thumbnail.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailArrows" xml:space="preserve">
+				<source>Indicates whether the thumbnail arrows will be enabled.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.fadeThumbnailArrows" xml:space="preserve">
+				<source>Indicates whether the thumbnail arrows will be faded.</source>
+			</trans-unit>
+			<trans-unit id="sliderpro.thumbnailTouchSwipe" xml:space="preserve">
+				<source>Indicates whether the touch swipe will be enabled for thumbnails.</source>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.delay" xml:space="preserve">
+				<source>Duration for one slide [ms]</source>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.gridwidth" xml:space="preserve">
+				<source>Width of the grid [px]</source>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.gridheight" xml:space="preserve">
+				<source>Height of the grid [px]</source>
+			</trans-unit>
+			<trans-unit id="sliderrevolution.disableProgressBar" xml:space="preserve">
+				<source>Disable progress bar?</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

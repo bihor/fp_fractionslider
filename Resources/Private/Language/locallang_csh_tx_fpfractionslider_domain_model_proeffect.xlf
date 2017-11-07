@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-11T11:52:11Z" product-name="fp_fractionslider">
+		<header/>
+		<body>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1">
+				<source>Professional Slider-Plugin</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_pi1.description">
+				<source>Can be used with the "jQuery-FractionSlider", the "Professional jQuery Content Slider Plugin - Slider Pro" or the "Slider revolution".</source>
+			</trans-unit>
+			<trans-unit id="datawidth.description">
+				<source>Sets the width of the layer. Can be set to a fixed or percentage value (px or %).</source>
+			</trans-unit>
+			<trans-unit id="dataheight.description">
+				<source>Sets the height of the layer. Can be set to a fixed or percentage value (px or %).</source>
+			</trans-unit>
+			<trans-unit id="datadepth.description">
+				<source>Sets the depth (z-index, in CSS terms) of the layer</source>
+			</trans-unit>
+			<trans-unit id="dataposition.description">
+				<source>Sets the position of the layer</source>
+			</trans-unit>
+			<trans-unit id="datahorizontal.description">
+				<source>Sets the horizontal position of the layer, using the value specified for data-position as a reference point (px or %)</source>
+			</trans-unit>
+			<trans-unit id="datavertical.description">
+				<source>Sets the vertical position of the layer, using the value specified for data-position as a reference point (px or %)</source>
+			</trans-unit>
+			<trans-unit id="datashowtransition.description">
+				<source>Sets the transition of the layer when it appears in the slide</source>
+			</trans-unit>
+			<trans-unit id="datashowoffset.description">
+				<source>Sets an offset for the position of the layer from which the layer will be animated towards the final position when it appears in the slide</source>
+			</trans-unit>
+			<trans-unit id="datashowduration.description">
+				<source>Sets the duration of the show transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="datashowdelay.description">
+				<source>Sets a delay for the show transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="datahidetransition.description">
+				<source>Sets the transition of the layer when it disappears from the slide</source>
+			</trans-unit>
+			<trans-unit id="datahideoffset.description">
+				<source>Sets an offset for the position of the layer towards which the layer will be animated from the original position when it disappears from the slide</source>
+			</trans-unit>
+			<trans-unit id="datahideduration.description">
+				<source>Sets the duration of the hide transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="datahidedelay.description">
+				<source>Sets a delay for the hide transition [ms]</source>
+			</trans-unit>
+			<trans-unit id="datastayduration.description">
+				<source>Sets how much time a layer will stay visible before being hidden automatically [ms]</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

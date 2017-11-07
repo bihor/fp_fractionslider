@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-fp-fractionslider" >
+	<tr>
+		<td>
+			<f:translate key="tx_fpfractionslider_domain_model_slide.title" />
+		</td>
+		<td>
+		{slide.title}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_fpfractionslider_domain_model_slide.subtitle" />
+		</td>
+		<td>
+		{slide.subtitle}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_fpfractionslider_domain_model_slide.background" />
+		</td>
+		<td>
+				<f:image src="{slide.background.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_fpfractionslider_domain_model_slide.color" />
+		</td>
+		<td>
+		{slide.color}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_fpfractionslider_domain_model_slide.datain" />
+		</td>
+		<td>
+		{slide.datain}
+		</td>
+	</tr>
+</table>
+</html>
