@@ -1,0 +1,893 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    151,
+                    52
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+                        "fractionslider",
+                        "sliderpro",
+                        "sliderrevolution",
+                        "show"
+                    ]
+                },
+                "name": "Slide",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "Slide-element",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "206113585229"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Title of the slide",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": true,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "1014035425049"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Optional subtitle of this slide",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "subtitle",
+                            "propertyType": "String",
+                            "uid": "1014824572823"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Fixed background image",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "background",
+                            "propertyType": "Image",
+                            "uid": "1480405511789"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Or fixed background color",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "color",
+                            "propertyType": "String",
+                            "uid": "1241836642754"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-in attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datain",
+                            "propertyType": "Select",
+                            "uid": "313786528534"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "Slide-elements for this slide",
+                            "relationName": "elements",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "1131710020933"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    319,
+                    421
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "FracEffect",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "Fractionslider effect",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "168428905015"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-position attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataposition",
+                            "propertyType": "String",
+                            "uid": "151464407437"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-in attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datain",
+                            "propertyType": "Select",
+                            "uid": "670601846820"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-out attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataout",
+                            "propertyType": "Select",
+                            "uid": "793991546096"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-ease-in attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataeasein",
+                            "propertyType": "String",
+                            "uid": "383966306550"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-ease-out attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataeaseout",
+                            "propertyType": "String",
+                            "uid": "936096252941"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-delay attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datadelay",
+                            "propertyType": "String",
+                            "uid": "1324265969649"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-time attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datatime",
+                            "propertyType": "String",
+                            "uid": "285800698607"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-step attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datastep",
+                            "propertyType": "String",
+                            "uid": "746819335958"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-special attribute",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataspecial",
+                            "propertyType": "Select",
+                            "uid": "1039006927729"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    1143,
+                    50
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Cssclass",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": false,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "823558498482"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Name",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": true,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "uid": "452574712397"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Description",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "description",
+                            "propertyType": "String",
+                            "uid": "578668013855"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    648,
+                    408
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "ProEffect",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "Slider Pro effect",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "1470519587333"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the width of the layer",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datawidth",
+                            "propertyType": "String",
+                            "uid": "1337201821919"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the height of the layer",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataheight",
+                            "propertyType": "String",
+                            "uid": "903524190602"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the depth (z-index, in CSS terms) of the layer",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datadepth",
+                            "propertyType": "String",
+                            "uid": "207280995240"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the position of the layer",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataposition",
+                            "propertyType": "Select",
+                            "uid": "198563969834"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the horizontal position of the layer, using the value specified for data-position as a reference point",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datahorizontal",
+                            "propertyType": "String",
+                            "uid": "109486255642"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the vertical position of the layer, using the value specified for data-position as a reference point",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datavertical",
+                            "propertyType": "String",
+                            "uid": "1176054632081"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the transition of the layer when it appears in the slide",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datashowtransition",
+                            "propertyType": "Select",
+                            "uid": "450924864439"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets an offset for the position of the layer from which the layer will be animated towards the final position when it appears in the slide",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datashowoffset",
+                            "propertyType": "String",
+                            "uid": "1378182193209"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the duration of the show transition",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datashowduration",
+                            "propertyType": "String",
+                            "uid": "1440410942997"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets a delay for the show transition",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datashowdelay",
+                            "propertyType": "String",
+                            "uid": "1361234297941"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the transition of the layer when it disappears from the slide",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datahidetransition",
+                            "propertyType": "Select",
+                            "uid": "307693175560"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets an offset for the position of the layer towards which the layer will be animated from the original position when it disappears from the slide",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datahideoffset",
+                            "propertyType": "String",
+                            "uid": "229737141955"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets the duration of the hide transition",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datahideduration",
+                            "propertyType": "String",
+                            "uid": "103146181752"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets a delay for the hide transition",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datahidedelay",
+                            "propertyType": "String",
+                            "uid": "964594099217"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Sets how much time a layer will stay visible before being hidden automatically",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datastayduration",
+                            "propertyType": "String",
+                            "uid": "231318051904"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    929,
+                    390
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "RevEffect",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "Slider revolution effect",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "181376715622"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-x value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datax",
+                            "propertyType": "String",
+                            "uid": "1193052274389"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-y value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datay",
+                            "propertyType": "String",
+                            "uid": "516139052556"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-start value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datastart",
+                            "propertyType": "String",
+                            "uid": "659837351803"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-whitespace value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datawhitespace",
+                            "propertyType": "Select",
+                            "uid": "1071353407904"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-width value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datawidth",
+                            "propertyType": "String",
+                            "uid": "113708051288"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-height value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataheight",
+                            "propertyType": "String",
+                            "uid": "1190907510"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-hoffset value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datahoffset",
+                            "propertyType": "String",
+                            "uid": "970322285856"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-voffset value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "datavoffset",
+                            "propertyType": "String",
+                            "uid": "1313577552373"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-responsive_offset value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "dataresponsiveoffset",
+                            "propertyType": "Select",
+                            "uid": "924282586521"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "data-basealign value",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "databasealign",
+                            "propertyType": "Select",
+                            "uid": "946222454453"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    555,
+                    77
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Part",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "Part of a slide",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "601953451203"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Title of this element",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": true,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "1475597831362"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Optional subtitle of this element",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "subtitle",
+                            "propertyType": "String",
+                            "uid": "1155847665183"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Title of an optional link",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "linktitle",
+                            "propertyType": "String",
+                            "uid": "485329760531"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Link",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "link",
+                            "propertyType": "String",
+                            "uid": "1259851114607"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Image",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "image",
+                            "propertyType": "Image",
+                            "uid": "1447477160341"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Or: relation to a tt_content element",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "cettcontent",
+                            "propertyType": "String",
+                            "uid": "80271750384"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "CSS styles",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "cssstyles",
+                            "propertyType": "String",
+                            "uid": "1280715492062"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "CSS class",
+                            "relationName": "cssclass",
+                            "relationType": "manyToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "47284676213"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "fraction",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "732891479932"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "pro",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "1344339296541"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "revolution",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "517156591982"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Can be used with the \"jQuery-FractionSlider\", the \"Professional jQuery Content Slider Plugin - Slider Pro\" or the \"Slider revolution\".",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 7.6.0-7.6.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "beta",
+            "targetVersion": "7.6.0-7.6.99",
+            "version": "0.3.0"
+        },
+        "extensionKey": "fp_fractionslider",
+        "name": "Professional Slider-PlugIn",
+        "originalExtensionKey": "fp_fractionslider",
+        "originalVendorName": "Fixpunkt",
+        "persons": [
+            {
+                "company": "fixpunkt werbeagentur gmbH",
+                "email": "k.gusbeth@fixpunkt.com",
+                "name": "Kurt Gusbeth",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "key": "pi1",
+                "name": "Professional Slider-Plugin"
+            }
+        ],
+        "vendorName": "Fixpunkt"
+    },
+    "wires": [
+        {
+            "src": {
+                "moduleId": 5,
+                "terminal": "relationWire_0",
+                "uid": "47284676213"
+            },
+            "tgt": {
+                "moduleId": 2,
+                "terminal": "SOURCES",
+                "uid": "823558498482"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_0",
+                "uid": "1131710020933"
+            },
+            "tgt": {
+                "moduleId": 5,
+                "terminal": "SOURCES",
+                "uid": "601953451203"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 5,
+                "terminal": "relationWire_1",
+                "uid": "732891479932"
+            },
+            "tgt": {
+                "moduleId": 1,
+                "terminal": "SOURCES",
+                "uid": "168428905015"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 5,
+                "terminal": "relationWire_2",
+                "uid": "1344339296541"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "terminal": "SOURCES",
+                "uid": "1470519587333"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 5,
+                "terminal": "relationWire_3",
+                "uid": "517156591982"
+            },
+            "tgt": {
+                "moduleId": 4,
+                "terminal": "SOURCES",
+                "uid": "181376715622"
+            }
+        }
+    ],
+    "log": {
+        "last_modified": "2017-07-11 11:52",
+        "extension_builder_version": "7.6.18",
+        "be_user": " (1)"
+    }
+}
