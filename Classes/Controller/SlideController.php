@@ -46,26 +46,61 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $overrides = $settings['override'];
             unset($settings['override']);
             //$settings = array_merge($tsSettings, $overrides);	// übernimmt auch leere Werte :-(
-            foreach ($tsSettings['fractionslider.'] as $key => $value) {
-                if (!($overrides['fractionslider'][$key] === '' || $overrides['fractionslider'][$key] === NULL || $overrides['fractionslider'][$key] == '-')) {
-                    $settings['fractionslider'][$key] = $overrides['fractionslider'][$key];
-                } else {
-                    $settings['fractionslider'][$key] = $value;
-                }
+            if (is_array($tsSettings['fractionslider.'])) {
+	            foreach ($tsSettings['fractionslider.'] as $key => $value) {
+	                if (!($overrides['fractionslider'][$key] === '' || $overrides['fractionslider'][$key] === NULL || $overrides['fractionslider'][$key] == '-')) {
+	                    $settings['fractionslider'][$key] = $overrides['fractionslider'][$key];
+	                } else {
+	                    $settings['fractionslider'][$key] = $value;
+	                }
+	            }
             }
-            foreach ($tsSettings['sliderpro.'] as $key => $value) {
-                if (!($overrides['sliderpro'][$key] === '' || $overrides['sliderpro'][$key] === NULL || $overrides['sliderpro'][$key] == '-')) {
-                    $settings['sliderpro'][$key] = $overrides['sliderpro'][$key];
-                } else {
-                    $settings['sliderpro'][$key] = $value;
-                }
+            if (is_array($tsSettings['sliderpro.'])) {
+	            foreach ($tsSettings['sliderpro.'] as $key => $value) {
+	                if (!($overrides['sliderpro'][$key] === '' || $overrides['sliderpro'][$key] === NULL || $overrides['sliderpro'][$key] == '-')) {
+	                    $settings['sliderpro'][$key] = $overrides['sliderpro'][$key];
+	                } else {
+	                    $settings['sliderpro'][$key] = $value;
+	                }
+	            }
             }
-            foreach ($tsSettings['sliderrevolution.'] as $key => $value) {
-                if (!($overrides['sliderrevolution'][$key] === '' || $overrides['sliderrevolution'][$key] === NULL || $overrides['sliderrevolution'][$key] == '-')) {
-                    $settings['sliderrevolution'][$key] = $overrides['sliderrevolution'][$key];
-                } else {
-                    $settings['sliderrevolution'][$key] = $value;
-                }
+            if (is_array($tsSettings['sliderrevolution.'])) {
+	            foreach ($tsSettings['sliderrevolution.'] as $key => $value) {
+	                if (!($overrides['sliderrevolution'][$key] === '' || $overrides['sliderrevolution'][$key] === NULL || $overrides['sliderrevolution'][$key] == '-')) {
+	                    $settings['sliderrevolution'][$key] = $overrides['sliderrevolution'][$key];
+	                } else {
+	                    $settings['sliderrevolution'][$key] = $value;
+	                }
+	            }
+            }
+            if (is_array($tsSettings['more.'])) {
+	            foreach ($tsSettings['more.'] as $key => $value) {
+	                if ($overrides['more'][$key]) {
+	                    $settings['more'][$key] = $overrides['more'][$key];
+	                } else {
+	                    $settings['more'][$key] = $value;
+	                }
+	            }
+            }
+            if ($overrides['sortOrder'] == 'asc' || $overrides['sortOrder'] == 'desc') {
+            	$settings['sortOrder'] = $overrides['sortOrder'];
+            } else {
+            	$settings['sortOrder'] = $tsSettings['sortOrder'];
+            }
+            if ($overrides['limit'] > 0) {
+            	$settings['limit'] = $overrides['limit'];
+            } else {
+            	$settings['limit'] = $tsSettings['limit'];
+            }
+            if ($overrides['listId']) {
+            	$settings['listId'] = $overrides['listId'];
+            } else {
+            	$settings['listId'] = $tsSettings['listId'];
+            }
+            if ($overrides['showId']) {
+            	$settings['showId'] = $overrides['showId'];
+            } else {
+            	$settings['showId'] = $tsSettings['showId'];
             }
         }
         $this->settings = $settings;
@@ -78,7 +113,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function fractionsliderAction()
     {
-        $slides = $this->slideRepository->findAll();
+        $slides = $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']);
         $this->view->assign('slides', $slides);
         $this->view->assign('jsonSettings', json_encode($this->settings['fractionslider']));
     }
@@ -90,7 +125,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function sliderproAction()
     {
-        $slides = $this->slideRepository->findAll();
+        $slides = $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']);
         $this->view->assign('slides', $slides);
         $this->view->assign('jsonSettings', json_encode($this->settings['sliderpro']));
     }
@@ -102,7 +137,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function sliderrevolutionAction()
     {
-        $slides = $this->slideRepository->findAll();
+        $slides = $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']);
         $this->view->assign('slides', $slides);
         $this->settings['sliderrevolution']['delay'] = intval($this->settings['sliderrevolution']['delay']);
         $this->settings['sliderrevolution']['gridwidth'] = intval($this->settings['sliderrevolution']['gridwidth']);
@@ -110,6 +145,16 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $this->view->assign('jsonSettings', json_encode($this->settings['sliderrevolution']));
     }
 
+    /**
+     * action list
+     *
+     * @return void
+     */
+    public function listAction()
+    {
+    	$this->view->assign('slides', $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']));
+    }
+    
     /**
      * action show
      *
