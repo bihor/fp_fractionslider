@@ -114,7 +114,37 @@ class PageLayoutView
             $this->getStartingPoint($params['row']['pages']);
             
             if (is_array($this->flexformData)) {
-               if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['fp_fractionslider']['Fixpunkt\\FpFractionslider\\Hooks\\PageLayoutView']['extensionSummary'])) {
+            	$listPid = (int)$this->getFieldFromFlexform('settings.override.listId');
+            	if ($listPid > 0) {
+            		$content = $this->getRecordData($listPid);
+            		$this->tableData[] = [
+            				$this->getLanguageService()->sL(self::LLPATH . 'listId'),
+            				$content
+            		];
+            	}
+            	$detailPid = (int)$this->getFieldFromFlexform('settings.override.showId');
+            	if ($detailPid > 0) {
+            		$content = $this->getRecordData($detailPid);
+            		$this->tableData[] = [
+            				$this->getLanguageService()->sL(self::LLPATH . 'showId'),
+            				$content
+            		];
+            	}
+            	$sortOrder = $this->getFieldFromFlexform('settings.override.sortOrder');
+            	if ($sortOrder) {
+            		$this->tableData[] = [
+            				$this->getLanguageService()->sL(self::LLPATH . 'sortOrder'),
+            				$this->getLanguageService()->sL(self::LLPATH . 'sortOrder.' . $sortOrder)
+            		];
+            	}
+            	$limit = (int)$this->getFieldFromFlexform('settings.override.limit');
+            	if ($limit > 0) {
+            		$this->tableData[] = [
+            				$this->getLanguageService()->sL(self::LLPATH . 'limit'),
+            				$limit
+            		];
+            	}
+        		if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['fp_fractionslider']['Fixpunkt\\FpFractionslider\\Hooks\\PageLayoutView']['extensionSummary'])) {
                     $params = [
                         'action' => $actionTranslationKey
                     ];
