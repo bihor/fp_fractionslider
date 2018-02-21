@@ -18,6 +18,16 @@ plugin.tx_fpfractionslider_pi1 {
     #callDefaultActionIfActionCantBeResolved = 1
   }
   settings {
+	listId =
+	showId =
+	sortOrder = asc
+	limit =
+	more {
+		text1 =
+		text2 =
+		text3 =
+		textlink =
+	}
 	fractionslider {
 		slideTransition = none
 		slideTransitionSpeed = 1500
