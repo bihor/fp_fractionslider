@@ -36,6 +36,45 @@
 			<trans-unit id="sliderrevolution" xml:space="preserve">
 				<target>Slider Revolution</target>
 			</trans-unit>
+			<trans-unit id="listview" xml:space="preserve">
+				<target>Listen- und Einzelansicht</target>
+			</trans-unit>
+			<trans-unit id="singleview" xml:space="preserve">
+				<target>Nur Einzelansicht</target>
+			</trans-unit>
+			<trans-unit id="more" xml:space="preserve">
+				<target>Zusätzliches</target>
+			</trans-unit>
+			<trans-unit id="more.text1" xml:space="preserve">
+				<target>Text 1 für einen zusätzlichen Slide:</target>
+			</trans-unit>
+			<trans-unit id="more.text2" xml:space="preserve">
+				<target>Text 2 für einen zusätzlichen Slide:</target>
+			</trans-unit>
+			<trans-unit id="more.text3" xml:space="preserve">
+				<target>Text 3 für einen zusätzlichen Slide:</target>
+			</trans-unit>
+			<trans-unit id="more.textlink" xml:space="preserve">
+				<target>Text für einen Link (zu einer Listenansicht):</target>
+			</trans-unit>
+			<trans-unit id="sortOrder" xml:space="preserve">
+				<target>Standard-Sortier-Reihenfolge:</target>
+			</trans-unit>
+			<trans-unit id="sortOrder.asc" xml:space="preserve">
+				<target>Aufsteigend</target>
+			</trans-unit>
+			<trans-unit id="sortOrder.desc" xml:space="preserve">
+				<target>Absteigend</target>
+			</trans-unit>
+			<trans-unit id="limit" xml:space="preserve">
+				<target>Anzahl sichtbarer Elemente (SQL-Select-Parameter):</target>
+			</trans-unit>
+			<trans-unit id="listId" xml:space="preserve">
+				<target>Wo ist die Listenansicht-Seite (verwende {settings.listId} im Template)?</target>
+			</trans-unit>
+			<trans-unit id="showId" xml:space="preserve">
+				<target>Wo ist die Einzelansicht-Seite (verwende {settings.showId} im Template)?</target>
+			</trans-unit>
 			<trans-unit id="true" xml:space="preserve">
 				<target>true</target>
 			</trans-unit>

@@ -36,6 +36,45 @@
 			<trans-unit id="sliderrevolution" xml:space="preserve">
 				<source>Slider Revolution</source>
 			</trans-unit>
+			<trans-unit id="listview" xml:space="preserve">
+				<source>Listen- und Einzelansicht</source>
+			</trans-unit>
+			<trans-unit id="singleview" xml:space="preserve">
+				<source>Nur Einzelansicht</source>
+			</trans-unit>
+			<trans-unit id="more" xml:space="preserve">
+				<source>Additional</source>
+			</trans-unit>
+			<trans-unit id="more.text1" xml:space="preserve">
+				<source>Text 1 for an additional slide:</source>
+			</trans-unit>
+			<trans-unit id="more.text2" xml:space="preserve">
+				<source>Text 2 for an additional slide:</source>
+			</trans-unit>
+			<trans-unit id="more.text3" xml:space="preserve">
+				<source>Text 3 for an additional slide:</source>
+			</trans-unit>
+			<trans-unit id="more.textlink" xml:space="preserve">
+				<source>Text for the link (to the listview-page):</source>
+			</trans-unit>
+			<trans-unit id="sortOrder" xml:space="preserve">
+				<source>Default sort order:</source>
+			</trans-unit>
+			<trans-unit id="sortOrder.asc" xml:space="preserve">
+				<source>ascending</source>
+			</trans-unit>
+			<trans-unit id="sortOrder.desc" xml:space="preserve">
+				<source>descending</source>
+			</trans-unit>
+			<trans-unit id="limit" xml:space="preserve">
+				<source>Number of visible elements (SQL-select-parameter):</source>
+			</trans-unit>
+			<trans-unit id="listId" xml:space="preserve">
+				<source>Where is the list-page (you can use {settings.listId} in the template)?</source>
+			</trans-unit>
+			<trans-unit id="showId" xml:space="preserve">
+				<source>Where is the single-page (you can use {settings.showId} in the template)?</source>
+			</trans-unit>
 			<trans-unit id="true" xml:space="preserve">
 				<source>true</source>
 			</trans-unit>
