@@ -26,13 +26,136 @@
                 <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderrevolution</numIndex>
                 <numIndex index="1">Slide->sliderrevolution;Slide->show</numIndex>
             </numIndex>
+            <numIndex index="10">
+                <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:listview</numIndex>
+                <numIndex index="1">Slide->list;Slide->show</numIndex>
+            </numIndex>
+            <numIndex index="11">
+                <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:singleview</numIndex>
+                <numIndex index="1">Slide->show</numIndex>
+            </numIndex>
             </items>
           </config>
           </TCEforms>
           </switchableControllerActions>
+			<settings.override.sortOrder>
+				<TCEforms>
+					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sortOrder</label>
+					<config>
+					<type>select</type>
+					<items>
+					  <numIndex index="0">
+					      <numIndex index="0">TypoScript</numIndex>
+					      <numIndex index="1">0</numIndex>
+					  </numIndex>
+					  <numIndex index="1">
+					      <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sortOrder.asc</numIndex>
+					      <numIndex index="1">asc</numIndex>
+					  </numIndex>
+					  <numIndex index="2">
+					      <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sortOrder.desc</numIndex>
+					      <numIndex index="1">desc</numIndex>
+					  </numIndex>
+					  </items>
+					</config>
+				</TCEforms>
+			</settings.override.sortOrder>
+			<settings.override.limit>
+              <TCEforms>
+                <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:limit</label>
+                <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>5</max>
+                    <eval>trim</eval>
+                </config>
+              </TCEforms>
+			</settings.override.limit>
+			<settings.override.listId>
+				<TCEforms>
+					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:listId</label>
+	                <config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+						<show_thumbs>0</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.override.listId>
+			<settings.override.showId>
+				<TCEforms>
+					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:showId</label>
+	                <config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+						<show_thumbs>0</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.override.showId>
     </el>
    </ROOT>
   </sDEF>
+    <sMORE>
+      <ROOT>
+    	<TCEforms>
+          <sheetTitle>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+    	<el>
+			<settings.override.more.text1>
+              <TCEforms>
+                <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.text1</label>
+                <config>
+                    <type>input</type>
+                    <size>25</size>
+                    <max>255</max>
+                    <eval>trim</eval>
+                </config>
+              </TCEforms>
+			</settings.override.more.text1>
+			<settings.override.more.text2>
+              <TCEforms>
+                <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.text2</label>
+                <config>
+                    <type>input</type>
+                    <size>30</size>
+                    <max>255</max>
+                    <eval>trim</eval>
+                </config>
+              </TCEforms>
+			</settings.override.more.text2>
+			<settings.override.more.text3>
+              <TCEforms>
+                <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.text3</label>
+                <config>
+                    <type>input</type>
+                    <size>30</size>
+                    <max>255</max>
+                    <eval>trim</eval>
+                </config>
+              </TCEforms>
+			</settings.override.more.text3>
+			<settings.override.more.textlink>
+              <TCEforms>
+                <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.textlink</label>
+                <config>
+                    <type>input</type>
+                    <size>25</size>
+                    <max>100</max>
+                    <eval>trim</eval>
+                </config>
+              </TCEforms>
+			</settings.override.more.textlink>
+        </el>
+      </ROOT>
+    </sMORE>
     <sFRACTION>
       <ROOT>
     	<TCEforms>
