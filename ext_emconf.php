@@ -16,11 +16,11 @@ $EM_CONF[$_EXTKEY] = array (
   'category' => 'plugin',
   'author' => 'Kurt Gusbeth',
   'author_email' => 'k.gusbeth@fixpunkt.com',
-  'state' => 'beta',
+  'state' => 'stable',
   'uploadfolder' => false,
   'createDirs' => '',
   'clearCacheOnLoad' => 0,
-  'version' => '0.4.2',
+  'version' => '0.5.3',
   'constraints' => 
   array (
     'depends' => 

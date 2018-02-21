@@ -9,7 +9,7 @@ call_user_func(
             'Fixpunkt.FpFractionslider',
             'Pi1',
             [
-                'Slide' => 'fractionslider, sliderpro, sliderrevolution, show',
+                'Slide' => 'fractionslider, sliderpro, sliderrevolution, list, show',
                 'FracEffect' => 'list',
                 'Cssclass' => 'list',
                 'ProEffect' => 'list',
