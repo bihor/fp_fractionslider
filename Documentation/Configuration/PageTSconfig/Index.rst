@@ -37,3 +37,6 @@ Here an example to hide some fields:
 |img-7|
 
 *Image: you find this on the Ressources tab of a page*
+
+
+You have to use the table-name and column-name. The column-names for the different effects are: fraction, pro and revolution.

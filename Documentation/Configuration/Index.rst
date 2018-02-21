@@ -28,3 +28,4 @@ Configuration
 
    Typoscript-reference/Index
    PageTSconfig/Index
+   Additional/Index
