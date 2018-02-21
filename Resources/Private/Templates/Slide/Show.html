@@ -2,6 +2,18 @@
 <f:layout name="Default" />
 <f:section name="main">
 <f:flashMessages />
-empty till now
+<div class="row">
+  		<div class="col-xs-12 col-sm-3">
+  			<f:image src="{slide.background.uid}" treatIdAsReference="1" class="img-responsive" width="655" height="388c" />
+        	</div>
+        	<div class="col-xs-12 col-sm-9">
+        	<f:for each="{slide.elements}" as="element" iteration="iterator">
+         		<span class="headline"><f:if condition="{element.link}"><f:then><f:link.typolink parameter="{element.link}" title="{element.title}"><h4>{element.title}</h4></f:link.typolink>
+			</f:then><f:else><h4>{element.title}</h4></f:else></f:if></span>
+          	<p>{element.subtitle}</p>
+          	<f:if condition="{element.link}"><span class="more"><f:link.typolink parameter="{element.link}" title="{element.title}">{element.linktitle}</f:link.typolink></span></f:if>
+          </f:for>
+          </div>
+</div>
 </f:section>
 </html>
