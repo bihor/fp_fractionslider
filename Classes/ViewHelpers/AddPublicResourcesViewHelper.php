@@ -40,7 +40,8 @@ class AddPublicResourcesViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abst
 			return;
 		}
 		if (TYPO3_MODE === 'FE') {
-			$pageRenderer = $GLOBALS['TSFE']->getPageRenderer();
+			//$pageRenderer = $GLOBALS['TSFE']->getPageRenderer();
+			$pageRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
 		} else {
 			// wird noch nicht gebraucht
 		//	$doc = $this->getDocInstance();
