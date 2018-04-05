@@ -34,6 +34,7 @@ settings.limit                            int            Limit: how many entries
 settings.fractionslider.*                 array          Settings for the "jQuery-FractionSlider".
 settings.sliderpro.*                      array          Settings for the "Professional jQuery Content Slider Plugin - Slider Pro".
 settings.sliderrevolution.*               array          Settings for the "Slider revolution".
+settings.more.*                           array          Settings for an additional slide.
 ========================================  =============  =================================================================================  ===========
 
 Example

@@ -12,10 +12,10 @@ plugin.tx_fpfractionslider_pi1 {
     #recursive = 1
   }
   features {
-    #skipDefaultArguments = 1
+    skipDefaultArguments = 1
   }
   mvc {
-    #callDefaultActionIfActionCantBeResolved = 1
+    callDefaultActionIfActionCantBeResolved = 1
   }
   settings {
 	listId =
