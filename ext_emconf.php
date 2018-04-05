@@ -16,11 +16,12 @@ $EM_CONF[$_EXTKEY] = array (
   'category' => 'plugin',
   'author' => 'Kurt Gusbeth',
   'author_email' => 'k.gusbeth@fixpunkt.com',
+  'author_company' => 'fixpunkt.werbeagentur.gmbh',
   'state' => 'stable',
   'uploadfolder' => false,
   'createDirs' => '',
   'clearCacheOnLoad' => 0,
-  'version' => '0.5.3',
+  'version' => '0.5.4',
   'constraints' => 
   array (
     'depends' => 
@@ -34,6 +35,4 @@ $EM_CONF[$_EXTKEY] = array (
     array (
     ),
   ),
-  'clearcacheonload' => false,
-  'author_company' => NULL,
 );

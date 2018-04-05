@@ -111,7 +111,40 @@ class PageLayoutView
             		$td
             ];
 
-            $this->getStartingPoint($params['row']['pages']);
+            if (!empty($params['row']['pages'])) {
+            	$this->getStartingPoint($params['row']['pages']);
+            	
+            	$pageIds = GeneralUtility::intExplode(',', $params['row']['pages'], true);
+            	$sliders = [];
+            
+            	$i = 0;
+            	foreach ($pageIds as $id) {
+            		$res4 = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
+            				'uid, title',
+            				'tx_fpfractionslider_domain_model_slide',
+            				'pid=' . intval($id) . ' AND hidden=0 AND deleted=0');
+            		if ($GLOBALS['TYPO3_DB']->sql_num_rows($res4) > 0) {
+            			while($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res4)){
+		            		$i++;
+		            		$sliders[] = $row['title'];
+		            		if ($i >= self::SETTINGS_IN_PREVIEW) {
+		            			break;
+		            		}
+            			}
+            		}
+            		$GLOBALS['TYPO3_DB']->sql_free_result($res4);
+            		if ($i >= self::SETTINGS_IN_PREVIEW) {
+            			break;
+            		}
+            	}
+            	
+            	if ($i > 0) {
+            		$this->tableData[] = [
+            				'Slides:',
+            				implode('; ', $sliders)
+            		];
+            	}
+            }
             
             if (is_array($this->flexformData)) {
             	$listPid = (int)$this->getFieldFromFlexform('settings.override.listId');
@@ -212,23 +245,9 @@ class PageLayoutView
                 $pagesOut[] = $this->getRecordData($id, 'pages');
             }
 
-            $recursiveLevel = (int)$this->getFieldFromFlexform('settings.recursive');
-            $recursiveLevelText = '';
-            if ($recursiveLevel === 250) {
-                $recursiveLevelText = $this->getLanguageService()->sL('LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5');
-            } elseif ($recursiveLevel > 0) {
-                $recursiveLevelText = $this->getLanguageService()->sL('LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.' . $recursiveLevel);
-            }
-
-            if (!empty($recursiveLevelText)) {
-                $recursiveLevelText = '<br />' .
-                    htmlspecialchars($this->getLanguageService()->sL('LLL:EXT:lang/locallang_general.xlf:LGL.recursive')) . ' ' .
-                    $recursiveLevelText;
-            }
-
             $this->tableData[] = [
                 $this->getLanguageService()->sL('LLL:EXT:lang/locallang_general.php:LGL.startingpoint'),
-                implode(', ', $pagesOut) . $recursiveLevelText
+                implode(', ', $pagesOut)
             ];
         }
     }
