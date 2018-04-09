@@ -4,7 +4,6 @@ defined('TYPO3_MODE') || die('Access denied.');
 call_user_func(
     function($extKey)
 	{
-
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Fixpunkt.FpFractionslider',
             'Pi1',
@@ -26,31 +25,13 @@ call_user_func(
                 'Part' => ''
             ]
         );
-
-	// wizards
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-		'mod {
-			wizards.newContentElement.wizardItems.plugins {
-				elements {
-					pi1 {
-						icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/Fractionslider.svg
-						title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:tx_fp_fractionslider_domain_model_pi1
-						description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:tx_fp_fractionslider_domain_model_pi1.description
-						tt_content_defValues {
-							CType = list
-							list_type = fpfractionslider_pi1
-						}
-					}
-				}
-				show = *
-			}
-	   }'
-	);
     },
     $_EXTKEY
 );
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fp_fractionslider/Configuration/TSconfig/ContentElementWizard.txt">');
 
 // Page module hook - show flexform settings in page module
 // klappt noch nicht einwandfrei: 'No class named Fixpunkt\FpFractionslider\Hooks\PageLayoutView' (61 chars) in TYPO3 8
@@ -66,11 +47,11 @@ if (TYPO3_MODE === 'BE') {
 	
 	/** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
 	$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-	//	$iconRegistry->registerIcon(
-	//		'ext-fpreferenzen-wizard-icon',
-	//		\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-	//		['source' => 'EXT:fp_referenzen/Resources/Public/Icons/ce_wiz.gif']
-	//	);
+	$iconRegistry->registerIcon(
+		'ext-fpfractionslider-wizard-icon',
+		\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+		['source' => 'EXT:fp_fractionslider/Resources/Public/Icons/Fractionslider.svg']
+	);
 	$iconRegistry->registerIcon(
 		'ext-fpfractionslider-folder-icon',
 		\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,

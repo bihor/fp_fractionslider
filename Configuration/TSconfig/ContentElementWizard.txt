@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.plugins {
+	elements {
+		fp_fractionslider {
+			iconIdentifier = ext-fpfractionslider-wizard-icon
+			title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:tx_fp_fractionslider_domain_model_pi1
+			description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:tx_fp_fractionslider_domain_model_pi1.description
+			tt_content_defValues {
+				CType = list
+				list_type = fpfractionslider_pi1
+			}
+		}
+	}
+}
