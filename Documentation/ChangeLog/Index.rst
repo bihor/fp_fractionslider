@@ -26,6 +26,6 @@ Version     Changes
 0.5.0       Settings sortOrder, limit, listId and showId added. Slide-list-action added. 
 
             Bugfixing: CDATA removed (TYPO3 8 doesn´t like it - TYPO3 7 needs it sometimes).
-0.5.4       {settings.more.*} and additional-Flexforms added.
+0.6.0       {settings.more.*} and additional-Flexforms added.
             Slide preview to the page layout view added.
 ==========  =======================================================================================
