@@ -254,7 +254,7 @@ CREATE TABLE tx_fpfractionslider_domain_model_part (
 	linktitle varchar(255) DEFAULT '' NOT NULL,
 	link varchar(255) DEFAULT '' NOT NULL,
 	image int(11) unsigned NOT NULL default '0',
-	cettcontent varchar(255) DEFAULT '' NOT NULL,
+	cettcontent int(11) unsigned NOT NULL default '0',
 	cssstyles varchar(255) DEFAULT '' NOT NULL,
 	cssclass int(11) unsigned DEFAULT '0',
 	fraction int(11) unsigned DEFAULT '0' NOT NULL,

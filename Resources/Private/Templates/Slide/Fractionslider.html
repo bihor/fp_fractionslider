@@ -50,7 +50,7 @@ Now you can customise this template.
 					data-position="{f:if(condition: '{effekt.dataposition}', then: '{effekt.dataposition}', else: '100,100')}"
 					data-in="{f:if(condition: '{effekt.datain}', then: '{effekt.datainValue}', else: 'fade')}"
 					data-out="{f:if(condition: '{effekt.dataout}', then: '{effekt.dataoutValue}', else: 'fade')}" </f:for> >
-				<f:if condition="{element.cettcontent}">
+				<f:if condition="{element.cettcontent} > 0">
 				<f:then>
 					<re:Content uid="{element.cettcontent}" />
 				</f:then>

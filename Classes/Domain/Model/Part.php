@@ -58,7 +58,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Or: relation to a tt_content element
      *
-     * @var string
+     * @var integer
      */
     protected $cettcontent = '';
 
@@ -232,7 +232,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the cettcontent
      *
-     * @return string $cettcontent
+     * @return integer $cettcontent
      */
     public function getCettcontent()
     {
@@ -242,7 +242,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the cettcontent
      *
-     * @param string $cettcontent
+     * @param integer $cettcontent
      * @return void
      */
     public function setCettcontent($cettcontent)

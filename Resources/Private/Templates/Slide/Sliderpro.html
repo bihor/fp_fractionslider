@@ -45,7 +45,7 @@ Now you can customise this template. E.g. change the path to the transparent cle
 					{f:if(condition: '{effekt.datastayduration}', then: 'data-stay-duration="{effekt.datastayduration}"')} data-position="{f:if(condition: '{effekt.dataposition}', then: '{effekt.datapositionValue}', else: 'bottomLeft')}"
 					data-show-transition="{f:if(condition: '{effekt.datashowtransition}', then: '{effekt.datashowtransitionValue}', else: 'left')}"
 					data-hide-transition="{f:if(condition: '{effekt.datahidetransition}', then: '{effekt.datahidetransitionValue}', else: 'up')}" </f:for> >
-				<f:if condition="{element.cettcontent}">
+				<f:if condition="{element.cettcontent} > 0">
 				<f:then>
 					<re:Content uid="{element.cettcontent}" />
 				</f:then>

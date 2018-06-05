@@ -42,7 +42,7 @@ Note: you can use the Slider Revolution in other ways too (there are more ways t
 						<f:for each="{element.revolution}" as="effekt">{f:if(condition: '{effekt.datax}', then: 'data-x="{effekt.datax}"')}	{f:if(condition: '{effekt.datay}', then: 'data-y="{effekt.datay}"')} {f:if(condition: '{effekt.datastart}', then: 'data-start="{effekt.datastart}"')}
 	{f:if(condition: '{effekt.datawhitespace}', then: 'data-whitespace="{effekt.datawhitespaceValue}"')} {f:if(condition: '{effekt.datawidth}', then: 'data-width="{effekt.datawidth}"')} {f:if(condition: '{effekt.dataheight}', then: 'data-height="{effekt.dataheight}"')}
 						</f:for>	>
-						<f:if condition="{element.cettcontent}"><re:Content uid="{element.cettcontent}" /></f:if>
+						<f:if condition="{element.cettcontent} > 0"><re:Content uid="{element.cettcontent}" /></f:if>
 						<f:if condition="{element.linktitle}"><f:then>
 							{element.title} <f:link.typolink parameter="{element.link}" class="btn btn-default">{element.linktitle}</f:link.typolink>
 						</f:then><f:else><f:if condition="{element.link}"><f:then>

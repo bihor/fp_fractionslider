@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace re=Fixpunkt\FpFractionslider\ViewHelpers}
 <f:layout name="Default" />
 <f:comment>
 **Installation guide**
@@ -22,10 +23,17 @@ Now you can customise this template.
           	<div class="col-xs-12 col-sm-9">
           	<h4>{slide.title}<br>{slide.subtitle}</h4>
           	<f:for each="{slide.elements}" as="element" iteration="iterator">
-           		<p>{element.title}</p>
-            	<f:if condition="{element.subtitle}"><p>{element.subtitle}</p></f:if>
-            	<f:if condition="{element.link}"><span class="more"><f:link.typolink parameter="{element.link}" title="{element.title}">{element.linktitle}</f:link.typolink></span></f:if>
-            	<br><f:link.action action="show" arguments="{slide:slide}" title="{element.title}">Details</f:link.action>
+	          	<f:if condition="{element.cettcontent} > 0">
+				<f:then>
+					<re:Content uid="{element.cettcontent}" />
+				</f:then>
+				<f:else>
+	           		<p>{element.title}</p>
+	            	<f:if condition="{element.subtitle}"><p>{element.subtitle}</p></f:if>
+	            	<f:if condition="{element.link}"><span class="more"><f:link.typolink parameter="{element.link}" title="{element.title}">{element.linktitle}</f:link.typolink></span></f:if>
+	            	<br><f:link.action action="show" arguments="{slide:slide}" title="{element.title}">Details</f:link.action>
+            	</f:else>
+            	</f:if>
             </f:for>
             </div>
 		</div>
