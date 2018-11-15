@@ -28,5 +28,5 @@ Version     Changes
             Bugfixing: CDATA removed (TYPO3 8 doesn´t like it - TYPO3 7 needs it sometimes).
 0.6.0       {settings.more.*} and additional-Flexforms added.
             Slide preview to the page layout view added.
-0.6.1       cettcontent now as integer-field.
+0.6.2       cettcontent now as integer-field. Iconprovider was wrong.
 ==========  =======================================================================================

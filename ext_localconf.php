@@ -49,12 +49,12 @@ if (TYPO3_MODE === 'BE') {
 	$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 	$iconRegistry->registerIcon(
 		'ext-fpfractionslider-wizard-icon',
-		\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+	    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 		['source' => 'EXT:fp_fractionslider/Resources/Public/Icons/Fractionslider.svg']
 	);
 	$iconRegistry->registerIcon(
 		'ext-fpfractionslider-folder-icon',
-		\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+	    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 		['source' => 'EXT:fp_fractionslider/Resources/Public/Icons/ext-fpfractionslider-folder-tree.svg']
 	);
 }
