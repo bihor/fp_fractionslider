@@ -29,4 +29,5 @@ Version     Changes
 0.6.0       {settings.more.*} and additional-Flexforms added.
             Slide preview to the page layout view added.
 0.6.2       cettcontent now as integer-field. Iconprovider was wrong.
+0.6.3       Compatibility to jQuery 3.
 ==========  =======================================================================================
