@@ -20,16 +20,17 @@ class SlideRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     /**
      * @var array
      */
-    protected $defaultOrderings = array(
+    protected $defaultOrderings = [
         'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
-    );
+    ];
 
     /**
      * findAll ersetzen, wegen Sortierung und Limit
      * @param	string	$sortOrder	Sort order
      * @param	integer	$limit		Limit
      */
-    public function findAll($sortOrder = 'asc', $limit = 0) {
+    public function findAll($sortOrder = 'asc', $limit = 0)
+    {
 		$query = $this->createQuery();
 		if ($limit > 0) {
 			$query->setLimit(intval($limit));

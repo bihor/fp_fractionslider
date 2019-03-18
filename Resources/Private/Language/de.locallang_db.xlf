@@ -186,6 +186,30 @@
 			<trans-unit id="tx_fpfractionslider_domain_model_part.revolution">
 				<target>Slider Revolution Effekte</target>
 			</trans-unit>
+			<trans-unit id="LGL.language">
+				<target>Sprache</target>
+			</trans-unit>
+			<trans-unit id="LGL.allLanguages">
+				<target>Alle Sprachen</target>
+			</trans-unit>
+			<trans-unit id="LGL.l18n_parent">
+				<target>Parent</target>
+			</trans-unit>
+			<trans-unit id="LGL.versionLabel">
+				<target>Version</target>
+			</trans-unit>
+			<trans-unit id="LGL.hidden">
+				<target>Verbergen?</target>
+			</trans-unit>
+			<trans-unit id="labels.enabled">
+				<target>ja</target>
+			</trans-unit>
+			<trans-unit id="LGL.starttime">
+				<target>Start</target>
+			</trans-unit>
+			<trans-unit id="LGL.endtime">
+				<target>Stopp</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -1,0 +1,35 @@
+{
+	"name" : "fixpunkt/fp-fractionslider",
+	"type" : "typo3-cms-extension",
+	"description" : "Can be used with the \"jQuery-FractionSlider\", the \"Professional jQuery Content Slider Plugin - Slider Pro\" or the \"Slider revolution\".",
+	"authors" : [{
+			"name" : "Kurt Gusbeth",
+			"role" : "Developer"
+		}
+	],
+	"version" : "1.0.0",
+	"require" : {
+		"typo3/cms-core" : ">8.7.7"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Fixpunkt\\FpFractionslider\\" : "Classes"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Fixpunkt\\FpFractionslider\\Tests\\" : "Tests"
+		}
+	},
+	"replace" : {
+		"fp_fractionslider" : "self.version",
+		"typo3-ter/fp-fractionslider" : "self.version"
+	},
+	"support" : {
+		"email" : "info@quizpalme.de"
+	},
+	"homepage" : "https://www.fixpunkt.com/webentwicklung/typo3/typo3-extensions",
+	"keywords" : [
+		"slider"
+	]
+}

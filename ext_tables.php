@@ -2,7 +2,7 @@
 defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
-    function($extKey)
+    function()
     {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_fpfractionslider_domain_model_slide', 'EXT:fp_fractionslider/Resources/Private/Language/locallang_csh_tx_fpfractionslider_domain_model_slide.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_fpfractionslider_domain_model_slide');
@@ -21,7 +21,6 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_fpfractionslider_domain_model_part', 'EXT:fp_fractionslider/Resources/Private/Language/locallang_csh_tx_fpfractionslider_domain_model_part.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_fpfractionslider_domain_model_part');
-    },
-    $_EXTKEY
+    }
 );
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
