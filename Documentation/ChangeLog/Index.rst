@@ -32,5 +32,8 @@ Version     Changes
 0.6.3       Compatibility to jQuery 3.
 1.0.0       Now for TYPO3 8 and 9.
 
-            TypoScript plugin.tx_fpfractionslider_pi1 renamed to plugin.tx_fpfractionslider.
+            TypoScript-setup plugin.tx_fpfractionslider_pi1 renamed to plugin.tx_fpfractionslider.
+            Note: you need to rename your TypoScript-setup-settings in some cases too.
+            I did this because TYPO3 8 ignores the "Record Storage Page" when
+            plugin.tx_fpfractionslider_pi1.persistence.storagePid is empty (or set)! 
 ==========  =======================================================================================

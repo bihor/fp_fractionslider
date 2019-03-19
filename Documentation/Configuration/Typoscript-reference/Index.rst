@@ -54,9 +54,9 @@ Here some TypoScript setup example:
 
 ::
 
-   plugin.tx_fpfractionslider_pi1.persistence.storagePid >
-   plugin.tx_fpfractionslider_pi1.persistence.storagePid = 603
-   plugin.tx_fpfractionslider_pi1.settings.limit = 10
-   plugin.tx_fpfractionslider_pi1.settings.fractionslider.timeout = 3000
+   plugin.tx_fpfractionslider.persistence.storagePid >
+   plugin.tx_fpfractionslider.persistence.storagePid = 603
+   plugin.tx_fpfractionslider.settings.limit = 10
+   plugin.tx_fpfractionslider.settings.fractionslider.timeout = 3000
 
 Note: visit the homepage of the slider plugin to understand the settings of each slider.

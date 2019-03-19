@@ -119,7 +119,7 @@ class PageLayoutView
             	$sliders = [];
             
             	$i = 0;
-            	foreach ($pageIds as $id) {
+            	foreach ($pageIds as $pid) {
             		//$sliderRecords = BackendUtilityCore::getRecordsByField('tx_fpfractionslider_domain_model_slide', 'pid', $id);
             		$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_fpfractionslider_domain_model_slide');
             		/*$queryBuilder->getRestrictions()
@@ -132,7 +132,7 @@ class PageLayoutView
 	            		->where(
 	            			$queryBuilder->expr()->eq(
 	            				'pid',
-	            				intval($id)
+	            				$queryBuilder->createNamedParameter($pid, \PDO::PARAM_INT)
 	            			)
 	            		)
 	            		->setMaxResults(self::SETTINGS_IN_PREVIEW)

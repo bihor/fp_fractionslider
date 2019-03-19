@@ -39,7 +39,11 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $this->configurationManager = $configurationManager;
         $tsSettings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
-        $tsSettings = $tsSettings['plugin.']['tx_fpfractionslider_pi1.']['settings.'];
+        $tsSettings		= $tsSettings['plugin.']['tx_fpfractionslider.']['settings.'];
+        $tsSettings_pi1 = $tsSettings['plugin.']['tx_fpfractionslider_pi1.']['settings.'];
+        if (is_array($tsSettings_pi1)) {
+        	$tsSettings = array_merge($tsSettings, $tsSettings_pi1);
+        }
         $settings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS);
         //var_dump($tsSettings);
         if (isset($settings['override']) && is_array($settings['override'])) {
