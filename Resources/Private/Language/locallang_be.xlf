@@ -357,6 +357,9 @@
 			<trans-unit id="sliderrevolution.disableProgressBar" xml:space="preserve">
 				<source>Disable progress bar?</source>
 			</trans-unit>
+			<trans-unit id="LGL.startingpoint" xml:space="preserve">
+				<source>Startingpoint:</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

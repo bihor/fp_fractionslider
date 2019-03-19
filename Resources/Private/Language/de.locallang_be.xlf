@@ -357,6 +357,9 @@
 			<trans-unit id="sliderrevolution.disableProgressBar" xml:space="preserve">
 				<target>Fortschrittsbalken ausschalten?</target>
 			</trans-unit>
+			<trans-unit id="LGL.startingpoint" xml:space="preserve">
+				<target>Ordner:</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

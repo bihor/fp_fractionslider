@@ -12,15 +12,17 @@ namespace Fixpunkt\FpFractionslider\Hooks;
  * LICENSE.txt file that was distributed with this source code.
  *
  * The TYPO3 project - inspiring people to share!
- * Alternative:
+ * Variante aus tx_news. Alternative:
  * http://www.npostnik.de/typo3/vorschau-von-plugin-einstellungen-im-backend-in-typo3/
  */
 use TYPO3\CMS\Backend\Utility\BackendUtility as BackendUtilityCore;
 use TYPO3\CMS\Core\Imaging\Icon;
 use TYPO3\CMS\Core\Imaging\IconFactory;
+use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Database\Query\Restriction\BackendWorkspaceRestriction;
+use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Type\Bitmask\Permission;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
@@ -78,10 +80,9 @@ class PageLayoutView
      * Returns information about this extension's pi1 plugin
      *
      * @param array $params Parameters to the hook
-	 * @param	object		$pObj	A reference to calling object
      * @return string Information about pi1 plugin
      */
-    public function getExtensionSummary($params, &$pObj) {
+    public function getExtensionSummary(array $params) {
         $actionTranslationKey = $result = '';
 
         $header = '<strong>' . $this->getLanguageService()->sL(self::LLPATH . 'pagelayoutview') . '</strong>';
@@ -119,20 +120,33 @@ class PageLayoutView
             
             	$i = 0;
             	foreach ($pageIds as $id) {
-            		$res4 = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
-            				'uid, title',
-            				'tx_fpfractionslider_domain_model_slide',
-            				'pid=' . intval($id) . ' AND hidden=0 AND deleted=0');
-            		if ($GLOBALS['TYPO3_DB']->sql_num_rows($res4) > 0) {
-            			while($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res4)){
-		            		$i++;
-		            		$sliders[] = $row['title'];
-		            		if ($i >= self::SETTINGS_IN_PREVIEW) {
-		            			break;
-		            		}
-            			}
+            		//$sliderRecords = BackendUtilityCore::getRecordsByField('tx_fpfractionslider_domain_model_slide', 'pid', $id);
+            		$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_fpfractionslider_domain_model_slide');
+            		/*$queryBuilder->getRestrictions()
+            		->removeAll()
+            		->add(GeneralUtility::makeInstance(DeletedRestriction::class))
+            		->add(GeneralUtility::makeInstance(BackendWorkspaceRestriction::class));
+            		*/
+            		$sliderRecords = $queryBuilder->select('title')
+	            		->from('tx_fpfractionslider_domain_model_slide')
+	            		->where(
+	            			$queryBuilder->expr()->eq(
+	            				'pid',
+	            				intval($id)
+	            			)
+	            		)
+	            		->setMaxResults(self::SETTINGS_IN_PREVIEW)
+	            		->execute()
+	            		->fetchAll();
+            		if ($sliderRecords !== false) {
+	            		foreach ($sliderRecords as $row) {
+			            	$i++;
+			            	$sliders[] = implode(",", $row); //['title'];
+			            	if ($i >= self::SETTINGS_IN_PREVIEW) {
+			            		break;
+			            	}
+	            		}
             		}
-            		$GLOBALS['TYPO3_DB']->sql_free_result($res4);
             		if ($i >= self::SETTINGS_IN_PREVIEW) {
             			break;
             		}
@@ -193,6 +207,8 @@ class PageLayoutView
     }
 
     /**
+     * Daten zu einer Seite
+     * 
      * @param int $id
      * @param string $table
      * @return string
@@ -220,8 +236,7 @@ class PageLayoutView
                 $content .= $linkTitle;
             }
         } else {
-            $text = sprintf($this->getLanguageService()->sL(self::LLPATH . 'pagemodule.pageNotAvailable'),
-                $id);
+            $text = sprintf($this->getLanguageService()->sL(self::LLPATH . 'pagemodule.pageNotAvailable'), $id);
             $content = $this->generateCallout($text);
         }
 
@@ -246,7 +261,7 @@ class PageLayoutView
             }
 
             $this->tableData[] = [
-                $this->getLanguageService()->sL('LLL:EXT:lang/locallang_general.php:LGL.startingpoint'),
+            	$this->getLanguageService()->sL(self::LLPATH . 'LGL.startingpoint'),
                 implode(', ', $pagesOut)
             ];
         }
@@ -275,7 +290,7 @@ class PageLayoutView
     {
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
       //  $pageRenderer->loadRequireJsModule('TYPO3/CMS/fp_fractionslider/PageLayout');
-        $pageRenderer->addCssFile(ExtensionManagementUtility::extRelPath('fp_fractionslider') . 'Resources/Public/css/PageLayoutView.css');
+        $pageRenderer->addCssFile('EXT:fp_fractionslider/Resources/Public/css/PageLayoutView.css');
 
         $view = GeneralUtility::makeInstance(StandaloneView::class);
         $view->setTemplatePathAndFilename(GeneralUtility::getFileAbsFileName('EXT:fp_fractionslider/Resources/Private/Templates/Backend/PageLayoutView.html'));

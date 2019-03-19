@@ -1,4 +1,4 @@
-plugin.tx_fpfractionslider_pi1 {
+plugin.tx_fpfractionslider {
   view {
     templateRootPaths.0 = EXT:fp_fractionslider/Resources/Private/Templates/
     templateRootPaths.1 = {$plugin.tx_fpfractionslider_pi1.view.templateRootPath}

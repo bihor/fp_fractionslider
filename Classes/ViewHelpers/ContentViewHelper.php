@@ -1,26 +1,46 @@
 <?php
 namespace Fixpunkt\FpFractionslider\ViewHelpers;
- 
+
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+
 /**
  * ViewHelper zur Rückgabe eines geparsten tt_content Elementes
  */
  
-class ContentViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class ContentViewHelper extends AbstractViewHelper
 {
-    /**
-     * Parse content element
-     *
-     * @param    int           UID des Content Element
-     * @return   string        Geparstes Content Element
-     */
-    public function render($uid)
-    {
-        $conf = array( // config
-            'tables' => 'tt_content',
-            'source' => intval($uid),
-            'dontCheckPid' => 1
-        );
-        return $this->objectManager->get('TYPO3\CMS\Frontend\ContentObject\RecordsContentObject')->render($conf);
-    }
+	use CompileWithRenderStatic;
+	
+	protected $escapeOutput = false;
+	
+	public function initializeArguments()
+	{
+		$this->registerArgument('uid', 'integer', 'UID des Content Element', true);
+	}
+	
+	/**
+	 * Parse content element
+	 * 
+	 * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param RenderingContextInterface $renderingContext
+	 * @return   string        Geparstes Content Element
+	 */
+	public static function renderStatic(
+		array $arguments,
+		\Closure $renderChildrenClosure,
+		RenderingContextInterface $renderingContext
+		) {
+		$uid = $arguments['uid'];
+		$conf = array( // config
+			'tables' => 'tt_content',
+			'source' => intval($uid),
+			'dontCheckPid' => 1
+		);
+		$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+		return $objectManager->get('TYPO3\CMS\Frontend\ContentObject\RecordsContentObject')->render($conf);
+	}
 }
 ?>

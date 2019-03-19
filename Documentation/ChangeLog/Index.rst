@@ -30,4 +30,7 @@ Version     Changes
             Slide preview to the page layout view added.
 0.6.2       cettcontent now as integer-field. Iconprovider was wrong.
 0.6.3       Compatibility to jQuery 3.
+1.0.0       Now for TYPO3 8 and 9.
+
+            TypoScript plugin.tx_fpfractionslider_pi1 renamed to plugin.tx_fpfractionslider.
 ==========  =======================================================================================
