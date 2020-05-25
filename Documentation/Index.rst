@@ -29,7 +29,7 @@ FractionSlider
 		slider,fraction,professional
 
 	:Copyright:
-		2018
+		2020
 
 	:Author:
 		Kurt Gusbeth

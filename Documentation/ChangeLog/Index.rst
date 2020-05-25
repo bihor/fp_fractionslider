@@ -35,5 +35,6 @@ Version     Changes
             TypoScript-setup plugin.tx_fpfractionslider_pi1 renamed to plugin.tx_fpfractionslider.
             Note: you need to rename your TypoScript-setup-settings in some cases too.
             I did this because TYPO3 8 ignores the "Record Storage Page" when
-            plugin.tx_fpfractionslider_pi1.persistence.storagePid is empty (or set)! 
+            plugin.tx_fpfractionslider_pi1.persistence.storagePid is empty (or set)!
+1.1.0       Version for TYPO3 9 and 10.
 ==========  =======================================================================================

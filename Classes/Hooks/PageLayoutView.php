@@ -340,11 +340,16 @@ class PageLayoutView
     protected function getEditLink($row, $currentPageUid)
     {
         $editLink = '';
+        //$uriBuilder = GeneralUtility::makeInstance(UriBuilder::class);
+        //$objectManager = GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\ObjectManager\ObjectManager::class);
+        //$objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+        //$uriBuilder = $objectManager->get(\TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder::class);
+        $uriBuilder = GeneralUtility::makeInstance('TYPO3\CMS\Backend\Routing\UriBuilder');
         $localCalcPerms = $GLOBALS['BE_USER']->calcPerms(BackendUtilityCore::getRecord('pages', $row['uid']));
         $permsEdit = $localCalcPerms & Permission::PAGE_EDIT;
         if ($permsEdit) {
-            $returnUrl = BackendUtilityCore::getModuleUrl('web_layout', ['id' => $currentPageUid]);
-            $editLink = BackendUtilityCore::getModuleUrl('web_layout', [
+            $returnUrl = $uriBuilder->buildUriFromRoute('web_layout', ['id' => $currentPageUid]);
+            $editLink = $uriBuilder->buildUriFromRoute('web_layout', [
                 'id' => $row['uid'],
                 'returnUrl' => $returnUrl
             ]);

@@ -21,7 +21,7 @@ class FracEffectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      * fracEffectRepository
      *
      * @var \Fixpunkt\FpFractionslider\Domain\Repository\FracEffectRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $fracEffectRepository = null;
 

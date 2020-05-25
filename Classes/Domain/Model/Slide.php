@@ -21,7 +21,7 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Title of the slide
      *
      * @var string
-     * @validate NotEmpty
+     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $title = '';
 
@@ -36,7 +36,7 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Fixed background image
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $background = null;
 
@@ -58,7 +58,7 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Slide-elements for this slide
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\Part>
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $elements = null;
 

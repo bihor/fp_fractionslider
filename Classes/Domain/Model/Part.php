@@ -21,7 +21,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Title of this element
      *
      * @var string
-     * @validate NotEmpty
+     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $title = '';
 
@@ -29,7 +29,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Optional subtitle of this element
      *
      * @var string
-     * @validate NotEmpty
+     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $subtitle = '';
 
@@ -51,7 +51,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Image
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $image = null;
 
@@ -80,7 +80,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * fraction
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\FracEffect>
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $fraction = null;
 
@@ -88,7 +88,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * pro
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\ProEffect>
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $pro = null;
 
@@ -96,7 +96,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * revolution
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\RevEffect>
-     * @cascade remove
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $revolution = null;
 

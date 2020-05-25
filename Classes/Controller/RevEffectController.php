@@ -21,7 +21,7 @@ class RevEffectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * revEffectRepository
      *
      * @var \Fixpunkt\FpFractionslider\Domain\Repository\RevEffectRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $revEffectRepository = null;
 

@@ -21,7 +21,7 @@ class CssclassController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * cssclassRepository
      *
      * @var \Fixpunkt\FpFractionslider\Domain\Repository\CssclassRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $cssclassRepository = null;
 

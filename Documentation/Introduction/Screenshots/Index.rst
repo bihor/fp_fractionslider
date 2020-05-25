@@ -21,9 +21,9 @@ Screenshots
 
 - Demos:
 
-  jQuery-FractionSlider: http://www.quizpalme.de/foto-galerien/die-besten-museen.html
+  jQuery-FractionSlider: http://www.quizpalme.de/foto-galerien/die-besten-museen
 
-  Professional jQuery Content Slider Plugin - Slider Pro: http://www.quizpalme.de/foto-galerien/die-besten-aquarien.html
+  Professional jQuery Content Slider Plugin - Slider Pro: http://www.quizpalme.de/foto-galerien/die-besten-aquarien
 
 - Some visual impressions:
 
