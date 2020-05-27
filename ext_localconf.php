@@ -46,6 +46,5 @@ call_user_func(
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fp_fractionslider/Configuration/TSconfig/ContentElementWizard.txt">');
 
 // Page module hook - show flexform settings in page module
-// klappt noch nicht einwandfrei: 'No class named Fixpunkt\FpFractionslider\Hooks\PageLayoutView' (61 chars) in TYPO3 8
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['list_type_Info']['fpfractionslider_pi1']['fp_fractionslider'] =
 	\Fixpunkt\FpFractionslider\Hooks\PageLayoutView::class . '->getExtensionSummary';

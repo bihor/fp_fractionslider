@@ -18,7 +18,9 @@ Now you can customise this template.
 	<f:for each="{slides}" as="slide">
 		<div class="row">
     		<div class="col-xs-12 col-sm-3">
+    		<f:if condition="{slide.background.uid}">
     			<f:image src="{slide.background.uid}" treatIdAsReference="1" class="img-responsive" width="655" height="388c" />
+    		</f:if>
           	</div>
           	<div class="col-xs-12 col-sm-9">
           	<h4>{slide.title}<br>{slide.subtitle}</h4>

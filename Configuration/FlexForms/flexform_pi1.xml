@@ -13,6 +13,7 @@
           <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:action</label>
           <config>
           <type>select</type>
+          <renderType>selectSingle</renderType>
           <items>
             <numIndex index="0">
                 <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:fractionslider</numIndex>
@@ -43,6 +44,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sortOrder</label>
 					<config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -213,6 +215,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:slideEndAnimation</label>
 	                <config>
 					<type>select</type>
+         			<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -257,6 +260,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:fullWidth</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -345,6 +349,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:controls</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -367,6 +372,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:pager</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -389,6 +395,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:autoChange</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -411,6 +418,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:pauseOnHover</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -433,6 +441,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:backgroundAnimation</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -510,6 +519,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:responsive</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -532,6 +542,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:increase</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -587,6 +598,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.responsive</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -620,6 +632,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.imageScaleMode</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -650,6 +663,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.centerImage</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -672,6 +686,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.allowScaleUp</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -694,6 +709,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoHeight</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -716,6 +732,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoSlideSize</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -749,6 +766,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.shuffle</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -771,6 +789,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.orientation</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -793,6 +812,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.forceSize</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -819,6 +839,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.loop</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -885,6 +906,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.centerSelectedSlide</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -907,6 +929,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.rightToLeft</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -929,6 +952,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fade</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -951,6 +975,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeOutPreviousSlide</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -984,6 +1009,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoplay</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1017,6 +1043,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoplayDirection</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1039,6 +1066,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoplayOnHover</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1065,6 +1093,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.arrows</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1087,6 +1116,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeArrows</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1109,6 +1139,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.buttons</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1131,6 +1162,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.keyboard</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1153,6 +1185,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.keyboardOnlyOnFocus</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1175,6 +1208,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.touchSwipe</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1208,6 +1242,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeCaption</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1241,6 +1276,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fullScreen</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1263,6 +1299,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeFullScreen</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1285,6 +1322,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.waitForLayers</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1307,6 +1345,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoScaleLayers</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1373,6 +1412,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.updateHash</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1395,6 +1435,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.reachVideoAction</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1417,6 +1458,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.leaveVideoAction</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1447,6 +1489,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.playVideoAction</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1469,6 +1512,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.pauseVideoAction</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1491,6 +1535,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.endVideoAction</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1543,6 +1588,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailsPosition</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1573,6 +1619,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailPointer</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1595,6 +1642,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailArrows</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1617,6 +1665,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeThumbnailArrows</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1639,6 +1688,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailTouchSwipe</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>
@@ -1705,6 +1755,7 @@
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderrevolution.disableProgressBar</label>
 	                <config>
 					<type>select</type>
+					<renderType>selectSingle</renderType>
 					<items>
 					  <numIndex index="0">
 					      <numIndex index="0">TypoScript</numIndex>

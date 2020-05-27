@@ -60,3 +60,5 @@ Here some TypoScript setup example:
    plugin.tx_fpfractionslider.settings.fractionslider.timeout = 3000
 
 Note: visit the homepage of the slider plugin to understand the settings of each slider.
+
+Note: you will find an installtion guide in each HTML-template in typo3conf/ext/fp_fractionslider/Resources/Private/Templates/Slide/
