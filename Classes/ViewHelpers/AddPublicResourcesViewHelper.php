@@ -71,7 +71,8 @@ class AddPublicResourcesViewHelper extends AbstractViewHelper
                 if ($addSlash && substr($path,0,1) != '/') {
                     $path = '/' . $path;
                 }
-                if ($path === '' || ($addSlash && !file_exists($basis . $path))) {
+                $slash = (substr($path, 0, 1) != '/') ? '/' : '';
+                if ($path === '' || !file_exists($basis . $slash . $path)) {
                     //echo " not found: $basis$path ";
                     return;
                 }
