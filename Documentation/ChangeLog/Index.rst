@@ -37,7 +37,9 @@ Version     Changes
             I did this because TYPO3 8 ignores the "Record Storage Page" when
             plugin.tx_fpfractionslider_pi1.persistence.storagePid is empty (or set)!
 1.1.0       Version for TYPO3 9 and 10.
-1.1.3       addSlash-parameter in the Viewhelper activated. Default value: true.
+1.1.4       addSlash-parameter in the Viewhelper activated. Default value: true.
+
+            extension-key added to composer.json.
 
             Bugfix for TYPO3 10: image appearance in the BE.
 ==========  =======================================================================================
