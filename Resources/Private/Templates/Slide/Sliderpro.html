@@ -27,6 +27,66 @@ Now you can customise this template. E.g. change the path to the transparent cle
 <re:addPublicResources path="fileadmin/bsdist/theme/js/Professional-jQuery-Content-Slider-Plugin-Slider-Pro/dist/css/slider-pro.min.css"></re:addPublicResources>
 <re:addPublicResources path="fileadmin/bsdist/theme/js/Professional-jQuery-Content-Slider-Plugin-Slider-Pro/dist/js/jquery.sliderPro.min.js" compress="FALSE" footer="TRUE"></re:addPublicResources>
 
+<script type="text/javascript">
+	var pro_width = '{settings.sliderpro.width}';
+	var pro_height = '{settings.sliderpro.height}';
+	var pro_responsive = {settings.sliderpro.responsive};
+	var pro_aspectRatio = {settings.sliderpro.aspectRatio};
+	var pro_imageScaleMode = '{settings.sliderpro.imageScaleMode}';
+	var pro_centerImage = {settings.sliderpro.centerImage};
+	var pro_allowScaleUp = {settings.sliderpro.allowScaleUp};
+	var pro_autoHeight = {settings.sliderpro.autoHeight};
+	var pro_autoSlideSize = {settings.sliderpro.autoSlideSize};
+	var pro_startSlide = {settings.sliderpro.startSlide};
+	var pro_shuffle = {settings.sliderpro.shuffle};
+	var pro_orientation = '{settings.sliderpro.orientation}';
+	var pro_forceSize = '{settings.sliderpro.forceSize}';
+	var pro_loop = {settings.sliderpro.loop};
+	var pro_slideDistance = {settings.sliderpro.slideDistance};
+	var pro_slideAnimationDuration = {settings.sliderpro.slideAnimationDuration};
+	var pro_heightAnimationDuration = {settings.sliderpro.heightAnimationDuration};
+	var pro_visibleSize = '{settings.sliderpro.visibleSize}';
+	var pro_centerSelectedSlide = {settings.sliderpro.centerSelectedSlide};
+	var pro_rightToLeft = {settings.sliderpro.rightToLeft};
+	var pro_fade = {settings.sliderpro.fade};
+	var pro_fadeOutPreviousSlide = {settings.sliderpro.fadeOutPreviousSlide};
+	var pro_fadeDuration = {settings.sliderpro.fadeDuration};
+	var pro_autoplay = {settings.sliderpro.autoplay};
+	var pro_autoplayDelay = {settings.sliderpro.autoplayDelay};
+	var pro_autoplayDirection = '{settings.sliderpro.autoplayDirection}';
+	var pro_autoplayOnHover = '{settings.sliderpro.autoplayOnHover}';
+	var pro_arrows = {settings.sliderpro.arrows};
+	var pro_fadeArrows = {settings.sliderpro.fadeArrows};
+	var pro_buttons = {settings.sliderpro.buttons};
+	var pro_keyboard = {settings.sliderpro.keyboard};
+	var pro_keyboardOnlyOnFocus = {settings.sliderpro.keyboardOnlyOnFocus};
+	var pro_touchSwipe = {settings.sliderpro.touchSwipe};
+	var pro_touchSwipeThreshold = {settings.sliderpro.touchSwipeThreshold};
+	var pro_fadeCaption = {settings.sliderpro.fadeCaption};
+	var pro_captionFadeDuration = {settings.sliderpro.captionFadeDuration};
+	var pro_fullScreen = {settings.sliderpro.fullScreen};
+	var pro_fadeFullScreen = {settings.sliderpro.fadeFullScreen};
+	var pro_waitForLayers = {settings.sliderpro.waitForLayers};
+	var pro_autoScaleLayers = {settings.sliderpro.autoScaleLayers};
+	var pro_autoScaleReference = {settings.sliderpro.autoScaleReference};
+	var pro_smallSize = {settings.sliderpro.smallSize};
+	var pro_mediumSize = {settings.sliderpro.mediumSize};
+	var pro_largeSize = {settings.sliderpro.largeSize};
+	var pro_updateHash = {settings.sliderpro.updateHash};
+	var pro_reachVideoAction = '{settings.sliderpro.reachVideoAction}';
+	var pro_leaveVideoAction = '{settings.sliderpro.leaveVideoAction}';
+	var pro_playVideoAction = '{settings.sliderpro.playVideoAction}';
+	var pro_pauseVideoAction = '{settings.sliderpro.pauseVideoAction}';
+	var pro_endVideoAction = '{settings.sliderpro.endVideoAction}';
+	var pro_thumbnailWidth = {settings.sliderpro.thumbnailWidth};
+	var pro_thumbnailHeight = {settings.sliderpro.thumbnailHeight};
+	var pro_thumbnailsPosition = '{settings.sliderpro.thumbnailsPosition}';
+	var pro_thumbnailPointer = {settings.sliderpro.thumbnailPointer};
+	var pro_thumbnailArrows = {settings.sliderpro.thumbnailArrows};
+	var pro_fadeThumbnailArrows = {settings.sliderpro.fadeThumbnailArrows};
+	var pro_thumbnailTouchSwipe = {settings.sliderpro.thumbnailTouchSwipe};
+</script>
+
 <div id="derslider" class="slider-pro">
   <div class="sp-slides">
 	<f:for each="{slides}" as="slide">
@@ -83,65 +143,7 @@ Now you can customise this template. E.g. change the path to the transparent cle
   </div>
 </div>
 
-<script type="text/javascript">
-var pro_width = '{settings.sliderpro.width}';
-var pro_height = '{settings.sliderpro.height}';
-var pro_responsive = {settings.sliderpro.responsive};
-var pro_aspectRatio = {settings.sliderpro.aspectRatio};
-var pro_imageScaleMode = '{settings.sliderpro.imageScaleMode}';
-var pro_centerImage = {settings.sliderpro.centerImage};
-var pro_allowScaleUp = {settings.sliderpro.allowScaleUp};
-var pro_autoHeight = {settings.sliderpro.autoHeight};
-var pro_autoSlideSize = {settings.sliderpro.autoSlideSize};
-var pro_startSlide = {settings.sliderpro.startSlide};
-var pro_shuffle = {settings.sliderpro.shuffle};
-var pro_orientation = '{settings.sliderpro.orientation}';
-var pro_forceSize = '{settings.sliderpro.forceSize}';
-var pro_loop = {settings.sliderpro.loop};
-var pro_slideDistance = {settings.sliderpro.slideDistance};
-var pro_slideAnimationDuration = {settings.sliderpro.slideAnimationDuration};
-var pro_heightAnimationDuration = {settings.sliderpro.heightAnimationDuration};
-var pro_visibleSize = '{settings.sliderpro.visibleSize}';
-var pro_centerSelectedSlide = {settings.sliderpro.centerSelectedSlide};
-var pro_rightToLeft = {settings.sliderpro.rightToLeft};
-var pro_fade = {settings.sliderpro.fade};
-var pro_fadeOutPreviousSlide = {settings.sliderpro.fadeOutPreviousSlide};
-var pro_fadeDuration = {settings.sliderpro.fadeDuration};
-var pro_autoplay = {settings.sliderpro.autoplay};
-var pro_autoplayDelay = {settings.sliderpro.autoplayDelay};
-var pro_autoplayDirection = '{settings.sliderpro.autoplayDirection}';
-var pro_autoplayOnHover = '{settings.sliderpro.autoplayOnHover}';
-var pro_arrows = {settings.sliderpro.arrows};
-var pro_fadeArrows = {settings.sliderpro.fadeArrows};
-var pro_buttons = {settings.sliderpro.buttons};
-var pro_keyboard = {settings.sliderpro.keyboard};
-var pro_keyboardOnlyOnFocus = {settings.sliderpro.keyboardOnlyOnFocus};
-var pro_touchSwipe = {settings.sliderpro.touchSwipe};
-var pro_touchSwipeThreshold = {settings.sliderpro.touchSwipeThreshold};
-var pro_fadeCaption = {settings.sliderpro.fadeCaption};
-var pro_captionFadeDuration = {settings.sliderpro.captionFadeDuration};
-var pro_fullScreen = {settings.sliderpro.fullScreen};
-var pro_fadeFullScreen = {settings.sliderpro.fadeFullScreen};
-var pro_waitForLayers = {settings.sliderpro.waitForLayers};
-var pro_autoScaleLayers = {settings.sliderpro.autoScaleLayers};
-var pro_autoScaleReference = {settings.sliderpro.autoScaleReference};
-var pro_smallSize = {settings.sliderpro.smallSize};
-var pro_mediumSize = {settings.sliderpro.mediumSize};
-var pro_largeSize = {settings.sliderpro.largeSize};
-var pro_updateHash = {settings.sliderpro.updateHash};
-var pro_reachVideoAction = '{settings.sliderpro.reachVideoAction}';
-var pro_leaveVideoAction = '{settings.sliderpro.leaveVideoAction}';
-var pro_playVideoAction = '{settings.sliderpro.playVideoAction}';
-var pro_pauseVideoAction = '{settings.sliderpro.pauseVideoAction}';
-var pro_endVideoAction = '{settings.sliderpro.endVideoAction}';
-var pro_thumbnailWidth = {settings.sliderpro.thumbnailWidth};
-var pro_thumbnailHeight = {settings.sliderpro.thumbnailHeight};
-var pro_thumbnailsPosition = '{settings.sliderpro.thumbnailsPosition}';
-var pro_thumbnailPointer = {settings.sliderpro.thumbnailPointer};
-var pro_thumbnailArrows = {settings.sliderpro.thumbnailArrows};
-var pro_fadeThumbnailArrows = {settings.sliderpro.fadeThumbnailArrows};
-var pro_thumbnailTouchSwipe = {settings.sliderpro.thumbnailTouchSwipe};
-
+<script>
 	$( document ).ready(function( $ ) {
 		$( '#derslider' ).sliderPro({
 			width: pro_width,

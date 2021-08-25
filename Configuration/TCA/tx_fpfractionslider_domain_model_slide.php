@@ -20,9 +20,6 @@ return [
         'searchFields' => 'title,subtitle',
         'iconfile' => 'EXT:fp_fractionslider/Resources/Public/Icons/tx_fpfractionslider_domain_model_slide.png'
     ],
-    'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, subtitle, background, color, datain, elements',
-    ],
     'types' => [
         '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, subtitle, background, color, datain, elements, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
@@ -248,6 +245,7 @@ return [
                     ['random-static', 45],
                     ['random', 46],
                 ],
+                'default' => 0,
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''

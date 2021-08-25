@@ -21,9 +21,18 @@ class ProEffectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * proEffectRepository
      *
      * @var \Fixpunkt\FpFractionslider\Domain\Repository\ProEffectRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $proEffectRepository = null;
+
+    /**
+     * Injects the Repository
+     *
+     * @param \Fixpunkt\FpFractionslider\Domain\Repository\ProEffectRepository $proEffectRepository
+     */
+    public function injectProEffectRepository(\Fixpunkt\FpFractionslider\Domain\Repository\ProEffectRepository $proEffectRepository)
+    {
+        $this->proEffectRepository = $proEffectRepository;
+    }
 
     /**
      * action list

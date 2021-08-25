@@ -20,9 +20,6 @@ return [
 		'searchFields' => 'datax,datay,datastart,datawhitespace,datawidth,dataheight,datahoffset,datavoffset,dataresponsiveoffset,databasealign',
         'iconfile' => 'EXT:fp_fractionslider/Resources/Public/Icons/tx_fpfractionslider_domain_model_reveffect.png'
     ],
-    'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, datax, datay, datastart, datawhitespace, datawidth, dataheight, datahoffset, datavoffset, dataresponsiveoffset, databasealign',
-    ],
     'types' => [
 		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, datax, datay, datastart, datawhitespace, datawidth, dataheight, datahoffset, datavoffset, dataresponsiveoffset, databasealign, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
@@ -151,6 +148,7 @@ return [
 			        ['nowrap', 2],
 			        ['pre', 3]
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''
@@ -203,6 +201,7 @@ return [
 			        ['on', 1],
 			        ['off', 2]
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''
@@ -219,6 +218,7 @@ return [
 			        ['slide', 1],
 			        ['grid', 2]
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''

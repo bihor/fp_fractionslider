@@ -42,4 +42,5 @@ Version     Changes
             extension-key added to composer.json.
 
             Bugfix for TYPO3 10: image appearance in the BE.
+1.2.0       Version for TYPO3 10 and 11.3.
 ==========  =======================================================================================

@@ -20,9 +20,6 @@ return [
 		'searchFields' => 'datawidth,dataheight',
         'iconfile' => 'EXT:fp_fractionslider/Resources/Public/Icons/tx_fpfractionslider_domain_model_proeffect.png'
     ],
-    'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, datawidth, dataheight, datadepth, dataposition, datahorizontal, datavertical, datashowtransition, datashowoffset, datashowduration, datashowdelay, datahidetransition, datahideoffset, datahideduration, datahidedelay, datastayduration',
-    ],
     'types' => [
 		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, datawidth, dataheight, datadepth, dataposition, datahorizontal, datavertical, datashowtransition, datashowoffset, datashowduration, datashowdelay, datahidetransition, datahideoffset, datahideduration, datahidedelay, datastayduration, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
@@ -157,6 +154,7 @@ return [
 			        ['centerRight', 8],
 			        ['centerCenter', 9],
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''
@@ -193,6 +191,7 @@ return [
 			        ['up', 3],
 			        ['down', 4],
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''
@@ -238,6 +237,7 @@ return [
 			        ['up', 3],
 			        ['down', 4],
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''

@@ -9,4 +9,3 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignat
 		'Pi1',
 		'Professional Slider-Plugin'
 );
-?>

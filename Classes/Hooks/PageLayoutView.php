@@ -120,13 +120,7 @@ class PageLayoutView
             
             	$i = 0;
             	foreach ($pageIds as $pid) {
-            		//$sliderRecords = BackendUtilityCore::getRecordsByField('tx_fpfractionslider_domain_model_slide', 'pid', $id);
             		$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_fpfractionslider_domain_model_slide');
-            		/*$queryBuilder->getRestrictions()
-            		->removeAll()
-            		->add(GeneralUtility::makeInstance(DeletedRestriction::class))
-            		->add(GeneralUtility::makeInstance(BackendWorkspaceRestriction::class));
-            		*/
             		$sliderRecords = $queryBuilder->select('title')
 	            		->from('tx_fpfractionslider_domain_model_slide')
 	            		->where(
@@ -340,10 +334,6 @@ class PageLayoutView
     protected function getEditLink($row, $currentPageUid)
     {
         $editLink = '';
-        //$uriBuilder = GeneralUtility::makeInstance(UriBuilder::class);
-        //$objectManager = GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\ObjectManager\ObjectManager::class);
-        //$objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
-        //$uriBuilder = $objectManager->get(\TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder::class);
         $uriBuilder = GeneralUtility::makeInstance('TYPO3\CMS\Backend\Routing\UriBuilder');
         $localCalcPerms = $GLOBALS['BE_USER']->calcPerms(BackendUtilityCore::getRecord('pages', $row['uid']));
         $permsEdit = $localCalcPerms & Permission::PAGE_EDIT;

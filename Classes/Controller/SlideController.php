@@ -21,9 +21,18 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * slideRepository
      *
      * @var \Fixpunkt\FpFractionslider\Domain\Repository\SlideRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $slideRepository = null;
+
+    /**
+     * Injects the Repository
+     *
+     * @param \Fixpunkt\FpFractionslider\Domain\Repository\SlideRepository $slideRepository
+     */
+    public function injectSlideRepository(\Fixpunkt\FpFractionslider\Domain\Repository\SlideRepository $slideRepository)
+    {
+        $this->slideRepository = $slideRepository;
+    }
 
     /**
      * configurationManager

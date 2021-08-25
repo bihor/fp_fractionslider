@@ -21,9 +21,18 @@ class PartController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * partRepository
      *
      * @var \Fixpunkt\FpFractionslider\Domain\Repository\PartRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $partRepository = null;
+
+    /**
+     * Injects the Repository
+     *
+     * @param \Fixpunkt\FpFractionslider\Domain\Repository\PartRepository $partRepository
+     */
+    public function injectPartRepository(\Fixpunkt\FpFractionslider\Domain\Repository\PartRepository $partRepository)
+    {
+        $this->partRepository = $partRepository;
+    }
 
     /**
      * action list

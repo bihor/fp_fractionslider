@@ -20,9 +20,6 @@ return [
 		'searchFields' => 'title,subtitle',
         'iconfile' => 'EXT:fp_fractionslider/Resources/Public/Icons/tx_fpfractionslider_domain_model_part.png'
     ],
-    'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, subtitle, linktitle, link, image, cettcontent, cssstyles, cssclass, fraction, pro, revolution',
-    ],
     'types' => [
 		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, subtitle, linktitle, link, image, cettcontent, cssstyles, cssclass, fraction, pro, revolution, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
@@ -125,10 +122,10 @@ return [
 	        'exclude' => true,
 	        'label' => 'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:tx_fpfractionslider_domain_model_part.subtitle',
 	        'config' => [
-							'type' => 'text',
-							'cols' => 40,
-							'rows' => 3,
-							'eval' => 'trim'
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 3,
+                'eval' => 'trim'
 			],
 	    ],
 	    'linktitle' => [
@@ -211,6 +208,7 @@ return [
 	    		'size' => '1',
 	    		'maxitems' => '1',
 	    		'minitems' => '0',
+                'default' => 0,
 			],
 	    ],
 	    'cssstyles' => [
@@ -236,6 +234,7 @@ return [
 				'size' => 1,
 				'minitems' => 0,
 				'maxitems' => 1,
+                'default' => 0,
 			],
 	    ],
 	    'fraction' => [

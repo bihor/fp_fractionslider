@@ -26,6 +26,35 @@ Now you can customise this template.
 <re:addPublicResources path="fileadmin/bsdist/theme/Contrib/FractionSlider/css/fractionslider.css"></re:addPublicResources>
 <re:addPublicResources path="fileadmin/bsdist/theme/Contrib/FractionSlider/jquery.fractionslider.min.js" compress="FALSE" footer="TRUE"></re:addPublicResources>
 
+<script type="text/javascript">
+	var fraction_slideTransition = '{settings.fractionslider.slideTransition}';
+	var fraction_slideTransitionSpeed = {settings.fractionslider.slideTransitionSpeed};
+	var fraction_slideEndAnimation = {settings.fractionslider.slideEndAnimation};
+	var fraction_transitionIn = '{settings.fractionslider.transitionIn}';
+	var fraction_transitionOut = '{settings.fractionslider.transitionOut}';
+	var fraction_fullWidth = {settings.fractionslider.fullWidth};
+	var fraction_delay = {settings.fractionslider.delay};
+	var fraction_timeout = {settings.fractionslider.timeout};
+	var fraction_speedIn = {settings.fractionslider.speedIn};
+	var fraction_speedOut =	{settings.fractionslider.speedOut};
+	var fraction_easeIn = '{settings.fractionslider.easeIn}';
+	var fraction_easeOut = '{settings.fractionslider.easeOut}';
+	var fraction_controls = {settings.fractionslider.controls};
+	var fraction_pager = {settings.fractionslider.pager};
+	var fraction_autoChange = {settings.fractionslider.autoChange};
+	var fraction_pauseOnHover = {settings.fractionslider.pauseOnHover};
+	var fraction_backgroundAnimation = {settings.fractionslider.backgroundAnimation};
+	var fraction_backgroundElement = '{settings.fractionslider.backgroundElement}';
+	var fraction_backgroundX = {settings.fractionslider.backgroundX};
+	var fraction_backgroundY = {settings.fractionslider.backgroundY};
+	var fraction_backgroundSpeed = {settings.fractionslider.backgroundSpeed};
+	var fraction_backgroundEase = '{settings.fractionslider.backgroundEase}';
+	var fraction_responsive = {settings.fractionslider.responsive};
+	var fraction_increase = {settings.fractionslider.increase};
+	var fraction_width = {settings.fractionslider.width};
+	var fraction_height = {settings.fractionslider.height};
+</script>
+
 <div class="slider-container">
 	<f:for each="{slides}" as="slide" iteration="iteratorS">
 		<div class="slide" {f:if(condition: '{slide.color}', then: 'style="background-color:{slide.color};"')} {f:if(condition: '{slide.datain} > 0', then: 'data-in="{slide.datainValue}"')} >
@@ -77,34 +106,7 @@ Now you can customise this template.
 	<div class="fs_loader"><!-- shows a loading .gif while the slider is getting ready --></div>
 </div>
 
-<script type="text/javascript">
-var fraction_slideTransition = '{settings.fractionslider.slideTransition}';
-var fraction_slideTransitionSpeed = {settings.fractionslider.slideTransitionSpeed};
-var fraction_slideEndAnimation = {settings.fractionslider.slideEndAnimation};
-var fraction_transitionIn = '{settings.fractionslider.transitionIn}';
-var fraction_transitionOut = '{settings.fractionslider.transitionOut}';
-var fraction_fullWidth = {settings.fractionslider.fullWidth};
-var fraction_delay = {settings.fractionslider.delay};
-var fraction_timeout = {settings.fractionslider.timeout};
-var fraction_speedIn = {settings.fractionslider.speedIn};
-var fraction_speedOut =	{settings.fractionslider.speedOut};
-var fraction_easeIn = '{settings.fractionslider.easeIn}';
-var fraction_easeOut = '{settings.fractionslider.easeOut}';
-var fraction_controls = {settings.fractionslider.controls};
-var fraction_pager = {settings.fractionslider.pager};
-var fraction_autoChange = {settings.fractionslider.autoChange};
-var fraction_pauseOnHover = {settings.fractionslider.pauseOnHover};
-var fraction_backgroundAnimation = {settings.fractionslider.backgroundAnimation};
-var fraction_backgroundElement = '{settings.fractionslider.backgroundElement}';
-var fraction_backgroundX = {settings.fractionslider.backgroundX};
-var fraction_backgroundY = {settings.fractionslider.backgroundY};
-var fraction_backgroundSpeed = {settings.fractionslider.backgroundSpeed};
-var fraction_backgroundEase = '{settings.fractionslider.backgroundEase}';
-var fraction_responsive = {settings.fractionslider.responsive};
-var fraction_increase = {settings.fractionslider.increase};
-var fraction_width = {settings.fractionslider.width};
-var fraction_height = {settings.fractionslider.height};
-
+<script>
 $( document ).ready(function( $ ) {
 	$('.slider-container').fractionSlider({
 		'slideTransition' : fraction_slideTransition, // default slide transition

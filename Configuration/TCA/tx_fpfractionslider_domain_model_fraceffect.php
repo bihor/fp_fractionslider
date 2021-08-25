@@ -20,9 +20,6 @@ return [
 		'searchFields' => 'dataposition,datain,dataout,dataeasein,dataeaseout,datadelay,datatime,datastep,dataspecial',
         'iconfile' => 'EXT:fp_fractionslider/Resources/Public/Icons/tx_fpfractionslider_domain_model_fraceffect.png'
     ],
-    'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, dataposition, datain, dataout, dataeasein, dataeaseout, datadelay, datatime, datastep, dataspecial',
-    ],
     'types' => [
 		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, dataposition, datain, dataout, dataeasein, dataeaseout, datadelay, datatime, datastep, dataspecial, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
@@ -140,6 +137,7 @@ return [
 			        ['topRight', 9],
 			        ['bottomRight', 10],
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''
@@ -164,6 +162,7 @@ return [
 					['topRight', 9],
 					['bottomRight', 10],
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''
@@ -224,6 +223,7 @@ return [
 			        ['-', 0],
 		    		['cycle', 1],
 			    ],
+                'default' => 0,
 			    'size' => 1,
 			    'maxitems' => 1,
 			    'eval' => ''
