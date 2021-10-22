@@ -23,8 +23,8 @@ Change the path to this template via TypoScript-constants. Example:
 Now you can customise this template.
 </pre>
 
-<re:addPublicResources path="fileadmin/bsdist/theme/Contrib/FractionSlider/css/fractionslider.css"></re:addPublicResources>
-<re:addPublicResources path="fileadmin/bsdist/theme/Contrib/FractionSlider/jquery.fractionslider.min.js" compress="FALSE" footer="TRUE"></re:addPublicResources>
+<f:asset.css identifier="fractionslider" href="fileadmin/bsdist/theme/Contrib/FractionSlider/css/fractionslider.css" />
+<f:asset.script identifier="fractionslider" src="fileadmin/bsdist/theme/Contrib/FractionSlider/jquery.fractionslider.min.js" />
 
 <script type="text/javascript">
 	var fraction_slideTransition = '{settings.fractionslider.slideTransition}';

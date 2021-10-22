@@ -43,4 +43,6 @@ Version     Changes
 
             Bugfix for TYPO3 10: image appearance in the BE.
 1.2.1       Version for TYPO3 10 and 11.
+1.3.0       Replacement of the Viewhelper re:addPublicResources. It is now deprecated.
+            Use f:asset.css or f:asset.script instead.
 ==========  =======================================================================================

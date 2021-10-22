@@ -24,8 +24,8 @@ Change the path to this template via TypoScript-constants. Example:
 Now you can customise this template. E.g. change the path to the transparent clear.gif.
 </pre>
 
-<re:addPublicResources path="fileadmin/bsdist/theme/js/Professional-jQuery-Content-Slider-Plugin-Slider-Pro/dist/css/slider-pro.min.css"></re:addPublicResources>
-<re:addPublicResources path="fileadmin/bsdist/theme/js/Professional-jQuery-Content-Slider-Plugin-Slider-Pro/dist/js/jquery.sliderPro.min.js" compress="FALSE" footer="TRUE"></re:addPublicResources>
+<f:asset.css identifier="sliderpro" href="fileadmin/bsdist/theme/js/Professional-jQuery-Content-Slider-Plugin-Slider-Pro/dist/css/slider-pro.min.css" />
+<f:asset.script identifier="sliderpro" src="fileadmin/bsdist/theme/js/Professional-jQuery-Content-Slider-Plugin-Slider-Pro/dist/js/jquery.sliderPro.min.js" />
 
 <script type="text/javascript">
 	var pro_width = '{settings.sliderpro.width}';

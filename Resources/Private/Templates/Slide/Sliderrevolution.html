@@ -24,9 +24,9 @@ Now you can customise this template.
 Note: you can use the Slider Revolution in other ways too (there are more ways to use it).
 </pre>
 
-<re:addPublicResources path="fileadmin/bsdist/theme/js/jquery.themepunch.tools.min.js" compress="FALSE" footer="TRUE"></re:addPublicResources>
-<re:addPublicResources path="fileadmin/bsdist/theme/js/jquery.themepunch.revolution.min.js" compress="FALSE" footer="TRUE"></re:addPublicResources>
-<re:addPublicResources path="fileadmin/bsdist/theme/css/revolution.css" compress="FALSE" footer="FALSE"></re:addPublicResources>
+<f:asset.css identifier="revolution" href="fileadmin/bsdist/theme/css/revolution.css" />
+<f:asset.script identifier="punchtools" src="fileadmin/bsdist/theme/js/jquery.themepunch.tools.min.js" />
+<f:asset.script identifier="revolution" src="fileadmin/bsdist/theme/js/jquery.themepunch.revolution.min.js" />
 
 <div class="slider-container rev_slider_wrapper">
 	<div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options='{jsonSettings -> f:format.raw()}'>
