@@ -5,7 +5,7 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignat
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginSignature, 'FILE:EXT:fp_fractionslider/Configuration/FlexForms/flexform_pi1.xml' );
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-		'Fixpunkt.FpFractionslider',
+		'FpFractionslider',
 		'Pi1',
 		'Professional Slider-Plugin'
 );

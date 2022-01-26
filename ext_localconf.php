@@ -5,7 +5,7 @@ call_user_func(
     function()
 	{
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Fixpunkt.FpFractionslider',
+            'FpFractionslider',
             'Pi1',
             [
                 \Fixpunkt\FpFractionslider\Controller\SlideController::class => 'fractionslider, sliderpro, sliderrevolution, list, show',
