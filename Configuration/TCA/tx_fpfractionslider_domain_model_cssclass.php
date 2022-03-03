@@ -71,11 +71,14 @@ return [
             'label' => 'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:LGL.hidden',
             'config' => [
             	'type' => 'check',
-            	'items' => [
-            		'1' => [
-            			'0' => 'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:labels.enabled'
-            		]
-            	],
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    [
+                        0 => '',
+                        1 => '',
+                        'invertStateDisplay' => true
+                    ]
+                ],
             ],
         ],
         'name' => [

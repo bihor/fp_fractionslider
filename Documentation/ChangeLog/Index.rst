@@ -21,8 +21,7 @@ ChangeLog
 ==========  =======================================================================================
 Version     Changes
 ==========  =======================================================================================
-0.4.0       Initial upload to TER. Beta version!
-0.4.3       Bugfixing. TYPO3 8 compatibility.
+0.4.0       Initial upload to TER.
 0.5.0       Settings sortOrder, limit, listId and showId added. Slide-list-action added. 
 
             Bugfixing: CDATA removed (TYPO3 8 doesn´t like it - TYPO3 7 needs it sometimes).
