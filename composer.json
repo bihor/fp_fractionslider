@@ -23,9 +23,6 @@
 	"replace" : {
 		"typo3-ter/fp-fractionslider" : "self.version"
 	},
-	"support" : {
-		"email" : "info@quizpalme.de"
-	},
 	"homepage" : "https://www.fixpunkt.com/webentwicklung/typo3/typo3-extensions",
 	"license" : "GPL-3.0-or-later",
 	"keywords" : [

@@ -15,7 +15,6 @@ $EM_CONF[$_EXTKEY] = [
   'description' => 'Can be used with the "jQuery-FractionSlider", the "Professional jQuery Content Slider Plugin - Slider Pro" or the "Slider revolution".',
   'category' => 'plugin',
   'author' => 'Kurt Gusbeth',
-  'author_email' => 'info@quizpalme.de',
   'author_company' => 'fixpunkt werbeagentur gmbh',
   'state' => 'stable',
   'createDirs' => '',
