@@ -44,4 +44,5 @@ Version     Changes
 1.2.1       Version for TYPO3 10 and 11.
 1.3.0       Replacement of the Viewhelper re:addPublicResources. It is now deprecated.
             Use f:asset.css or f:asset.script instead.
+1.3.2       PHP 8 bugfix.
 ==========  =======================================================================================

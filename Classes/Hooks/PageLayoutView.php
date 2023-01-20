@@ -185,7 +185,8 @@ class PageLayoutView
             				$limit
             		];
             	}
-        		if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['fp_fractionslider']['Fixpunkt\\FpFractionslider\\Hooks\\PageLayoutView']['extensionSummary'])) {
+        		if (isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['fp_fractionslider']['Fixpunkt\\FpFractionslider\\Hooks\\PageLayoutView']['extensionSummary']) &&
+                    is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['fp_fractionslider']['Fixpunkt\\FpFractionslider\\Hooks\\PageLayoutView']['extensionSummary'])) {
                     $params = [
                         'action' => $actionTranslationKey
                     ];

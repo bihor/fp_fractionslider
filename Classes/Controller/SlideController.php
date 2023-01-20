@@ -48,20 +48,23 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $this->configurationManager = $configurationManager;
         $tsSettings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
-        $tsSettings		= $tsSettings['plugin.']['tx_fpfractionslider.']['settings.'];
-        $tsSettings_pi1 = $tsSettings['plugin.']['tx_fpfractionslider_pi1.']['settings.'];
-        if (is_array($tsSettings_pi1)) {
+        if (isset($tsSettings['plugin.']['tx_fpfractionslider.']['settings.']) && is_array($tsSettings['plugin.']['tx_fpfractionslider.']['settings.'])) {
+            $tsSettings = $tsSettings['plugin.']['tx_fpfractionslider.']['settings.'];
+        } else {
+            $tsSettings = [];
+        }
+        if (isset($tsSettings['plugin.']['tx_fpfractionslider_pi1.']['settings.']) && is_array($tsSettings['plugin.']['tx_fpfractionslider_pi1.']['settings.'])) {
+            $tsSettings_pi1 = $tsSettings['plugin.']['tx_fpfractionslider_pi1.']['settings.'];
         	$tsSettings = array_merge($tsSettings, $tsSettings_pi1);
         }
         $settings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS);
-        //var_dump($tsSettings);
         if (isset($settings['override']) && is_array($settings['override'])) {
             $overrides = $settings['override'];
             unset($settings['override']);
             //$settings = array_merge($tsSettings, $overrides);	// übernimmt auch leere Werte :-(
             if (is_array($tsSettings['fractionslider.'])) {
 	            foreach ($tsSettings['fractionslider.'] as $key => $value) {
-	                if (!($overrides['fractionslider'][$key] === '' || $overrides['fractionslider'][$key] === NULL || $overrides['fractionslider'][$key] == '-')) {
+	                if (isset($overrides['fractionslider'][$key]) && !($overrides['fractionslider'][$key] === '' || $overrides['fractionslider'][$key] === NULL || $overrides['fractionslider'][$key] == '-')) {
 	                    $settings['fractionslider'][$key] = $overrides['fractionslider'][$key];
 	                } else {
 	                    $settings['fractionslider'][$key] = $value;
@@ -70,7 +73,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             }
             if (is_array($tsSettings['sliderpro.'])) {
 	            foreach ($tsSettings['sliderpro.'] as $key => $value) {
-	                if (!($overrides['sliderpro'][$key] === '' || $overrides['sliderpro'][$key] === NULL || $overrides['sliderpro'][$key] == '-')) {
+	                if (isset($overrides['sliderpro'][$key]) && !($overrides['sliderpro'][$key] === '' || $overrides['sliderpro'][$key] === NULL || $overrides['sliderpro'][$key] == '-')) {
 	                    $settings['sliderpro'][$key] = $overrides['sliderpro'][$key];
 	                } else {
 	                    $settings['sliderpro'][$key] = $value;
@@ -79,16 +82,16 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             }
             if (is_array($tsSettings['sliderrevolution.'])) {
 	            foreach ($tsSettings['sliderrevolution.'] as $key => $value) {
-	                if (!($overrides['sliderrevolution'][$key] === '' || $overrides['sliderrevolution'][$key] === NULL || $overrides['sliderrevolution'][$key] == '-')) {
+	                if (isset($overrides['sliderrevolution'][$key]) && !($overrides['sliderrevolution'][$key] === '' || $overrides['sliderrevolution'][$key] === NULL || $overrides['sliderrevolution'][$key] == '-')) {
 	                    $settings['sliderrevolution'][$key] = $overrides['sliderrevolution'][$key];
 	                } else {
 	                    $settings['sliderrevolution'][$key] = $value;
 	                }
 	            }
             }
-            if (is_array($tsSettings['more.'])) {
+            if (isset($tsSettings['more.']) && is_array($tsSettings['more.'])) {
 	            foreach ($tsSettings['more.'] as $key => $value) {
-	                if ($overrides['more'][$key]) {
+	                if (isset($overrides['more'][$key])) {
 	                    $settings['more'][$key] = $overrides['more'][$key];
 	                } else {
 	                    $settings['more'][$key] = $value;
