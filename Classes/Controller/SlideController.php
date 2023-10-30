@@ -1,6 +1,8 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Controller;
 
+use Psr\Http\Message\ResponseInterface;
+
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -39,15 +41,16 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      *
      * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
      */
-    protected $configurationManager = null;
+    protected $configurationManager;
 
     /**
-     * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
+     * Initializes the current action
      */
-    public function injectConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager)
+    public function initializeAction()
     {
-        $this->configurationManager = $configurationManager;
-        $tsSettings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
+        $tsSettings = $this->configurationManager->getConfiguration(
+            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
+        );
         if (isset($tsSettings['plugin.']['tx_fpfractionslider.']['settings.']) && is_array($tsSettings['plugin.']['tx_fpfractionslider.']['settings.'])) {
             $tsSettings = $tsSettings['plugin.']['tx_fpfractionslider.']['settings.'];
         } else {
@@ -57,12 +60,14 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $tsSettings_pi1 = $tsSettings['plugin.']['tx_fpfractionslider_pi1.']['settings.'];
         	$tsSettings = array_merge($tsSettings, $tsSettings_pi1);
         }
-        $settings = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS);
+        $settings = $this->configurationManager->getConfiguration(
+            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS
+        );
         if (isset($settings['override']) && is_array($settings['override'])) {
             $overrides = $settings['override'];
             unset($settings['override']);
             //$settings = array_merge($tsSettings, $overrides);	// übernimmt auch leere Werte :-(
-            if (is_array($tsSettings['fractionslider.'])) {
+            if (isset($tsSettings['fractionslider.']) && is_array($tsSettings['fractionslider.'])) {
 	            foreach ($tsSettings['fractionslider.'] as $key => $value) {
 	                if (isset($overrides['fractionslider'][$key]) && !($overrides['fractionslider'][$key] === '' || $overrides['fractionslider'][$key] === NULL || $overrides['fractionslider'][$key] == '-')) {
 	                    $settings['fractionslider'][$key] = $overrides['fractionslider'][$key];
@@ -71,7 +76,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	                }
 	            }
             }
-            if (is_array($tsSettings['sliderpro.'])) {
+            if (isset($tsSettings['sliderpro.']) && is_array($tsSettings['sliderpro.'])) {
 	            foreach ($tsSettings['sliderpro.'] as $key => $value) {
 	                if (isset($overrides['sliderpro'][$key]) && !($overrides['sliderpro'][$key] === '' || $overrides['sliderpro'][$key] === NULL || $overrides['sliderpro'][$key] == '-')) {
 	                    $settings['sliderpro'][$key] = $overrides['sliderpro'][$key];
@@ -80,7 +85,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	                }
 	            }
             }
-            if (is_array($tsSettings['sliderrevolution.'])) {
+            if (isset($tsSettings['sliderrevolution.']) && is_array($tsSettings['sliderrevolution.'])) {
 	            foreach ($tsSettings['sliderrevolution.'] as $key => $value) {
 	                if (isset($overrides['sliderrevolution'][$key]) && !($overrides['sliderrevolution'][$key] === '' || $overrides['sliderrevolution'][$key] === NULL || $overrides['sliderrevolution'][$key] == '-')) {
 	                    $settings['sliderrevolution'][$key] = $overrides['sliderrevolution'][$key];
@@ -125,33 +130,35 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * action list
      *
-     * @return void
+     * @return ResponseInterface
      */
-    public function fractionsliderAction()
+    public function fractionsliderAction(): ResponseInterface
     {
         $slides = $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']);
         $this->view->assign('slides', $slides);
         $this->view->assign('jsonSettings', json_encode($this->settings['fractionslider']));
+        return $this->htmlResponse();
     }
 
     /**
      * action sliderpro
      *
-     * @return void
+     * @return ResponseInterface
      */
-    public function sliderproAction()
+    public function sliderproAction(): ResponseInterface
     {
         $slides = $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']);
         $this->view->assign('slides', $slides);
         $this->view->assign('jsonSettings', json_encode($this->settings['sliderpro']));
+        return $this->htmlResponse();
     }
 
     /**
      * action sliderrevolution
      *
-     * @return void
+     * @return ResponseInterface
      */
-    public function sliderrevolutionAction()
+    public function sliderrevolutionAction(): ResponseInterface
     {
         $slides = $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']);
         $this->view->assign('slides', $slides);
@@ -159,26 +166,29 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $this->settings['sliderrevolution']['gridwidth'] = intval($this->settings['sliderrevolution']['gridwidth']);
         $this->settings['sliderrevolution']['gridheight'] = intval($this->settings['sliderrevolution']['gridheight']);
         $this->view->assign('jsonSettings', json_encode($this->settings['sliderrevolution']));
+        return $this->htmlResponse();
     }
 
     /**
      * action list
      *
-     * @return void
+     * @return ResponseInterface
      */
-    public function listAction()
+    public function listAction(): ResponseInterface
     {
     	$this->view->assign('slides', $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']));
+        return $this->htmlResponse();
     }
     
     /**
      * action show
      *
      * @param \Fixpunkt\FpFractionslider\Domain\Model\Slide $slide
-     * @return void
+     * @return ResponseInterface
      */
-    public function showAction(\Fixpunkt\FpFractionslider\Domain\Model\Slide $slide)
+    public function showAction(\Fixpunkt\FpFractionslider\Domain\Model\Slide $slide): ResponseInterface
     {
         $this->view->assign('slide', $slide);
+        return $this->htmlResponse();
     }
 }

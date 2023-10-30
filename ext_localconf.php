@@ -1,49 +1,103 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+declare(strict_types=1);
+
+use Fixpunkt\FpFractionslider\Controller\SlideController;
+use Fixpunkt\FpFractionslider\Updates\SwitchableControllerActionsPluginUpdater;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
+defined('TYPO3') || die('Access denied.');
 
 call_user_func(
     function()
 	{
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        ExtensionUtility::configurePlugin(
             'FpFractionslider',
-            'Pi1',
-            [
-                \Fixpunkt\FpFractionslider\Controller\SlideController::class => 'fractionslider, sliderpro, sliderrevolution, list, show',
-                \Fixpunkt\FpFractionslider\Controller\FracEffectController::class => 'list',
-                \Fixpunkt\FpFractionslider\Controller\CssclassController::class => 'list',
-                \Fixpunkt\FpFractionslider\Controller\ProEffectController::class => 'list',
-                \Fixpunkt\FpFractionslider\Controller\RevEffectController::class => 'list',
-                \Fixpunkt\FpFractionslider\Controller\PartController::class => 'list'
-            ],
-            // non-cacheable actions
-            [
-                \Fixpunkt\FpFractionslider\Controller\SlideController::class => '',
-                \Fixpunkt\FpFractionslider\Controller\FracEffectController::class => '',
-                \Fixpunkt\FpFractionslider\Controller\CssclassController::class => '',
-                \Fixpunkt\FpFractionslider\Controller\ProEffectController::class => '',
-                \Fixpunkt\FpFractionslider\Controller\RevEffectController::class => '',
-                \Fixpunkt\FpFractionslider\Controller\PartController::class => ''
-            ]
+            'Fractionslider',
+            [   SlideController::class => 'fractionslider'     ],
+            [   SlideController::class => ''    ]
         );
-        
-        /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
-        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-        $iconRegistry->registerIcon(
-        	'ext-fpfractionslider-wizard-icon',
-        	\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        	['source' => 'EXT:fp_fractionslider/Resources/Public/Icons/Fractionslider.svg']
+        ExtensionUtility::configurePlugin(
+            'FpFractionslider',
+            'Sliderpro',
+            [   SlideController::class => 'sliderpro'     ],
+            [   SlideController::class => ''    ]
         );
-        $iconRegistry->registerIcon(
-        	'ext-fpfractionslider-folder-icon',
-        	\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        	['source' => 'EXT:fp_fractionslider/Resources/Public/Icons/ext-fpfractionslider-folder-tree.svg']
+        ExtensionUtility::configurePlugin(
+            'FpFractionslider',
+            'Sliderrevolution',
+            [   SlideController::class => 'sliderrevolution'     ],
+            [   SlideController::class => ''    ]
+        );
+        ExtensionUtility::configurePlugin(
+            'FpFractionslider',
+            'List',
+            [   SlideController::class => 'list'     ],
+            [   SlideController::class => ''    ]
+        );
+        ExtensionUtility::configurePlugin(
+            'FpFractionslider',
+            'Show',
+            [   SlideController::class => 'show'     ],
+            [   SlideController::class => ''    ]
         );
 
-        // Page module hook - show flexform settings in page module
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['list_type_Info']['fpfractionslider_pi1']['fp_fractionslider'] =
-            \Fixpunkt\FpFractionslider\Hooks\PageLayoutView::class . '->getExtensionSummary';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+'mod.wizards.newContentElement.wizardItems.fractionslider {
+    header = Fractionslider
+	elements {
+		fpfractionslider_fractionslider {
+			iconIdentifier = ext-fpfractionslider-wizard-icon
+			title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_fractionslider
+			description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+			tt_content_defValues {
+				CType = list
+				list_type = fpfractionslider_fractionslider
+			}
+		}
+		fpfractionslider_sliderpro {
+			iconIdentifier = ext-fpfractionslider-wizard-icon
+			title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_sliderpro
+			description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+			tt_content_defValues {
+				CType = list
+				list_type = fpfractionslider_sliderpro
+			}
+		}
+		fpfractionslider_sliderrevolution {
+			iconIdentifier = ext-fpfractionslider-wizard-icon
+			title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_sliderrevolution
+			description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+			tt_content_defValues {
+				CType = list
+				list_type = fpfractionslider_sliderrevolution
+			}
+		}
+		fpfractionslider_list {
+			iconIdentifier = ext-fpfractionslider-wizard-icon
+			title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_list
+			description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+			tt_content_defValues {
+				CType = list
+				list_type = fpfractionslider_list
+			}
+		}
+		fpfractionslider_show {
+			iconIdentifier = ext-fpfractionslider-wizard-icon
+			title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_show
+			description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+			tt_content_defValues {
+				CType = list
+				list_type = fpfractionslider_show
+			}
+		}
+	}
+    show = *
+}'
+        );
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fp_fractionslider/Configuration/TSconfig/ContentElementWizard.txt">');
+        // Register switchableControllerActions plugin migrator
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['switchableControllerActionsPluginUpdaterFpFrac']
+            = SwitchableControllerActionsPluginUpdater::class;
     }
 );
 

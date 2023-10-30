@@ -17,6 +17,9 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
+        'security' => [
+            'ignorePageTypeRestriction' => true,
+        ],
 		'searchFields' => 'dataposition,datain,dataout,dataeasein,dataeaseout,datadelay,datatime,datastep,dataspecial',
         'iconfile' => 'EXT:fp_fractionslider/Resources/Public/Icons/tx_fpfractionslider_domain_model_fraceffect.png'
     ],

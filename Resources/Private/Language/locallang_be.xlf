@@ -3,6 +3,24 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-10T14:22:23Z" product-name="fp_fractionslider">
 		<header/>
 		<body>
+			<trans-unit id="tx_fp_fractionslider_domain_model_fractionslider">
+				<source>Professional Slider-Plugin: jQuery-FractionSlider</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_sliderpro">
+				<source>Professional Slider-Plugin: Slider Pro</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_sliderrevolution">
+				<source>Professional Slider-Plugin: Slider revolution</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_list">
+				<source>Professional Slider-Plugin: list and single view</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_show">
+				<source>Professional Slider-Plugin: single view</source>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model.description">
+				<source>Can be used with the "jQuery-FractionSlider", the "Professional jQuery Content Slider Plugin - Slider Pro" or the "Slider revolution".</source>
+			</trans-unit>
 			<trans-unit id="fpfractionslider-folder" xml:space="preserve">
 				<source>Professional slider</source>
 			</trans-unit>
@@ -26,21 +44,6 @@
 			</trans-unit>
 			<trans-unit id="template.not_configured">
 				<source>no template layout selected!</source>
-			</trans-unit>
-			<trans-unit id="fractionslider" xml:space="preserve">
-				<source>FractionSlider</source>
-			</trans-unit>
-			<trans-unit id="sliderpro" xml:space="preserve">
-				<source>Slider Pro</source>
-			</trans-unit>
-			<trans-unit id="sliderrevolution" xml:space="preserve">
-				<source>Slider Revolution</source>
-			</trans-unit>
-			<trans-unit id="listview" xml:space="preserve">
-				<source>Listen- und Einzelansicht</source>
-			</trans-unit>
-			<trans-unit id="singleview" xml:space="preserve">
-				<source>Nur Einzelansicht</source>
 			</trans-unit>
 			<trans-unit id="more" xml:space="preserve">
 				<source>Additional</source>
@@ -357,8 +360,11 @@
 			<trans-unit id="sliderrevolution.disableProgressBar" xml:space="preserve">
 				<source>Disable progress bar?</source>
 			</trans-unit>
-			<trans-unit id="LGL.startingpoint" xml:space="preserve">
+			<trans-unit id="startingpoint" xml:space="preserve">
 				<source>Startingpoint:</source>
+			</trans-unit>
+			<trans-unit id="recursive" xml:space="preserve">
+				<source>Recursive:</source>
 			</trans-unit>
 		</body>
 	</file>

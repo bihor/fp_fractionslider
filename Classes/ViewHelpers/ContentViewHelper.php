@@ -39,8 +39,6 @@ class ContentViewHelper extends AbstractViewHelper
 			'source' => intval($uid),
 			'dontCheckPid' => 1
 		);
-		$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
-		return $objectManager->get('TYPO3\CMS\Frontend\ContentObject\RecordsContentObject')->render($conf);
+		return $GLOBALS['TSFE']->cObj->cObjGetSingle('RECORDS',$conf);
 	}
 }
-?>

@@ -130,8 +130,7 @@ class PageLayoutView
 	            			)
 	            		)
 	            		->setMaxResults(self::SETTINGS_IN_PREVIEW)
-	            		->execute()
-	            		->fetchAll();
+	            		->executeQuery()->fetchAllAssociative();
             		if ($sliderRecords !== false) {
 	            		foreach ($sliderRecords as $row) {
 			            	$i++;

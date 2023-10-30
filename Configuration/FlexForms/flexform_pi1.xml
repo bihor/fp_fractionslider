@@ -8,37 +8,6 @@
         </TCEforms>
         <type>array</type>
         <el>
-          <switchableControllerActions>
-          <TCEforms>
-          <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:action</label>
-          <config>
-          <type>select</type>
-          <renderType>selectSingle</renderType>
-          <items>
-            <numIndex index="0">
-                <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:fractionslider</numIndex>
-                <numIndex index="1">Slide->fractionslider;Slide->show</numIndex>
-            </numIndex>
-            <numIndex index="1">
-                <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro</numIndex>
-                <numIndex index="1">Slide->sliderpro;Slide->show</numIndex>
-            </numIndex>
-            <numIndex index="2">
-                <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderrevolution</numIndex>
-                <numIndex index="1">Slide->sliderrevolution;Slide->show</numIndex>
-            </numIndex>
-            <numIndex index="10">
-                <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:listview</numIndex>
-                <numIndex index="1">Slide->list;Slide->show</numIndex>
-            </numIndex>
-            <numIndex index="11">
-                <numIndex index="0">LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:singleview</numIndex>
-                <numIndex index="1">Slide->show</numIndex>
-            </numIndex>
-            </items>
-          </config>
-          </TCEforms>
-          </switchableControllerActions>
 			<settings.override.sortOrder>
 				<TCEforms>
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sortOrder</label>

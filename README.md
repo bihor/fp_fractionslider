@@ -1,4 +1,4 @@
-# fp_fractionslider v.1.3.2
+# fp_fractionslider v.2.0.0
 
 Professional Slider-PlugIn for TYPO3
 
@@ -9,6 +9,5 @@ You find the manual (with links to demo pages) at typo3.org:
 https://docs.typo3.org/typo3cms/extensions/fp_fractionslider/
 
 Last changes:
-- Now for TYPO3 10 and 11.
-- Replacement of the Viewhelper re:addPublicResources. It is now deprecated. Use f:asset.css or f:asset.script instead.
-- PHP 8 bugfix.
+- Breaking: all plugins must be changed via an update-script (in the install-tool)!
+- Breaking: the Viewhelper re:addPublicResources was removed.

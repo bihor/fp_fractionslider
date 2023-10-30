@@ -17,6 +17,9 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
+        'security' => [
+            'ignorePageTypeRestriction' => true,
+        ],
 		'searchFields' => 'datax,datay,datastart,datawhitespace,datawidth,dataheight,datahoffset,datavoffset,dataresponsiveoffset,databasealign',
         'iconfile' => 'EXT:fp_fractionslider/Resources/Public/Icons/tx_fpfractionslider_domain_model_reveffect.png'
     ],

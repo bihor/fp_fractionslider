@@ -11,18 +11,18 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-  'title' => 'Professional Slider-PlugIn',
+  'title' => 'Professional Slider-PlugIn for Profis',
   'description' => 'Can be used with the "jQuery-FractionSlider", the "Professional jQuery Content Slider Plugin - Slider Pro" or the "Slider revolution".',
   'category' => 'plugin',
   'author' => 'Kurt Gusbeth',
-  'author_company' => 'fixpunkt werbeagentur gmbh',
+  'author_company' => 'fixpunkt für digitales GmbH',
   'state' => 'stable',
   'createDirs' => '',
   'clearCacheOnLoad' => 0,
-  'version' => '1.3.2',
+  'version' => '2.0.0',
   'constraints' => [
     'depends' => [
-      'typo3' => '10.4.6-11.5.99',
+      'typo3' => '12.0.0-12.4.99',
     ],
   	'conflicts' => [],
   	'suggests' => [],

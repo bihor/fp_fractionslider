@@ -3,6 +3,24 @@
 	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-11-10T14:22:23Z" product-name="fp_fractionslider">
 		<header/>
 		<body>
+			<trans-unit id="tx_fp_fractionslider_domain_model_fractionslider">
+				<target>Professionelles Slider-plugin: jQuery-FractionSlider</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_sliderpro">
+				<target>Professionelles Slider-plugin: Slider Pro</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_sliderrevolution">
+				<target>Professionelles Slider-plugin: Slider revolution</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_list">
+				<target>Professionelles Slider-plugin: Listen- und Einzelansicht</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model_show">
+				<target>Professionelles Slider-plugin: Einzelansicht</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_fractionslider_domain_model.description">
+				<target>Kann mit dem "jQuery-FractionSlider", dem "Professional jQuery Content Slider Plugin - Slider Pro" oder dem "Slider Revolution" benutzt werden.</target>
+			</trans-unit>
 			<trans-unit id="fpfractionslider-folder" xml:space="preserve">
 				<target>Professioneller Slider</target>
 			</trans-unit>
@@ -26,21 +44,6 @@
 			</trans-unit>
 			<trans-unit id="template.not_configured">
 				<target>kein Layout-Template ausgewählt!</target>
-			</trans-unit>
-			<trans-unit id="fractionslider" xml:space="preserve">
-				<target>FractionSlider</target>
-			</trans-unit>
-			<trans-unit id="sliderpro" xml:space="preserve">
-				<target>Slider Pro</target>
-			</trans-unit>
-			<trans-unit id="sliderrevolution" xml:space="preserve">
-				<target>Slider Revolution</target>
-			</trans-unit>
-			<trans-unit id="listview" xml:space="preserve">
-				<target>Listen- und Einzelansicht</target>
-			</trans-unit>
-			<trans-unit id="singleview" xml:space="preserve">
-				<target>Nur Einzelansicht</target>
 			</trans-unit>
 			<trans-unit id="more" xml:space="preserve">
 				<target>Zusätzliches</target>
@@ -357,8 +360,11 @@
 			<trans-unit id="sliderrevolution.disableProgressBar" xml:space="preserve">
 				<target>Fortschrittsbalken ausschalten?</target>
 			</trans-unit>
-			<trans-unit id="LGL.startingpoint" xml:space="preserve">
+			<trans-unit id="startingpoint" xml:space="preserve">
 				<target>Ordner:</target>
+			</trans-unit>
+			<trans-unit id="recursive" xml:space="preserve">
+				<target>Rekursiv:</target>
 			</trans-unit>
 		</body>
 	</file>
