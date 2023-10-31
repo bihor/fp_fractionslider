@@ -140,11 +140,6 @@ return [
             'config' =>
                 [
                     'type' => 'file',
-                    'foreign_match_fields' => [
-                        'fieldname' => 'background',
-                        'tablenames' => 'tx_fpfractionslider_domain_model_slide',
-                        'table_local' => 'sys_file',
-                    ],
                     'maxitems' => 1,
                     'allowed' => 'common-image-types'
                 ],

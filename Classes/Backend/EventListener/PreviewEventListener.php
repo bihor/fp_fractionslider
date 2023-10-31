@@ -112,8 +112,7 @@ final class PreviewEventListener
                         )
                     )
                     ->setMaxResults(self::SETTINGS_IN_PREVIEW)
-                    ->execute()
-                    ->fetchAll();
+                    ->executeQuery()->fetchAllAssociative();
                 if ($sliderRecords !== false) {
                     foreach ($sliderRecords as $row) {
                         $i++;
@@ -137,18 +136,17 @@ final class PreviewEventListener
 
             if (is_array($this->flexformData)) {
                 foreach ($this->recordMapping as $fieldName => $fieldConfiguration) {
-                    $value = $this->getFieldFromFlexform('settings.' . $fieldName);
+                    $value = $this->getFieldFromFlexform('settings.override.' . $fieldName);
                     if (isset($value) && (!$fieldConfiguration['table'] || $value)) {
                         if ($fieldConfiguration['table']) {
                             $content = $this->getRecordData($value, $fieldConfiguration['table']);
+                        } elseif ($fieldName == 'sortOrder') {
+                            $content = $this->getLanguageService()->sL(self::LLPATH . $fieldName . '.' . $value);
                         } else {
                             $content = $value;
                         }
-                        if ($fieldName == 'pagebrowser.itemsPerPage') {
-                            $fieldName = 'itemsPerPage';
-                        }
                         $this->tableData[] = [
-                            $this->getLanguageService()->sL(self::LLPATH . 'settings.' . $fieldName),
+                            $this->getLanguageService()->sL(self::LLPATH . $fieldName),
                             $content
                         ];
                     }

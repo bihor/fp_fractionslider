@@ -5,7 +5,7 @@ foreach (['fractionslider', 'sliderpro', 'sliderrevolution', 'list', 'show'] as 
     $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         $pluginSignature,
-        'FILE:EXT:fp_fractionslider/Configuration/FlexForms/flexform_pi1.xml'
+        'FILE:EXT:fp_fractionslider/Configuration/FlexForms/flexform_' . $plugin . '.xml'
     );
 
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
@@ -13,5 +13,6 @@ foreach (['fractionslider', 'sliderpro', 'sliderrevolution', 'list', 'show'] as 
         ucfirst($plugin),
         'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_' . $plugin,
         'EXT:fp_fractionslider/Resources/Public/Icons/Extension.gif',
+        'Fractionslider'
     );
 }

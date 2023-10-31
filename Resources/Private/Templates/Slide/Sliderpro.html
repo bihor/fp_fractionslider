@@ -13,7 +13,7 @@ Download it and copy the css/slider-pro.min.css and js/jquery.sliderPro.min.js t
  load them with the viewhelper f:asset.css and f:asset.script.
 Copy this file (Resources/Private/Templates/Slide/Sliderpro.html) to the fileadmin-folder too and
  modify the path to the slider-plugin below. Remove this pre-comment.
-After you have modified the path, you can use this template from your fileadmin-folder.
+After you have modified the path, you can use this template from your fileadmin/extension-folder.
 Change the path to this template via TypoScript-constants. Example:
  plugin.tx_fpfractionslider_pi1.view {
   templateRootPath = fileadmin/bsdist/theme/tmpl/fractionslider/Templates/
@@ -91,7 +91,7 @@ Now you can customise this template. E.g. change the path to the transparent cle
 	<f:for each="{slides}" as="slide">
 		<div class="sp-slide" {f:if(condition: '{slide.color}', then: 'style="background-color:{slide.color};"')}>
 			<f:if condition="{slide.background.originalResource.name}">
-				<img src="/clear.gif" data-src="/{slide.background.originalResource.originalFile.publicUrl}" class="sp-image" />
+				<img src="/clear.gif" data-src="{slide.background.originalResource.originalFile.publicUrl}" class="sp-image" />
 			</f:if>
 			<f:for each="{slide.elements}" as="element" iteration="iterator">
 				<div class="slide-part-{iterator.cycle} {f:if(condition: '{element.cssclass.name}', then: '{element.cssclass.name}', else: 'sp-layer sp-white sp-padding')}" {f:if(condition: '{element.cssstyles}', then: 'style="{element.cssstyles}"')}

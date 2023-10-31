@@ -45,4 +45,9 @@ Version     Changes
 1.3.0       Replacement of the Viewhelper re:addPublicResources. It is now deprecated.
             Use f:asset.css or f:asset.script instead.
 1.3.2       PHP 8 bugfix.
+2.0.0       Breaking: all plugins must be changed via an update-script (in the install-tool)!
+
+            Breaking: the Viewhelper re:addPublicResources was removed.
+
+            Breaking: plugin.tx_fpfractionslider_pi1 renamed to plugin.tx_fpfractionslider.
 ==========  =======================================================================================

@@ -1,11 +1,11 @@
 plugin.tx_fpfractionslider {
   view {
     templateRootPaths.0 = EXT:fp_fractionslider/Resources/Private/Templates/
-    templateRootPaths.1 = {$plugin.tx_fpfractionslider_pi1.view.templateRootPath}
+    templateRootPaths.1 = {$plugin.tx_fpfractionslider.view.templateRootPath}
     partialRootPaths.0 = EXT:fp_fractionslider/Resources/Private/Partials/
-    partialRootPaths.1 = {$plugin.tx_fpfractionslider_pi1.view.partialRootPath}
+    partialRootPaths.1 = {$plugin.tx_fpfractionslider.view.partialRootPath}
     layoutRootPaths.0 = EXT:fp_fractionslider/Resources/Private/Layouts/
-    layoutRootPaths.1 = {$plugin.tx_fpfractionslider_pi1.view.layoutRootPath}
+    layoutRootPaths.1 = {$plugin.tx_fpfractionslider.view.layoutRootPath}
   }
   persistence {
     storagePid = {$plugin.tx_fpfractionslider_pi1.persistence.storagePid}
