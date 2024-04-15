@@ -50,4 +50,7 @@ Version     Changes
             Breaking: the Viewhelper re:addPublicResources was removed.
 
             Breaking: plugin.tx_fpfractionslider_pi1 renamed to plugin.tx_fpfractionslider.
+2.1.0       Refactored with the rector-tool.
+
+            ts-files renamed to .typoscript!
 ==========  =======================================================================================
