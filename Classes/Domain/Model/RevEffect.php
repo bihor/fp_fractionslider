@@ -1,6 +1,7 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -11,11 +12,10 @@ namespace Fixpunkt\FpFractionslider\Domain\Model;
  *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
  *
  ***/
-
 /**
  * Slider revolution effect
  */
-class RevEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class RevEffect extends AbstractEntity
 {
     /**
      * data-x value
@@ -242,14 +242,12 @@ class RevEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDatawhitespaceValue()
     {
     	$result = '';
-        switch ($this->datawhitespace) {
-            case 1:    $result = 'normal';
-                break;
-            case 2:    $result = 'nowrap';
-                break;
-            case 3:    $result = 'pre';
-                break;
-        }
+        $result = match ($this->datawhitespace) {
+            1 => 'normal',
+            2 => 'nowrap',
+            3 => 'pre',
+            default => $result,
+        };
         return $result;
     }
     
@@ -282,12 +280,11 @@ class RevEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDataresponsiveoffsetValue()
     {
     	$result = '';
-    	switch ($this->dataresponsiveoffset) {
-    		case 1:    $result = 'on';
-    		break;
-    		case 2:    $result = 'off';
-    		break;
-    	}
+    	$result = match ($this->dataresponsiveoffset) {
+         1 => 'on',
+         2 => 'off',
+         default => $result,
+     };
     	return $result;
     }
     
@@ -320,12 +317,11 @@ class RevEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDatabasealignValue()
     {
     	$result = '';
-    	switch ($this->databasealign) {
-    		case 1:    $result = 'slide';
-    		break;
-    		case 2:    $result = 'grid';
-    		break;
-    	}
+    	$result = match ($this->databasealign) {
+         1 => 'slide',
+         2 => 'grid',
+         default => $result,
+     };
     	return $result;
     }
     

@@ -1,27 +1,27 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Domain\Model;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Domain\Model\RevEffect;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class RevEffectTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class RevEffectTest extends UnitTestCase
 {
     /**
-     * @var \Fixpunkt\FpFractionslider\Domain\Model\RevEffect
+     * @var RevEffect
      */
     protected $subject = null;
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = new \Fixpunkt\FpFractionslider\Domain\Model\RevEffect();
+        $this->subject = new RevEffect();
     }
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**

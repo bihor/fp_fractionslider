@@ -1,4 +1,4 @@
-# fp_fractionslider v.2.0.1
+# fp_fractionslider v.2.1.0
 
 Professional Slider-PlugIn for TYPO3
 
@@ -9,6 +9,10 @@ You find the manual (with links to demo pages) at typo3.org:
 https://docs.typo3.org/p/fixpunkt/fp-fractionslider/main/en-us/
 
 Last changes:
+v. 2.0:
 - Breaking: all plugins must be changed via an update-script (in the install-tool)!
 - Breaking: the Viewhelper re:addPublicResources was removed.
 - Breaking: plugin.tx_fpfractionslider_pi1 renamed to plugin.tx_fpfractionslider.
+
+v. 2.1:
+- Refactored with the rector-tool.

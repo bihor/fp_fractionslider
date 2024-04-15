@@ -1,6 +1,10 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Controller;
 
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use Fixpunkt\FpFractionslider\Domain\Repository\SlideRepository;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+use Fixpunkt\FpFractionslider\Domain\Model\Slide;
 use Psr\Http\Message\ResponseInterface;
 
 /***
@@ -17,21 +21,19 @@ use Psr\Http\Message\ResponseInterface;
 /**
  * SlideController
  */
-class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class SlideController extends ActionController
 {
     /**
      * slideRepository
      *
-     * @var \Fixpunkt\FpFractionslider\Domain\Repository\SlideRepository
+     * @var SlideRepository
      */
     protected $slideRepository = null;
 
     /**
      * Injects the Repository
-     *
-     * @param \Fixpunkt\FpFractionslider\Domain\Repository\SlideRepository $slideRepository
      */
-    public function injectSlideRepository(\Fixpunkt\FpFractionslider\Domain\Repository\SlideRepository $slideRepository)
+    public function injectSlideRepository(SlideRepository $slideRepository)
     {
         $this->slideRepository = $slideRepository;
     }
@@ -39,7 +41,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * configurationManager
      *
-     * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
+     * @var ConfigurationManagerInterface
      */
     protected $configurationManager;
 
@@ -49,7 +51,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function initializeAction()
     {
         $tsSettings = $this->configurationManager->getConfiguration(
-            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
+            ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
         );
         if (isset($tsSettings['plugin.']['tx_fpfractionslider.']['settings.']) && is_array($tsSettings['plugin.']['tx_fpfractionslider.']['settings.'])) {
             $tsSettings = $tsSettings['plugin.']['tx_fpfractionslider.']['settings.'];
@@ -61,7 +63,7 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         	$tsSettings = array_merge($tsSettings, $tsSettings_pi1);
         }
         $settings = $this->configurationManager->getConfiguration(
-            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS
+            ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS
         );
         if (isset($settings['override']) && is_array($settings['override'])) {
             $overrides = $settings['override'];
@@ -183,10 +185,9 @@ class SlideController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * action show
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\Slide $slide
      * @return ResponseInterface
      */
-    public function showAction(\Fixpunkt\FpFractionslider\Domain\Model\Slide $slide): ResponseInterface
+    public function showAction(Slide $slide): ResponseInterface
     {
         $this->view->assign('slide', $slide);
         return $this->htmlResponse();

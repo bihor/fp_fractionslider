@@ -1,12 +1,17 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Controller;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Controller\RevEffectController;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use Fixpunkt\FpFractionslider\Domain\Repository\RevEffectRepository;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class RevEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class RevEffectControllerTest extends UnitTestCase
 {
     /**
      * @var \Fixpunkt\FpFractionslider\Controller\RevEffectController
@@ -15,8 +20,7 @@ class RevEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = $this->getMockBuilder(\Fixpunkt\FpFractionslider\Controller\RevEffectController::class)
+        $this->subject = $this->getMockBuilder(RevEffectController::class)
             ->setMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -24,7 +28,6 @@ class RevEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**
@@ -33,18 +36,18 @@ class RevEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     public function listActionFetchesAllRevEffectsFromRepositoryAndAssignsThemToView()
     {
 
-        $allRevEffects = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $allRevEffects = $this->getMockBuilder(ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $revEffectRepository = $this->getMockBuilder(\Fixpunkt\FpFractionslider\Domain\Repository\RevEffectRepository::class)
+        $revEffectRepository = $this->getMockBuilder(RevEffectRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
         $revEffectRepository->expects(self::once())->method('findAll')->will(self::returnValue($allRevEffects));
         $this->inject($this->subject, 'revEffectRepository', $revEffectRepository);
 
-        $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
+        $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $view->expects(self::once())->method('assign')->with('revEffects', $allRevEffects);
         $this->inject($this->subject, 'view', $view);
 

@@ -1,27 +1,30 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Domain\Model;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Domain\Model\Slide;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use Fixpunkt\FpFractionslider\Domain\Model\Part;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class SlideTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class SlideTest extends UnitTestCase
 {
     /**
-     * @var \Fixpunkt\FpFractionslider\Domain\Model\Slide
+     * @var Slide
      */
     protected $subject = null;
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = new \Fixpunkt\FpFractionslider\Domain\Model\Slide();
+        $this->subject = new Slide();
     }
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**
@@ -95,7 +98,7 @@ class SlideTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setBackgroundForFileReferenceSetsBackground()
     {
-        $fileReferenceFixture = new \TYPO3\CMS\Extbase\Domain\Model\FileReference();
+        $fileReferenceFixture = new FileReference();
         $this->subject->setBackground($fileReferenceFixture);
 
         self::assertAttributeEquals(
@@ -152,7 +155,7 @@ class SlideTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getElementsReturnsInitialValueForPart()
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $newObjectStorage = new ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
             $this->subject->getElements()
@@ -165,8 +168,8 @@ class SlideTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setElementsForObjectStorageContainingPartSetsElements()
     {
-        $element = new \Fixpunkt\FpFractionslider\Domain\Model\Part();
-        $objectStorageHoldingExactlyOneElements = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $element = new Part();
+        $objectStorageHoldingExactlyOneElements = new ObjectStorage();
         $objectStorageHoldingExactlyOneElements->attach($element);
         $this->subject->setElements($objectStorageHoldingExactlyOneElements);
 
@@ -183,8 +186,8 @@ class SlideTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addElementToObjectStorageHoldingElements()
     {
-        $element = new \Fixpunkt\FpFractionslider\Domain\Model\Part();
-        $elementsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $element = new Part();
+        $elementsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -200,8 +203,8 @@ class SlideTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeElementFromObjectStorageHoldingElements()
     {
-        $element = new \Fixpunkt\FpFractionslider\Domain\Model\Part();
-        $elementsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $element = new Part();
+        $elementsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();

@@ -1,6 +1,8 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -11,18 +13,17 @@ namespace Fixpunkt\FpFractionslider\Domain\Model;
  *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
  *
  ***/
-
 /**
  * Cssclass
  */
-class Cssclass extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Cssclass extends AbstractEntity
 {
     /**
      * Name
      *
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $name = '';
 
     /**

@@ -1,27 +1,33 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Domain\Model;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Domain\Model\Part;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use Fixpunkt\FpFractionslider\Domain\Model\Cssclass;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use Fixpunkt\FpFractionslider\Domain\Model\FracEffect;
+use Fixpunkt\FpFractionslider\Domain\Model\ProEffect;
+use Fixpunkt\FpFractionslider\Domain\Model\RevEffect;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class PartTest extends UnitTestCase
 {
     /**
-     * @var \Fixpunkt\FpFractionslider\Domain\Model\Part
+     * @var Part
      */
     protected $subject = null;
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = new \Fixpunkt\FpFractionslider\Domain\Model\Part();
+        $this->subject = new Part();
     }
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**
@@ -149,7 +155,7 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setImageForFileReferenceSetsImage()
     {
-        $fileReferenceFixture = new \TYPO3\CMS\Extbase\Domain\Model\FileReference();
+        $fileReferenceFixture = new FileReference();
         $this->subject->setImage($fileReferenceFixture);
 
         self::assertAttributeEquals(
@@ -231,7 +237,7 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setCssclassForCssclassSetsCssclass()
     {
-        $cssclassFixture = new \Fixpunkt\FpFractionslider\Domain\Model\Cssclass();
+        $cssclassFixture = new Cssclass();
         $this->subject->setCssclass($cssclassFixture);
 
         self::assertAttributeEquals(
@@ -247,7 +253,7 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getFractionReturnsInitialValueForFracEffect()
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $newObjectStorage = new ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
             $this->subject->getFraction()
@@ -260,8 +266,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setFractionForObjectStorageContainingFracEffectSetsFraction()
     {
-        $fraction = new \Fixpunkt\FpFractionslider\Domain\Model\FracEffect();
-        $objectStorageHoldingExactlyOneFraction = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $fraction = new FracEffect();
+        $objectStorageHoldingExactlyOneFraction = new ObjectStorage();
         $objectStorageHoldingExactlyOneFraction->attach($fraction);
         $this->subject->setFraction($objectStorageHoldingExactlyOneFraction);
 
@@ -278,8 +284,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addFractionToObjectStorageHoldingFraction()
     {
-        $fraction = new \Fixpunkt\FpFractionslider\Domain\Model\FracEffect();
-        $fractionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $fraction = new FracEffect();
+        $fractionObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -295,8 +301,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeFractionFromObjectStorageHoldingFraction()
     {
-        $fraction = new \Fixpunkt\FpFractionslider\Domain\Model\FracEffect();
-        $fractionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $fraction = new FracEffect();
+        $fractionObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -313,7 +319,7 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getProReturnsInitialValueForProEffect()
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $newObjectStorage = new ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
             $this->subject->getPro()
@@ -326,8 +332,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setProForObjectStorageContainingProEffectSetsPro()
     {
-        $pro = new \Fixpunkt\FpFractionslider\Domain\Model\ProEffect();
-        $objectStorageHoldingExactlyOnePro = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $pro = new ProEffect();
+        $objectStorageHoldingExactlyOnePro = new ObjectStorage();
         $objectStorageHoldingExactlyOnePro->attach($pro);
         $this->subject->setPro($objectStorageHoldingExactlyOnePro);
 
@@ -344,8 +350,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addProToObjectStorageHoldingPro()
     {
-        $pro = new \Fixpunkt\FpFractionslider\Domain\Model\ProEffect();
-        $proObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $pro = new ProEffect();
+        $proObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -361,8 +367,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeProFromObjectStorageHoldingPro()
     {
-        $pro = new \Fixpunkt\FpFractionslider\Domain\Model\ProEffect();
-        $proObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $pro = new ProEffect();
+        $proObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -379,7 +385,7 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getRevolutionReturnsInitialValueForRevEffect()
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $newObjectStorage = new ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
             $this->subject->getRevolution()
@@ -392,8 +398,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setRevolutionForObjectStorageContainingRevEffectSetsRevolution()
     {
-        $revolution = new \Fixpunkt\FpFractionslider\Domain\Model\RevEffect();
-        $objectStorageHoldingExactlyOneRevolution = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $revolution = new RevEffect();
+        $objectStorageHoldingExactlyOneRevolution = new ObjectStorage();
         $objectStorageHoldingExactlyOneRevolution->attach($revolution);
         $this->subject->setRevolution($objectStorageHoldingExactlyOneRevolution);
 
@@ -410,8 +416,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addRevolutionToObjectStorageHoldingRevolution()
     {
-        $revolution = new \Fixpunkt\FpFractionslider\Domain\Model\RevEffect();
-        $revolutionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $revolution = new RevEffect();
+        $revolutionObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -427,8 +433,8 @@ class PartTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeRevolutionFromObjectStorageHoldingRevolution()
     {
-        $revolution = new \Fixpunkt\FpFractionslider\Domain\Model\RevEffect();
-        $revolutionObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $revolution = new RevEffect();
+        $revolutionObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();

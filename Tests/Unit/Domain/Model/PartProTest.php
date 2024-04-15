@@ -1,12 +1,16 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Domain\Model;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Domain\Model\PartPro;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use Fixpunkt\FpFractionslider\Domain\Model\Cssclass;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class PartProTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class PartProTest extends UnitTestCase
 {
     /**
      * @var \Fixpunkt\FpFractionslider\Domain\Model\PartPro
@@ -15,13 +19,11 @@ class PartProTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = new \Fixpunkt\FpFractionslider\Domain\Model\PartPro();
+        $this->subject = new PartPro();
     }
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**
@@ -149,7 +151,7 @@ class PartProTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setImageForFileReferenceSetsImage()
     {
-        $fileReferenceFixture = new \TYPO3\CMS\Extbase\Domain\Model\FileReference();
+        $fileReferenceFixture = new FileReference();
         $this->subject->setImage($fileReferenceFixture);
 
         self::assertAttributeEquals(
@@ -570,7 +572,7 @@ class PartProTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setCssclassForCssclassSetsCssclass()
     {
-        $cssclassFixture = new \Fixpunkt\FpFractionslider\Domain\Model\Cssclass();
+        $cssclassFixture = new Cssclass();
         $this->subject->setCssclass($cssclassFixture);
 
         self::assertAttributeEquals(

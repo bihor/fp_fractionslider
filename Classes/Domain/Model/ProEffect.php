@@ -1,6 +1,7 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -11,11 +12,10 @@ namespace Fixpunkt\FpFractionslider\Domain\Model;
  *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
  *
  ***/
-
 /**
  * PartPro
  */
-class ProEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class ProEffect extends AbstractEntity
 {
     /**
      * Sets the width of the layer
@@ -197,26 +197,18 @@ class ProEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDatapositionValue()
     {
         $result = '';
-        switch ($this->dataposition) {
-            case 1:    $result = 'topLeft';
-                break;
-            case 2:    $result = 'topCenter';
-                break;
-            case 3:    $result = 'topRight';
-                break;
-            case 4:    $result = 'bottomLeft';
-                break;
-            case 5:    $result = 'bottomCenter';
-                break;
-            case 6:    $result = 'bottomRight';
-                break;
-            case 7:    $result = 'centerLeft';
-                break;
-            case 8:    $result = 'centerRight';
-                break;
-            case 9:    $result = 'centerCenter';
-                break;
-        }
+        $result = match ($this->dataposition) {
+            1 => 'topLeft',
+            2 => 'topCenter',
+            3 => 'topRight',
+            4 => 'bottomLeft',
+            5 => 'bottomCenter',
+            6 => 'bottomRight',
+            7 => 'centerLeft',
+            8 => 'centerRight',
+            9 => 'centerCenter',
+            default => $result,
+        };
         return $result;
     }
 
@@ -291,16 +283,13 @@ class ProEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDatashowtransitionValue()
     {
         $result = '';
-        switch ($this->datashowtransition) {
-            case 1:    $result = 'left';
-                break;
-            case 2:    $result = 'right';
-                break;
-            case 3:    $result = 'up';
-                break;
-            case 4:    $result = 'down';
-                break;
-        }
+        $result = match ($this->datashowtransition) {
+            1 => 'left',
+            2 => 'right',
+            3 => 'up',
+            4 => 'down',
+            default => $result,
+        };
         return $result;
     }
 
@@ -396,16 +385,13 @@ class ProEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDatahidetransitionValue()
     {
         $result = '';
-        switch ($this->datahidetransition) {
-            case 1:    $result = 'left';
-                break;
-            case 2:    $result = 'right';
-                break;
-            case 3:    $result = 'up';
-                break;
-            case 4:    $result = 'down';
-                break;
-        }
+        $result = match ($this->datahidetransition) {
+            1 => 'left',
+            2 => 'right',
+            3 => 'up',
+            4 => 'down',
+            default => $result,
+        };
         return $result;
     }
 

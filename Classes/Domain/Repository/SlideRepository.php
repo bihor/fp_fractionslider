@@ -1,6 +1,8 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Domain\Repository;
 
+use TYPO3\CMS\Extbase\Persistence\Repository;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -11,17 +13,16 @@ namespace Fixpunkt\FpFractionslider\Domain\Repository;
  *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
  *
  ***/
-
 /**
  * The repository for Slides
  */
-class SlideRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class SlideRepository extends Repository
 {
     /**
      * @var array
      */
     protected $defaultOrderings = [
-        'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+        'sorting' => QueryInterface::ORDER_ASCENDING
     ];
 
     /**
@@ -36,7 +37,7 @@ class SlideRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 			$query->setLimit(intval($limit));
 		}
 		if ($sortOrder == 'desc') {
-			$query->setOrderings(	array('sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING) );
+			$query->setOrderings(	['sorting' => QueryInterface::ORDER_DESCENDING] );
 		}
 		return $query->execute();
     }

@@ -1,6 +1,7 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -11,11 +12,10 @@ namespace Fixpunkt\FpFractionslider\Domain\Model;
  *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
  *
  ***/
-
 /**
  * Part of a slide-element
  */
-class FracEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class FracEffect extends AbstractEntity
 {
     /**
      * data-position attribute
@@ -109,28 +109,19 @@ class FracEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDatainValue()
     {
         $result = '';
-        switch ($this->datain) {
-            case 1:    $result = 'none';
-                break;
-            case 2:    $result = 'fade';
-                break;
-            case 3:    $result = 'left';
-                break;
-            case 4:    $result = 'right';
-                break;
-            case 5:    $result = 'top';
-                break;
-            case 6:    $result = 'bottom';
-                break;
-            case 7:    $result = 'topLeft';
-                break;
-            case 8:    $result = 'bottomLeft';
-                break;
-            case 9:    $result = 'topRight';
-                break;
-            case 10:    $result = 'bottomRight';
-                break;
-        }
+        $result = match ($this->datain) {
+            1 => 'none',
+            2 => 'fade',
+            3 => 'left',
+            4 => 'right',
+            5 => 'top',
+            6 => 'bottom',
+            7 => 'topLeft',
+            8 => 'bottomLeft',
+            9 => 'topRight',
+            10 => 'bottomRight',
+            default => $result,
+        };
         return $result;
     }
 
@@ -163,28 +154,19 @@ class FracEffect extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDataoutValue()
     {
         $result = '';
-        switch ($this->dataout) {
-            case 1:    $result = 'none';
-                break;
-            case 2:    $result = 'fade';
-                break;
-            case 3:    $result = 'left';
-                break;
-            case 4:    $result = 'right';
-                break;
-            case 5:    $result = 'top';
-                break;
-            case 6:    $result = 'bottom';
-                break;
-            case 7:    $result = 'topLeft';
-                break;
-            case 8:    $result = 'bottomLeft';
-                break;
-            case 9:    $result = 'topRight';
-                break;
-            case 10:    $result = 'bottomRight';
-                break;
-        }
+        $result = match ($this->dataout) {
+            1 => 'none',
+            2 => 'fade',
+            3 => 'left',
+            4 => 'right',
+            5 => 'top',
+            6 => 'bottom',
+            7 => 'topLeft',
+            8 => 'bottomLeft',
+            9 => 'topRight',
+            10 => 'bottomRight',
+            default => $result,
+        };
         return $result;
     }
 

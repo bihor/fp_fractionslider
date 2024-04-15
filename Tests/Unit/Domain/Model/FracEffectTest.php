@@ -1,27 +1,27 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Domain\Model;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Domain\Model\FracEffect;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class FracEffectTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class FracEffectTest extends UnitTestCase
 {
     /**
-     * @var \Fixpunkt\FpFractionslider\Domain\Model\FracEffect
+     * @var FracEffect
      */
     protected $subject = null;
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = new \Fixpunkt\FpFractionslider\Domain\Model\FracEffect();
+        $this->subject = new FracEffect();
     }
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**

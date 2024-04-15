@@ -5,7 +5,6 @@ return [
         'label' => 'datashowdelay',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'sortby' => 'sorting',
 		'versioningWS' => true,
         'languageField' => 'sys_language_uid',
@@ -30,29 +29,16 @@ return [
 		'sys_language_uid' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:LGL.language',
-			'config' => [
-				'type' => 'select',
-				'renderType' => 'selectSingle',
-				'special' => 'languages',
-				'items' => [
-					[
-						'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:LGL.allLanguages',
-						-1,
-						'flags-multiple'
-					]
-				],
-				'default' => 0,
-			],
+			'config' => ['type' => 'language'],
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => true,
             'label' => 'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', 0],
+                    ['label' => '', 'value' => 0],
                 ],
                 'foreign_table' => 'tx_fpfractionslider_domain_model_proeffect',
                 'foreign_table_where' => 'AND tx_fpfractionslider_domain_model_proeffect.pid=###CURRENT_PID### AND tx_fpfractionslider_domain_model_proeffect.sys_language_uid IN (-1,0)',
@@ -79,8 +65,7 @@ return [
                 'renderType' => 'checkboxToggle',
                 'items' => [
                     [
-                        0 => '',
-                        1 => '',
+                        'label' => '',
                         'invertStateDisplay' => true
                     ]
                 ],
@@ -90,9 +75,7 @@ return [
     		'exclude' => true,
     		'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
     		'config' => [
-    			'type' => 'input',
-    			'renderType' => 'inputDateTime',
-    			'eval' => 'datetime,int',
+    			'type' => 'datetime',
     			'default' => 0,
     			'behaviour' => [
     				'allowLanguageSynchronization' => true
@@ -103,9 +86,7 @@ return [
     		'exclude' => true,
     		'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
     		'config' => [
-    			'type' => 'input',
-    			'renderType' => 'inputDateTime',
-    			'eval' => 'datetime,int',
+    			'type' => 'datetime',
     			'default' => 0,
     			'range' => [
     				'upper' => mktime(0, 0, 0, 1, 1, 2038)
@@ -149,16 +130,16 @@ return [
 			    'type' => 'select',
 			    'renderType' => 'selectSingle',
 			    'items' => [
-			        ['-', 0],
-			        ['topLeft', 1],
-			        ['topCenter', 2],
-			        ['topRight', 3],
-			        ['bottomLeft', 4],
-			        ['bottomCenter', 5],
-			        ['bottomRight', 6],
-			        ['centerLeft', 7],
-			        ['centerRight', 8],
-			        ['centerCenter', 9],
+			        ['label' => '-', 'value' => 0],
+			        ['label' => 'topLeft', 'value' => 1],
+			        ['label' => 'topCenter', 'value' => 2],
+			        ['label' => 'topRight', 'value' => 3],
+			        ['label' => 'bottomLeft', 'value' => 4],
+			        ['label' => 'bottomCenter', 'value' => 5],
+			        ['label' => 'bottomRight', 'value' => 6],
+			        ['label' => 'centerLeft', 'value' => 7],
+			        ['label' => 'centerRight', 'value' => 8],
+			        ['label' => 'centerCenter', 'value' => 9],
 			    ],
                 'default' => 0,
 			    'size' => 1,
@@ -191,11 +172,11 @@ return [
 			    'type' => 'select',
 			    'renderType' => 'selectSingle',
 			    'items' => [
-			        ['-', 0],
-			        ['left', 1],
-			        ['right', 2],
-			        ['up', 3],
-			        ['down', 4],
+			        ['label' => '-', 'value' => 0],
+			        ['label' => 'left', 'value' => 1],
+			        ['label' => 'right', 'value' => 2],
+			        ['label' => 'up', 'value' => 3],
+			        ['label' => 'down', 'value' => 4],
 			    ],
                 'default' => 0,
 			    'size' => 1,
@@ -237,11 +218,11 @@ return [
 			    'type' => 'select',
 			    'renderType' => 'selectSingle',
 			    'items' => [
-			        ['-', 0],
-			        ['left', 1],
-			        ['right', 2],
-			        ['up', 3],
-			        ['down', 4],
+			        ['label' => '-', 'value' => 0],
+			        ['label' => 'left', 'value' => 1],
+			        ['label' => 'right', 'value' => 2],
+			        ['label' => 'up', 'value' => 3],
+			        ['label' => 'down', 'value' => 4],
 			    ],
                 'default' => 0,
 			    'size' => 1,

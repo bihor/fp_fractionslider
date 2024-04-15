@@ -1,6 +1,11 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -11,26 +16,25 @@ namespace Fixpunkt\FpFractionslider\Domain\Model;
  *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
  *
  ***/
-
 /**
  * Part of a slide
  */
-class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Part extends AbstractEntity
 {
     /**
      * Title of this element
      *
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $title = '';
 
     /**
      * Optional subtitle of this element
      *
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $subtitle = '';
 
     /**
@@ -50,9 +54,9 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Image
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var FileReference
      */
+    #[Cascade(['value' => 'remove'])]
     protected $image = null;
 
     /**
@@ -72,32 +76,32 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * CSS class
      *
-     * @var \Fixpunkt\FpFractionslider\Domain\Model\Cssclass
+     * @var Cssclass
      */
     protected $cssclass = null;
 
     /**
      * fraction
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\FracEffect>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var ObjectStorage<FracEffect>
      */
+    #[Cascade(['value' => 'remove'])]
     protected $fraction = null;
 
     /**
      * pro
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\ProEffect>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var ObjectStorage<ProEffect>
      */
+    #[Cascade(['value' => 'remove'])]
     protected $pro = null;
 
     /**
      * revolution
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\RevEffect>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var ObjectStorage<RevEffect>
      */
+    #[Cascade(['value' => 'remove'])]
     protected $revolution = null;
 
     /**
@@ -119,9 +123,9 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected function initStorageObjects()
     {
-        $this->fraction = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->pro = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->revolution = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->fraction = new ObjectStorage();
+        $this->pro = new ObjectStorage();
+        $this->revolution = new ObjectStorage();
     }
 
     /**
@@ -211,7 +215,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the image
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @return FileReference $image
      */
     public function getImage()
     {
@@ -221,10 +225,9 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the image
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
      * @return void
      */
-    public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
+    public function setImage(FileReference $image)
     {
         $this->image = $image;
     }
@@ -274,7 +277,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the cssclass
      *
-     * @return \Fixpunkt\FpFractionslider\Domain\Model\Cssclass $cssclass
+     * @return Cssclass $cssclass
      */
     public function getCssclass()
     {
@@ -284,10 +287,9 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the cssclass
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\Cssclass $cssclass
      * @return void
      */
-    public function setCssclass(\Fixpunkt\FpFractionslider\Domain\Model\Cssclass $cssclass)
+    public function setCssclass(Cssclass $cssclass)
     {
         $this->cssclass = $cssclass;
     }
@@ -295,10 +297,9 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a FracEffect
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\FracEffect $fraction
      * @return void
      */
-    public function addFraction(\Fixpunkt\FpFractionslider\Domain\Model\FracEffect $fraction)
+    public function addFraction(FracEffect $fraction)
     {
         $this->fraction->attach($fraction);
     }
@@ -306,10 +307,10 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a FracEffect
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\FracEffect $fractionToRemove The FracEffect to be removed
+     * @param FracEffect $fractionToRemove The FracEffect to be removed
      * @return void
      */
-    public function removeFraction(\Fixpunkt\FpFractionslider\Domain\Model\FracEffect $fractionToRemove)
+    public function removeFraction(FracEffect $fractionToRemove)
     {
         $this->fraction->detach($fractionToRemove);
     }
@@ -317,7 +318,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the fraction
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\FracEffect> $fraction
+     * @return ObjectStorage<FracEffect> $fraction
      */
     public function getFraction()
     {
@@ -327,10 +328,10 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the fraction
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\FracEffect> $fraction
+     * @param ObjectStorage<FracEffect> $fraction
      * @return void
      */
-    public function setFraction(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $fraction)
+    public function setFraction(ObjectStorage $fraction)
     {
         $this->fraction = $fraction;
     }
@@ -338,10 +339,9 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a ProEffect
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\ProEffect $pro
      * @return void
      */
-    public function addPro(\Fixpunkt\FpFractionslider\Domain\Model\ProEffect $pro)
+    public function addPro(ProEffect $pro)
     {
         $this->pro->attach($pro);
     }
@@ -349,10 +349,10 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a ProEffect
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\ProEffect $proToRemove The ProEffect to be removed
+     * @param ProEffect $proToRemove The ProEffect to be removed
      * @return void
      */
-    public function removePro(\Fixpunkt\FpFractionslider\Domain\Model\ProEffect $proToRemove)
+    public function removePro(ProEffect $proToRemove)
     {
         $this->pro->detach($proToRemove);
     }
@@ -360,7 +360,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the pro
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\ProEffect> $pro
+     * @return ObjectStorage<ProEffect> $pro
      */
     public function getPro()
     {
@@ -370,10 +370,10 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the pro
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\ProEffect> $pro
+     * @param ObjectStorage<ProEffect> $pro
      * @return void
      */
-    public function setPro(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $pro)
+    public function setPro(ObjectStorage $pro)
     {
         $this->pro = $pro;
     }
@@ -381,10 +381,9 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a RevEffect
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\RevEffect $revolution
      * @return void
      */
-    public function addRevolution(\Fixpunkt\FpFractionslider\Domain\Model\RevEffect $revolution)
+    public function addRevolution(RevEffect $revolution)
     {
         $this->revolution->attach($revolution);
     }
@@ -392,10 +391,10 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a RevEffect
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\RevEffect $revolutionToRemove The RevEffect to be removed
+     * @param RevEffect $revolutionToRemove The RevEffect to be removed
      * @return void
      */
-    public function removeRevolution(\Fixpunkt\FpFractionslider\Domain\Model\RevEffect $revolutionToRemove)
+    public function removeRevolution(RevEffect $revolutionToRemove)
     {
         $this->revolution->detach($revolutionToRemove);
     }
@@ -403,7 +402,7 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the revolution
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\RevEffect> $revolution
+     * @return ObjectStorage<RevEffect> $revolution
      */
     public function getRevolution()
     {
@@ -413,10 +412,10 @@ class Part extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the revolution
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\RevEffect> $revolution
+     * @param ObjectStorage<RevEffect> $revolution
      * @return void
      */
-    public function setRevolution(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $revolution)
+    public function setRevolution(ObjectStorage $revolution)
     {
         $this->revolution = $revolution;
     }

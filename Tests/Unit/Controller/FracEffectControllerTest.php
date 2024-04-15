@@ -1,12 +1,17 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Controller;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Controller\FracEffectController;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use Fixpunkt\FpFractionslider\Domain\Repository\FracEffectRepository;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class FracEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class FracEffectControllerTest extends UnitTestCase
 {
     /**
      * @var \Fixpunkt\FpFractionslider\Controller\FracEffectController
@@ -15,8 +20,7 @@ class FracEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = $this->getMockBuilder(\Fixpunkt\FpFractionslider\Controller\FracEffectController::class)
+        $this->subject = $this->getMockBuilder(FracEffectController::class)
             ->setMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -24,7 +28,6 @@ class FracEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**
@@ -33,18 +36,18 @@ class FracEffectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     public function listActionFetchesAllFracEffectsFromRepositoryAndAssignsThemToView()
     {
 
-        $allFracEffects = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $allFracEffects = $this->getMockBuilder(ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $fracEffectRepository = $this->getMockBuilder(\Fixpunkt\FpFractionslider\Domain\Repository\FracEffectRepository::class)
+        $fracEffectRepository = $this->getMockBuilder(FracEffectRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
         $fracEffectRepository->expects(self::once())->method('findAll')->will(self::returnValue($allFracEffects));
         $this->inject($this->subject, 'fracEffectRepository', $fracEffectRepository);
 
-        $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
+        $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $view->expects(self::once())->method('assign')->with('fracEffects', $allFracEffects);
         $this->inject($this->subject, 'view', $view);
 

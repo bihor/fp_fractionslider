@@ -5,7 +5,6 @@ return [
         'label' => 'datatime',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'sortby' => 'sorting',
 		'versioningWS' => true,
         'languageField' => 'sys_language_uid',
@@ -30,29 +29,16 @@ return [
 		'sys_language_uid' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:LGL.language',
-			'config' => [
-				'type' => 'select',
-				'renderType' => 'selectSingle',
-				'special' => 'languages',
-				'items' => [
-					[
-						'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:LGL.allLanguages',
-						-1,
-						'flags-multiple'
-					]
-				],
-				'default' => 0,
-			],
+			'config' => ['type' => 'language'],
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => true,
             'label' => 'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_db.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', 0],
+                    ['label' => '', 'value' => 0],
                 ],
                 'foreign_table' => 'tx_fpfractionslider_domain_model_fraceffect',
                 'foreign_table_where' => 'AND tx_fpfractionslider_domain_model_fraceffect.pid=###CURRENT_PID### AND tx_fpfractionslider_domain_model_fraceffect.sys_language_uid IN (-1,0)',
@@ -79,8 +65,7 @@ return [
                 'renderType' => 'checkboxToggle',
                 'items' => [
                     [
-                        0 => '',
-                        1 => '',
+                        'label' => '',
                         'invertStateDisplay' => true
                     ]
                 ],
@@ -90,9 +75,7 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
-                'type' => 'input',
-            	'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
+                'type' => 'datetime',
             	'default' => 0,
             	'behaviour' => [
             		'allowLanguageSynchronization' => true
@@ -103,9 +86,7 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
-                'type' => 'input',
-            	'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
+                'type' => 'datetime',
                 'default' => 0,
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038)
@@ -131,17 +112,17 @@ return [
 			    'type' => 'select',
 			    'renderType' => 'selectSingle',
 			    'items' => [
-			        ['-', 0],
-			        ['none', 1],
-			        ['fade', 2],
-			        ['left', 3],
-			        ['right', 4],
-			        ['top', 5],
-			        ['bottom', 6],
-			        ['topLeft', 7],
-			        ['bottomLeft', 8],
-			        ['topRight', 9],
-			        ['bottomRight', 10],
+			        ['label' => '-', 'value' => 0],
+			        ['label' => 'none', 'value' => 1],
+			        ['label' => 'fade', 'value' => 2],
+			        ['label' => 'left', 'value' => 3],
+			        ['label' => 'right', 'value' => 4],
+			        ['label' => 'top', 'value' => 5],
+			        ['label' => 'bottom', 'value' => 6],
+			        ['label' => 'topLeft', 'value' => 7],
+			        ['label' => 'bottomLeft', 'value' => 8],
+			        ['label' => 'topRight', 'value' => 9],
+			        ['label' => 'bottomRight', 'value' => 10],
 			    ],
                 'default' => 0,
 			    'size' => 1,
@@ -156,17 +137,17 @@ return [
 			    'type' => 'select',
 			    'renderType' => 'selectSingle',
 			    'items' => [
-			        ['-', 0],
-					['none ', 1],
-					['fade', 2],
-					['left', 3],
-					['right', 4],
-					['top', 5],
-					['bottom', 6],
-					['topLeft', 7],
-					['bottomLeft', 8],
-					['topRight', 9],
-					['bottomRight', 10],
+			        ['label' => '-', 'value' => 0],
+					['label' => 'none ', 'value' => 1],
+					['label' => 'fade', 'value' => 2],
+					['label' => 'left', 'value' => 3],
+					['label' => 'right', 'value' => 4],
+					['label' => 'top', 'value' => 5],
+					['label' => 'bottom', 'value' => 6],
+					['label' => 'topLeft', 'value' => 7],
+					['label' => 'bottomLeft', 'value' => 8],
+					['label' => 'topRight', 'value' => 9],
+					['label' => 'bottomRight', 'value' => 10],
 			    ],
                 'default' => 0,
 			    'size' => 1,
@@ -226,8 +207,8 @@ return [
 			    'type' => 'select',
 			    'renderType' => 'selectSingle',
 			    'items' => [
-			        ['-', 0],
-		    		['cycle', 1],
+			        ['label' => '-', 'value' => 0],
+		    		['label' => 'cycle', 'value' => 1],
 			    ],
                 'default' => 0,
 			    'size' => 1,

@@ -1,22 +1,25 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Tests\Unit\Controller;
 
+use TYPO3\CMS\Core\Tests\UnitTestCase;
+use Fixpunkt\FpFractionslider\Controller\SlideController;
+use Fixpunkt\FpFractionslider\Domain\Model\Slide;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 /**
  * Test case.
  *
  * @author Kurt Gusbeth <k.gusbeth@fixpunkt.com>
  */
-class SlideControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class SlideControllerTest extends UnitTestCase
 {
     /**
-     * @var \Fixpunkt\FpFractionslider\Controller\SlideController
+     * @var SlideController
      */
     protected $subject = null;
 
     protected function setUp()
     {
-        parent::setUp();
-        $this->subject = $this->getMockBuilder(\Fixpunkt\FpFractionslider\Controller\SlideController::class)
+        $this->subject = $this->getMockBuilder(SlideController::class)
             ->setMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -24,7 +27,6 @@ class SlideControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
     protected function tearDown()
     {
-        parent::tearDown();
     }
 
     /**
@@ -32,9 +34,9 @@ class SlideControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function showActionAssignsTheGivenSlideToView()
     {
-        $slide = new \Fixpunkt\FpFractionslider\Domain\Model\Slide();
+        $slide = new Slide();
 
-        $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
+        $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->inject($this->subject, 'view', $view);
         $view->expects(self::once())->method('assign')->with('slide', $slide);
 

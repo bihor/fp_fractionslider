@@ -34,11 +34,11 @@ class ContentViewHelper extends AbstractViewHelper
 		RenderingContextInterface $renderingContext
 		) {
 		$uid = $arguments['uid'];
-		$conf = array( // config
-			'tables' => 'tt_content',
-			'source' => intval($uid),
-			'dontCheckPid' => 1
-		);
+		$conf = [
+          'tables' => 'tt_content',
+          'source' => intval($uid),
+          'dontCheckPid' => 1,
+        ];
 		return $GLOBALS['TSFE']->cObj->cObjGetSingle('RECORDS',$conf);
 	}
 }

@@ -1,6 +1,11 @@
 <?php
 namespace Fixpunkt\FpFractionslider\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /***
  *
  * This file is part of the "FractionSlider" Extension for TYPO3 CMS.
@@ -11,18 +16,17 @@ namespace Fixpunkt\FpFractionslider\Domain\Model;
  *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
  *
  ***/
-
 /**
  * Slide-element
  */
-class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Slide extends AbstractEntity
 {
     /**
      * Title of the slide
      *
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $title = '';
 
     /**
@@ -35,9 +39,9 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Fixed background image
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var FileReference
      */
+    #[Cascade(['value' => 'remove'])]
     protected $background = null;
 
     /**
@@ -57,9 +61,9 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Slide-elements for this slide
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\Part>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var ObjectStorage<Part>
      */
+    #[Cascade(['value' => 'remove'])]
     protected $elements = null;
 
     /**
@@ -81,7 +85,7 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected function initStorageObjects()
     {
-        $this->elements = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->elements = new ObjectStorage();
     }
 
     /**
@@ -129,7 +133,7 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the background
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $background
+     * @return FileReference $background
      */
     public function getBackground()
     {
@@ -139,10 +143,9 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the background
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $background
      * @return void
      */
-    public function setBackground(\TYPO3\CMS\Extbase\Domain\Model\FileReference $background)
+    public function setBackground(FileReference $background)
     {
         $this->background = $background;
     }
@@ -176,96 +179,53 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getDatainValue()
     {
         $result = '';
-        switch ($this->datain) {
-            case 1:    $result = 'none';
-                break;
-            case 2:    $result = 'fade';
-                break;
-            case 4:    $result = 'slideLeft';
-                break;
-            case 5:    $result = 'slideRight';
-                break;
-            case 6:    $result = 'slideTop';
-                break;
-            case 7:    $result = 'slideBottom';
-                break;
-            case 8:    $result = 'scrollLeft';
-                break;
-            case 9:    $result = 'scrollRight';
-                break;
-            case 10:    $result = 'scrollTop';
-                break;
-            case 11:    $result = 'scrollBottom';
-                break;
-            case 13:    $result = 'slideup';
-                break;
-            case 14:    $result = 'slidedown';
-                break;
-            case 15:    $result = 'slideright';
-                break;
-            case 16:    $result = 'slideleft';
-                break;
-            case 17:    $result = 'slidehorizontal';
-                break;
-            case 18:    $result = 'slidevertical';
-                break;
-            case 19:    $result = 'boxslide';
-                break;
-            case 20:    $result = 'slotslide-horizontal';
-                break;
-            case 21:    $result = 'slotslide-vertical';
-                break;
-            case 22:    $result = 'boxfade';
-                break;
-            case 23:    $result = 'slotfade-horizontal';
-                break;
-            case 24:    $result = 'slotfade-vertical';
-                break;
-            case 25:    $result = 'fadefromright';
-                break;
-            case 26:    $result = 'fadefromleft';
-                break;
-            case 27:    $result = 'fadefromtop';
-                break;
-            case 28:    $result = 'fadefrombottom';
-                break;
-            case 29:    $result = 'fadetoleftfadefromright';
-                break;
-            case 30:    $result = 'fadetorightfadefromleft';
-                break;
-            case 31:    $result = 'fadetotopfadefrombottom';
-                break;
-            case 32:    $result = 'fadetobottomfadefromtop';
-                break;
-            case 33:    $result = 'parallaxtoright';
-                break;
-            case 34:    $result = 'parallaxtoleft';
-                break;
-            case 35:    $result = 'parallaxtotop';
-                break;
-            case 36:    $result = 'parallaxtobottom';
-                break;
-            case 37:    $result = 'scaledownfromright';
-                break;
-            case 38:    $result = 'scaledownfromleft';
-                break;
-            case 39:    $result = 'scaledownfromtop';
-                break;
-            case 40:    $result = 'scaledownfrombottom';
-                break;
-            case 41:    $result = 'zoomout';
-                break;
-            case 42:    $result = 'zoomin';
-                break;
-            case 43:    $result = 'slotzoom-horizontal';
-                break;
-            case 44:    $result = 'slotzoom-vertical';
-                break;
-            case 45:    $result = 'random-static';
-                break;
-            case 46:    $result = 'random';
-                break;
-        }
+        $result = match ($this->datain) {
+            1 => 'none',
+            2 => 'fade',
+            4 => 'slideLeft',
+            5 => 'slideRight',
+            6 => 'slideTop',
+            7 => 'slideBottom',
+            8 => 'scrollLeft',
+            9 => 'scrollRight',
+            10 => 'scrollTop',
+            11 => 'scrollBottom',
+            13 => 'slideup',
+            14 => 'slidedown',
+            15 => 'slideright',
+            16 => 'slideleft',
+            17 => 'slidehorizontal',
+            18 => 'slidevertical',
+            19 => 'boxslide',
+            20 => 'slotslide-horizontal',
+            21 => 'slotslide-vertical',
+            22 => 'boxfade',
+            23 => 'slotfade-horizontal',
+            24 => 'slotfade-vertical',
+            25 => 'fadefromright',
+            26 => 'fadefromleft',
+            27 => 'fadefromtop',
+            28 => 'fadefrombottom',
+            29 => 'fadetoleftfadefromright',
+            30 => 'fadetorightfadefromleft',
+            31 => 'fadetotopfadefrombottom',
+            32 => 'fadetobottomfadefromtop',
+            33 => 'parallaxtoright',
+            34 => 'parallaxtoleft',
+            35 => 'parallaxtotop',
+            36 => 'parallaxtobottom',
+            37 => 'scaledownfromright',
+            38 => 'scaledownfromleft',
+            39 => 'scaledownfromtop',
+            40 => 'scaledownfrombottom',
+            41 => 'zoomout',
+            42 => 'zoomin',
+            43 => 'slotzoom-horizontal',
+            44 => 'slotzoom-vertical',
+            45 => 'random-static',
+            46 => 'random',
+            default => $result,
+        };
         return $result;
     }
 
@@ -293,10 +253,9 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Part
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\Part $element
      * @return void
      */
-    public function addElement(\Fixpunkt\FpFractionslider\Domain\Model\Part $element)
+    public function addElement(Part $element)
     {
         $this->elements->attach($element);
     }
@@ -304,10 +263,10 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Part
      *
-     * @param \Fixpunkt\FpFractionslider\Domain\Model\Part $elementToRemove The Part to be removed
+     * @param Part $elementToRemove The Part to be removed
      * @return void
      */
-    public function removeElement(\Fixpunkt\FpFractionslider\Domain\Model\Part $elementToRemove)
+    public function removeElement(Part $elementToRemove)
     {
         $this->elements->detach($elementToRemove);
     }
@@ -315,7 +274,7 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the elements
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\Part> $elements
+     * @return ObjectStorage<Part> $elements
      */
     public function getElements()
     {
@@ -325,10 +284,10 @@ class Slide extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the elements
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fixpunkt\FpFractionslider\Domain\Model\Part> $elements
+     * @param ObjectStorage<Part> $elements
      * @return void
      */
-    public function setElements(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $elements)
+    public function setElements(ObjectStorage $elements)
     {
         $this->elements = $elements;
     }
