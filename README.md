@@ -1,4 +1,4 @@
-# fp_fractionslider v.2.1.0
+# fp_fractionslider v.2.1.1
 
 Professional Slider-PlugIn for TYPO3
 
@@ -16,3 +16,6 @@ v. 2.0:
 
 v. 2.1:
 - Refactored with the rector-tool.
+
+v. 2.1.1:
+- Bugfix: backend preview.

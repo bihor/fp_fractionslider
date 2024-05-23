@@ -53,4 +53,6 @@ Version     Changes
 2.1.0       Refactored with the rector-tool.
 
             ts-files renamed to .typoscript!
+
+2.1.1       Bugfix: backend preview.
 ==========  =======================================================================================
