@@ -7,15 +7,16 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * ViewHelper zur Rückgabe eines geparsten tt_content Elementes
+ * Alles deprecated, aber es läuft...
  */
  
 class ContentViewHelper extends AbstractViewHelper
 {
-	use CompileWithRenderStatic;
-	
+    use CompileWithRenderStatic;
+
 	protected $escapeOutput = false;
-	
-	public function initializeArguments()
+
+    public function initializeArguments()
 	{
 		$this->registerArgument('uid', 'integer', 'UID des Content Element', true);
 	}

@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Fixpunkt\FpFractionslider\Backend\EventListener;
 
 use TYPO3\CMS\Backend\Utility\BackendUtility as BackendUtilityCore;
+use TYPO3\CMS\Backend\View\BackendViewFactory;
+use TYPO3\CMS\Backend\View\Event\PageContentPreviewRenderingEvent;
 use TYPO3\CMS\Core\Imaging\Icon;
 use TYPO3\CMS\Core\Imaging\IconFactory;
-use TYPO3\CMS\Core\Type\Bitmask\Permission;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Backend\View\Event\PageContentPreviewRenderingEvent;
 
 final class PreviewEventListener
 {
@@ -79,7 +78,7 @@ final class PreviewEventListener
      */
     protected $iconFactory;
 
-    public function __construct()
+    public function __construct(private readonly BackendViewFactory $backendViewFactory)
     {
         $this->iconFactory = GeneralUtility::makeInstance(IconFactory::class);
     }
@@ -108,7 +107,7 @@ final class PreviewEventListener
                     ->where(
                         $queryBuilder->expr()->eq(
                             'pid',
-                            $queryBuilder->createNamedParameter($pid, \PDO::PARAM_INT)
+                            $queryBuilder->createNamedParameter($pid, \TYPO3\CMS\Core\Database\Connection::PARAM_INT)
                         )
                     )
                     ->setMaxResults(self::SETTINGS_IN_PREVIEW)
@@ -240,8 +239,7 @@ final class PreviewEventListener
      */
     protected function renderSettingsAsTable($header = '', $recordUid = 0)
     {
-        $view = GeneralUtility::makeInstance(StandaloneView::class);
-        $view->setTemplatePathAndFilename(GeneralUtility::getFileAbsFileName('EXT:fp_masterquiz/Resources/Private/Backend/Templates/PageLayoutView.html'));
+        $view = $this->backendViewFactory->create($GLOBALS['TYPO3_REQUEST'], ['fixpunkt/fp-fractionslider']);
         $view->assignMultiple([
             'header' => $header,
             'rows' => [
@@ -250,8 +248,7 @@ final class PreviewEventListener
             ],
             'id' => $recordUid
         ]);
-
-        return $view->render();
+        return $view->render('Backend/PageLayoutView');
     }
 
     /**

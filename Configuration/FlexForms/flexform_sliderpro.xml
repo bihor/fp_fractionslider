@@ -3,13 +3,11 @@
   <sheets>
     <sDEF>
       <ROOT>
-        <TCEforms>
           <sheetTitle>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:title</sheetTitle>
-        </TCEforms>
         <type>array</type>
         <el>
 			<settings.override.sortOrder>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sortOrder</label>
 					<config>
 					<type>select</type>
@@ -29,10 +27,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sortOrder>
 			<settings.override.limit>
-              <TCEforms>
+
                 <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:limit</label>
                 <config>
                     <type>input</type>
@@ -40,10 +38,10 @@
                     <max>5</max>
                     <eval>trim</eval>
                 </config>
-              </TCEforms>
+      
 			</settings.override.limit>
 			<settings.override.listId>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:listId</label>
 	                <config>
 						<type>group</type>
@@ -54,10 +52,10 @@
 						<minitems>0</minitems>
 						<show_thumbs>0</show_thumbs>
 					</config>
-				</TCEforms>
+
 			</settings.override.listId>
 			<settings.override.showId>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:showId</label>
 	                <config>
 						<type>group</type>
@@ -68,20 +66,18 @@
 						<minitems>0</minitems>
 						<show_thumbs>0</show_thumbs>
 					</config>
-				</TCEforms>
+
 			</settings.override.showId>
     </el>
    </ROOT>
   </sDEF>
     <sMORE>
       <ROOT>
-    	<TCEforms>
           <sheetTitle>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more</sheetTitle>
-        </TCEforms>
         <type>array</type>
     	<el>
 			<settings.override.more.text1>
-              <TCEforms>
+
                 <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.text1</label>
                 <config>
                     <type>input</type>
@@ -89,10 +85,10 @@
                     <max>255</max>
                     <eval>trim</eval>
                 </config>
-              </TCEforms>
+      
 			</settings.override.more.text1>
 			<settings.override.more.text2>
-              <TCEforms>
+
                 <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.text2</label>
                 <config>
                     <type>input</type>
@@ -100,10 +96,10 @@
                     <max>255</max>
                     <eval>trim</eval>
                 </config>
-              </TCEforms>
+      
 			</settings.override.more.text2>
 			<settings.override.more.text3>
-              <TCEforms>
+
                 <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.text3</label>
                 <config>
                     <type>input</type>
@@ -111,10 +107,10 @@
                     <max>255</max>
                     <eval>trim</eval>
                 </config>
-              </TCEforms>
+      
 			</settings.override.more.text3>
 			<settings.override.more.textlink>
-              <TCEforms>
+
                 <label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:more.textlink</label>
                 <config>
                     <type>input</type>
@@ -122,20 +118,18 @@
                     <max>100</max>
                     <eval>trim</eval>
                 </config>
-              </TCEforms>
+      
 			</settings.override.more.textlink>
         </el>
       </ROOT>
     </sMORE>
     <sPRO>
       <ROOT>
-    	<TCEforms>
           <sheetTitle>Slider Pro</sheetTitle>
-        </TCEforms>
         <type>array</type>
     	<el>
           	<settings.override.sliderpro.width>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.width</label>
 	                <config>
                    	 <type>input</type>
@@ -143,10 +137,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.width>
           	<settings.override.sliderpro.height>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.height</label>
 	                <config>
                    	 <type>input</type>
@@ -154,10 +148,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.height>
           	<settings.override.sliderpro.responsive>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.responsive</label>
 	                <config>
 					<type>select</type>
@@ -177,10 +171,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.responsive>
           	<settings.override.sliderpro.aspectRatio>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.aspectRatio</label>
 	                <config>
                    	 <type>input</type>
@@ -188,10 +182,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.aspectRatio>
           	<settings.override.sliderpro.imageScaleMode>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.imageScaleMode</label>
 	                <config>
 					<type>select</type>
@@ -219,10 +213,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.imageScaleMode>
           	<settings.override.sliderpro.centerImage>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.centerImage</label>
 	                <config>
 					<type>select</type>
@@ -242,10 +236,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.centerImage>
           	<settings.override.sliderpro.allowScaleUp>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.allowScaleUp</label>
 	                <config>
 					<type>select</type>
@@ -265,10 +259,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.allowScaleUp>
           	<settings.override.sliderpro.autoHeight>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoHeight</label>
 	                <config>
 					<type>select</type>
@@ -288,10 +282,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoHeight>
           	<settings.override.sliderpro.autoSlideSize>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoSlideSize</label>
 	                <config>
 					<type>select</type>
@@ -311,10 +305,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoSlideSize>
           	<settings.override.sliderpro.startSlide>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.startSlide</label>
 	                <config>
                    	 <type>input</type>
@@ -322,10 +316,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.startSlide>
           	<settings.override.sliderpro.shuffle>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.shuffle</label>
 	                <config>
 					<type>select</type>
@@ -345,10 +339,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.shuffle>
           	<settings.override.sliderpro.orientation>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.orientation</label>
 	                <config>
 					<type>select</type>
@@ -368,10 +362,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.orientation>
           	<settings.override.sliderpro.forceSize>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.forceSize</label>
 	                <config>
 					<type>select</type>
@@ -395,10 +389,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.forceSize>
           	<settings.override.sliderpro.loop>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.loop</label>
 	                <config>
 					<type>select</type>
@@ -418,10 +412,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.loop>
           	<settings.override.sliderpro.slideDistance>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.slideDistance</label>
 	                <config>
                    	 <type>input</type>
@@ -429,10 +423,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.slideDistance>
           	<settings.override.sliderpro.slideAnimationDuration>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.slideAnimationDuration</label>
 	                <config>
                    	 <type>input</type>
@@ -440,10 +434,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.slideAnimationDuration>
           	<settings.override.sliderpro.heightAnimationDuration>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.heightAnimationDuration</label>
 	                <config>
                    	 <type>input</type>
@@ -451,10 +445,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.heightAnimationDuration>
           	<settings.override.sliderpro.visibleSize>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.visibleSize</label>
 	                <config>
                    	 <type>input</type>
@@ -462,10 +456,10 @@
                  	   <max>35</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.visibleSize>
           	<settings.override.sliderpro.centerSelectedSlide>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.centerSelectedSlide</label>
 	                <config>
 					<type>select</type>
@@ -485,10 +479,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.centerSelectedSlide>
           	<settings.override.sliderpro.rightToLeft>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.rightToLeft</label>
 	                <config>
 					<type>select</type>
@@ -508,10 +502,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.rightToLeft>
           	<settings.override.sliderpro.fade>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fade</label>
 	                <config>
 					<type>select</type>
@@ -531,10 +525,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fade>
           	<settings.override.sliderpro.fadeOutPreviousSlide>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeOutPreviousSlide</label>
 	                <config>
 					<type>select</type>
@@ -554,10 +548,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fadeOutPreviousSlide>
           	<settings.override.sliderpro.fadeDuration>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeDuration</label>
 	                <config>
                    	 <type>input</type>
@@ -565,10 +559,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fadeDuration>
           	<settings.override.sliderpro.autoplay>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoplay</label>
 	                <config>
 					<type>select</type>
@@ -588,10 +582,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoplay>
           	<settings.override.sliderpro.autoplayDelay>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoplayDelay</label>
 	                <config>
                    	 <type>input</type>
@@ -599,10 +593,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoplayDelay>
           	<settings.override.sliderpro.autoplayDirection>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoplayDirection</label>
 	                <config>
 					<type>select</type>
@@ -622,10 +616,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoplayDirection>
           	<settings.override.sliderpro.autoplayOnHover>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoplayOnHover</label>
 	                <config>
 					<type>select</type>
@@ -649,10 +643,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoplayOnHover>
           	<settings.override.sliderpro.arrows>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.arrows</label>
 	                <config>
 					<type>select</type>
@@ -672,10 +666,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.arrows>
           	<settings.override.sliderpro.fadeArrows>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeArrows</label>
 	                <config>
 					<type>select</type>
@@ -695,10 +689,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fadeArrows>
           	<settings.override.sliderpro.buttons>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.buttons</label>
 	                <config>
 					<type>select</type>
@@ -718,10 +712,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.buttons>
           	<settings.override.sliderpro.keyboard>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.keyboard</label>
 	                <config>
 					<type>select</type>
@@ -741,10 +735,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.keyboard>
           	<settings.override.sliderpro.keyboardOnlyOnFocus>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.keyboardOnlyOnFocus</label>
 	                <config>
 					<type>select</type>
@@ -764,10 +758,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.keyboardOnlyOnFocus>
           	<settings.override.sliderpro.touchSwipe>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.touchSwipe</label>
 	                <config>
 					<type>select</type>
@@ -787,10 +781,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.touchSwipe>
           	<settings.override.sliderpro.touchSwipeThreshold>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.touchSwipeThreshold</label>
 	                <config>
                    	 <type>input</type>
@@ -798,10 +792,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.touchSwipeThreshold>
           	<settings.override.sliderpro.fadeCaption>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeCaption</label>
 	                <config>
 					<type>select</type>
@@ -821,10 +815,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fadeCaption>
           	<settings.override.sliderpro.captionFadeDuration>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.captionFadeDuration</label>
 	                <config>
                    	 <type>input</type>
@@ -832,10 +826,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.captionFadeDuration>
           	<settings.override.sliderpro.fullScreen>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fullScreen</label>
 	                <config>
 					<type>select</type>
@@ -855,10 +849,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fullScreen>
           	<settings.override.sliderpro.fadeFullScreen>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeFullScreen</label>
 	                <config>
 					<type>select</type>
@@ -878,10 +872,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fadeFullScreen>
           	<settings.override.sliderpro.waitForLayers>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.waitForLayers</label>
 	                <config>
 					<type>select</type>
@@ -901,10 +895,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.waitForLayers>
           	<settings.override.sliderpro.autoScaleLayers>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoScaleLayers</label>
 	                <config>
 					<type>select</type>
@@ -924,10 +918,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoScaleLayers>
           	<settings.override.sliderpro.autoScaleReference>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.autoScaleReference</label>
 	                <config>
                    	 <type>input</type>
@@ -935,10 +929,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.autoScaleReference>
           	<settings.override.sliderpro.smallSize>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.smallSize</label>
 	                <config>
                    	 <type>input</type>
@@ -946,10 +940,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.smallSize>
           	<settings.override.sliderpro.mediumSize>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.mediumSize</label>
 	                <config>
                    	 <type>input</type>
@@ -957,10 +951,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.mediumSize>
           	<settings.override.sliderpro.largeSize>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.largeSize</label>
 	                <config>
                    	 <type>input</type>
@@ -968,10 +962,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.largeSize>
           	<settings.override.sliderpro.updateHash>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.updateHash</label>
 	                <config>
 					<type>select</type>
@@ -991,10 +985,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.updateHash>
           	<settings.override.sliderpro.reachVideoAction>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.reachVideoAction</label>
 	                <config>
 					<type>select</type>
@@ -1014,10 +1008,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.reachVideoAction>
           	<settings.override.sliderpro.leaveVideoAction>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.leaveVideoAction</label>
 	                <config>
 					<type>select</type>
@@ -1045,10 +1039,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.leaveVideoAction>
           	<settings.override.sliderpro.playVideoAction>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.playVideoAction</label>
 	                <config>
 					<type>select</type>
@@ -1068,10 +1062,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.playVideoAction>
           	<settings.override.sliderpro.pauseVideoAction>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.pauseVideoAction</label>
 	                <config>
 					<type>select</type>
@@ -1091,10 +1085,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.pauseVideoAction>
           	<settings.override.sliderpro.endVideoAction>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.endVideoAction</label>
 	                <config>
 					<type>select</type>
@@ -1122,10 +1116,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.endVideoAction>
           	<settings.override.sliderpro.thumbnailWidth>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailWidth</label>
 	                <config>
                    	 <type>input</type>
@@ -1133,10 +1127,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.thumbnailWidth>
           	<settings.override.sliderpro.thumbnailHeight>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailHeight</label>
 	                <config>
                    	 <type>input</type>
@@ -1144,10 +1138,10 @@
                  	   <max>5</max>
                  	   <eval>trim</eval>
              	   </config>
-				</TCEforms>
+
 			</settings.override.sliderpro.thumbnailHeight>
           	<settings.override.sliderpro.thumbnailsPosition>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailsPosition</label>
 	                <config>
 					<type>select</type>
@@ -1175,10 +1169,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.thumbnailsPosition>
           	<settings.override.sliderpro.thumbnailPointer>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailPointer</label>
 	                <config>
 					<type>select</type>
@@ -1198,10 +1192,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.thumbnailPointer>
           	<settings.override.sliderpro.thumbnailArrows>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailArrows</label>
 	                <config>
 					<type>select</type>
@@ -1221,10 +1215,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.thumbnailArrows>
           	<settings.override.sliderpro.fadeThumbnailArrows>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.fadeThumbnailArrows</label>
 	                <config>
 					<type>select</type>
@@ -1244,10 +1238,10 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.fadeThumbnailArrows>
           	<settings.override.sliderpro.thumbnailTouchSwipe>
-				<TCEforms>
+
 					<label>LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:sliderpro.thumbnailTouchSwipe</label>
 	                <config>
 					<type>select</type>
@@ -1267,7 +1261,7 @@
 					  </numIndex>
 					  </items>
 					</config>
-				</TCEforms>
+
 			</settings.override.sliderpro.thumbnailTouchSwipe>
         </el>
       </ROOT>

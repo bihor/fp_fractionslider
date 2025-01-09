@@ -1,4 +1,4 @@
-# fp_fractionslider v.2.1.1
+# fp_fractionslider v.2.2
 
 Professional Slider-PlugIn for TYPO3
 
@@ -19,3 +19,7 @@ v. 2.1:
 
 v. 2.1.1:
 - Bugfix: backend preview.
+
+v. 2.2:
+- Now compatible with TYPO3 13.
+- Update-script Switchable-Controller-Actions-Plugin-Updater removed.

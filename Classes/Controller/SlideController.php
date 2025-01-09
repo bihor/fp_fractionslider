@@ -14,7 +14,7 @@ use Psr\Http\Message\ResponseInterface;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt werbeagentur gmbH
+ *  (c) 2017 Kurt Gusbeth <k.gusbeth@fixpunkt.com>, fixpunkt für digitales GmbH
  *
  ***/
 
@@ -39,16 +39,9 @@ class SlideController extends ActionController
     }
 
     /**
-     * configurationManager
-     *
-     * @var ConfigurationManagerInterface
-     */
-    protected $configurationManager;
-
-    /**
      * Initializes the current action
      */
-    public function initializeAction()
+    public function initializeAction(): void
     {
         $tsSettings = $this->configurationManager->getConfiguration(
             ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT

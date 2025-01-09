@@ -55,4 +55,8 @@ Version     Changes
             ts-files renamed to .typoscript!
 
 2.1.1       Bugfix: backend preview.
+
+2.2.0       Now compatible with TYPO3 13.
+
+            Update-script Switchable-Controller-Actions-Plugin-Updater removed.
 ==========  =======================================================================================

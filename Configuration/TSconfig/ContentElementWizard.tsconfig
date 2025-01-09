@@ -1,0 +1,51 @@
+mod.wizards.newContentElement.wizardItems.fractionslider {
+    header = Fractionslider
+    elements {
+        fpfractionslider_fractionslider {
+            iconIdentifier = ext-fpfractionslider-wizard-icon
+            title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_fractionslider
+            description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+            tt_content_defValues {
+                CType = list
+                list_type = fpfractionslider_fractionslider
+            }
+        }
+        fpfractionslider_sliderpro {
+            iconIdentifier = ext-fpfractionslider-wizard-icon
+            title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_sliderpro
+            description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+            tt_content_defValues {
+                CType = list
+                list_type = fpfractionslider_sliderpro
+            }
+        }
+        fpfractionslider_sliderrevolution {
+            iconIdentifier = ext-fpfractionslider-wizard-icon
+            title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_sliderrevolution
+            description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+            tt_content_defValues {
+                CType = list
+                list_type = fpfractionslider_sliderrevolution
+            }
+        }
+        fpfractionslider_list {
+            iconIdentifier = ext-fpfractionslider-wizard-icon
+            title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_list
+            description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+            tt_content_defValues {
+                CType = list
+                list_type = fpfractionslider_list
+            }
+        }
+        fpfractionslider_show {
+            iconIdentifier = ext-fpfractionslider-wizard-icon
+            title = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_show
+            description = LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model.description
+            tt_content_defValues {
+                CType = list
+                list_type = fpfractionslider_show
+            }
+        }
+    }
+    show = *
+}
