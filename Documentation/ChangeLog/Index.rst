@@ -1,16 +1,4 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: /Includes.rst.txt
 
 
 ChangeLog
@@ -22,7 +10,7 @@ ChangeLog
 Version     Changes
 ==========  =======================================================================================
 0.4.0       Initial upload to TER.
-0.5.0       Settings sortOrder, limit, listId and showId added. Slide-list-action added. 
+0.5.0       Settings sortOrder, limit, listId and showId added. Slide-list-action added.
 
             Bugfixing: CDATA removed (TYPO3 8 doesn´t like it - TYPO3 7 needs it sometimes).
 0.6.0       {settings.more.*} and additional-Flexforms added.
@@ -59,4 +47,6 @@ Version     Changes
 2.2.0       Now compatible with TYPO3 13.
 
             Update-script Switchable-Controller-Actions-Plugin-Updater removed.
+
+2.2.1       Small bugfixes. Documentation.
 ==========  =======================================================================================

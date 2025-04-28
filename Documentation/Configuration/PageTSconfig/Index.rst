@@ -1,18 +1,4 @@
-﻿.. include:: Images.txt
-
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+﻿.. include:: /Includes.rst.txt
 
 
 Page TSconfig
@@ -34,9 +20,9 @@ Here an example to hide some fields:
   TCEFORM.tx_fpfractionslider_domain_model_slide.color.disabled = 1
   TCEFORM.tx_fpfractionslider_domain_model_slide.subtitle.disabled = 1
 
-|img-7|
+.. include:: /Images/backend3.rst.txt
 
-*Image: you find this on the Ressources tab of a page*
+Image: you find this on the Ressources tab of a page
 
 
 You have to use the table-name and column-name. The column-names for the different effects are: fraction, pro and revolution.

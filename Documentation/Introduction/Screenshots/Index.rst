@@ -1,19 +1,4 @@
-﻿.. include:: Images.txt
-
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
-
+﻿.. include:: /Includes.rst.txt
 
 Screenshots
 ^^^^^^^^^^^
@@ -32,18 +17,22 @@ Screenshots
 .. container:: table-row
 
    Image 1: In the backend
-         |img-3|
+
+   .. include:: /Images/backend1.rst.txt
 
    Image 2: In the backend
-         |img-4|
+
+   .. include:: /Images/backend2.rst.txt
 
 
 .. container:: table-row
 
    jQuery-FractionSlider
-         |img-5|
+
+   .. include:: /Images/frontend1.rst.txt
 
    Image 4: Professional jQuery Content Slider Plugin - Slider Pro
-         |img-6|
+
+   .. include:: /Images/frontend2.rst.txt
 
 .. ###### END~OF~TABLE ######

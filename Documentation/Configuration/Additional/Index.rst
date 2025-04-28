@@ -1,25 +1,11 @@
-﻿
-
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+﻿.. include:: /Includes.rst.txt
 
 
 Additional
 ^^^^^^^^^^
 
 - You can add an additional slide, if you want.
-  Why? If you don´t want to show all slides, you can add an additional slide to your template. 
+  Why? If you don´t want to show all slides, you can add an additional slide to your template.
   There you could set a link to a list-view-page with all slides/news.
 
 Example

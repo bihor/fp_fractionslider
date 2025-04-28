@@ -1,4 +1,4 @@
-# fp_fractionslider v.2.2
+# fp_fractionslider v.2.2.1
 
 Professional Slider-PlugIn for TYPO3
 

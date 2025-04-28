@@ -98,22 +98,22 @@ class SlideController extends ActionController
 	                }
 	            }
             }
-            if ($overrides['sortOrder'] == 'asc' || $overrides['sortOrder'] == 'desc') {
+            if (isset($overrides['sortOrder']) && ($overrides['sortOrder'] == 'asc' || $overrides['sortOrder'] == 'desc')) {
             	$settings['sortOrder'] = $overrides['sortOrder'];
             } else {
             	$settings['sortOrder'] = $tsSettings['sortOrder'];
             }
-            if ($overrides['limit'] > 0) {
+            if (isset($overrides['limit']) && ($overrides['limit'] > 0)) {
             	$settings['limit'] = $overrides['limit'];
             } else {
             	$settings['limit'] = $tsSettings['limit'];
             }
-            if ($overrides['listId']) {
+            if (isset($overrides['listId']) && ($overrides['listId'])) {
             	$settings['listId'] = $overrides['listId'];
             } else {
             	$settings['listId'] = $tsSettings['listId'];
             }
-            if ($overrides['showId']) {
+            if (isset($overrides['showId']) && $overrides['showId']) {
             	$settings['showId'] = $overrides['showId'];
             } else {
             	$settings['showId'] = $tsSettings['showId'];
@@ -174,7 +174,7 @@ class SlideController extends ActionController
     	$this->view->assign('slides', $this->slideRepository->findAll($this->settings['sortOrder'], $this->settings['limit']));
         return $this->htmlResponse();
     }
-    
+
     /**
      * action show
      *

@@ -1,0 +1,2 @@
+.. figure:: /Images/backend2.jpg
+   :class: with-shadow

@@ -1,9 +1,4 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: Includes.txt
+﻿.. include:: /Includes.rst.txt
 
 .. _start:
 
@@ -29,7 +24,7 @@ FractionSlider
 		slider,fraction,professional
 
 	:Copyright:
-		2023
+		2025
 
 	:Author:
 		Kurt Gusbeth
