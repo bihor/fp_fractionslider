@@ -27,7 +27,7 @@ Screenshots
 
 .. container:: table-row
 
-   jQuery-FractionSlider
+   Image 3: jQuery-FractionSlider
 
    .. include:: /Images/frontend1.rst.txt
 

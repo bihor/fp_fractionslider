@@ -12,7 +12,7 @@ foreach (['fractionslider', 'sliderpro', 'sliderrevolution', 'list', 'show'] as 
         'FpFractionslider',
         ucfirst($plugin),
         'LLL:EXT:fp_fractionslider/Resources/Private/Language/locallang_be.xlf:tx_fp_fractionslider_domain_model_' . $plugin,
-        'EXT:fp_fractionslider/Resources/Public/Icons/Extension.gif',
+        'ext-fpfractionslider-wizard-icon',
         'Fractionslider'
     );
 }

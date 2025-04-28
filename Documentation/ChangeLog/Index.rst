@@ -48,5 +48,5 @@ Version     Changes
 
             Update-script Switchable-Controller-Actions-Plugin-Updater removed.
 
-2.2.1       Small bugfixes. Documentation.
+2.2.1/2     Small bugfixes. Documentation.
 ==========  =======================================================================================
