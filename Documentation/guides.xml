@@ -7,10 +7,10 @@
     <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
                project-home="https://extensions.typo3.org/extension/fp_fractionslider"
                project-contact="https://www.fixpunkt.com/webentwicklung/typo3/typo3-extensions/"
-               project-repository="https://github.com/bihor/fp_fractionslider"
-               project-issues="https://github.com/bihor/fp_fractionslider/issues"
+               project-repository="https://github.com/fixpunkt-com/fp_fractionslider"
+               project-issues="https://github.com/fixpunkt-com/fp_fractionslider/issues"
                edit-on-github-branch="master"
-               edit-on-github="bihor/fp_fractionslider"
+               edit-on-github="fixpunkt-com/fp_fractionslider"
                interlink-shortcode="fixpunkt/fp-fractionslider"
     />
     <project title="Professional Slider-Plugin, but outdated!"
